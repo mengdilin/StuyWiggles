@@ -40,11 +40,28 @@ def set_schedule(username,schedule):
     student=find_student(username)
     student["schedule"]=schedule
     students.update({"username":str(username)},student)
-
+    
+#need to be tested
 def get_schedule(username):
     db=Connection["StuyWiggles"]
     student=find_student(username)
     return student["schedule"]
+    
+def get_osis(username):
+    db=Connection["StuyWiggles"]
+    student=find_student(username)
+    return student["osis"]
+    
+def get_id(username):
+    db=Connection["StuyWiggles"]
+    student=find_student(username)
+    return student["id"]
+
+def get_period(username,period_number):
+    db=Connection["StuyWiggles"]
+    student=find_student(username)
+    schedule=student["schedule"]
+    return schedule[period_number-1]
     
 #parameter period: an int 
 #parameter clas: ["class","teacher"]
