@@ -56,8 +56,10 @@ def profile():
         return redirect(url_for('login'))
     elif request.method=='GET':
         user=session['user']
-        schedule=database.get_schedule()
-        return render_template("profile.html",user,schedule)
+        schedule=database.get_schedule(user)
+        digit=database.get_id(user)
+        osis=database.get_osis(user)
+        return render_template("profile.html",user,schedule,digit,osis)
     elif request.method=='POST':
         if request.form['button']=='Set':
             return redirect(url_for("setschedule"))
