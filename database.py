@@ -12,8 +12,12 @@ students=db.students
 def add_student(username,password):
     db=Connection["StuyWiggles"]
     if not username in get_usernames():
-        student={"username":str(username),"password":str(password),"schedule":[]}
+        #need to test this
+        student={"username":str(username),"password":str(password),"schedule":[], "osis":0,"id":0}
         students.insert(student)
+        return True
+    else:
+        return False
 
 def get_usernames():
     db=Connection["StuyWiggles"]
