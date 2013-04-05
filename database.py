@@ -41,6 +41,11 @@ def set_schedule(username,schedule):
     student["schedule"]=schedule
     students.update({"username":str(username)},student)
 
+def get_schedule(username):
+    db=Connection["StuyWiggles"]
+    student=find_student(username)
+    return student["schedule"]
+    
 #parameter period: an int 
 #parameter clas: ["class","teacher"]
 def set_period(username,period,clas):
