@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import session,render_template,url_for,redirect,request
+import database
 
 app=Flask(__name__)
 app.secret_key="secret key"
@@ -7,7 +8,7 @@ app.secret_key="secret key"
 @app.route("/")
 def index():
     if not session.has_key('user'):
-        return redirect(url_for('login'))
+        return redirect(url_for('about'))
     return redirect(url_for('about'))
 
 @app.route('/logout')
@@ -15,31 +16,26 @@ def logout():
     session.pop()
     return redirect(url_for('index'))
 
-@app.route('/login')
-def login():
+@app.route('/about',methods=['GET','POST'])
+def about():
     if request.method=='GET':
-        return render_template('login.html')
-    elif request.method=='POST':
+        return render_template('about.html',loggedout=True)
+    elif request.method=="POST":
         if request.form['button']=='Login':
             username=request.form['username']
             password=request.form['password']
-            session['user']=username
             if not username in database.get_usernames():
-                return redirect(url_for('register'))  
-            return render_template("login.html",username=username,password=password)
+                return render_template("about.html",loggedout=True,registered=False)
+            session['user']=username
+            return render_template("profile.html",username=username,password=password)
             
 
-
-@app.route('/about')
-def about():
-    return render_template("about.html")
-
-@app.route('/register')
+@app.route('/register',methods=['GET','POST'])
 def register():
     if session.has_key('user'):
         return redirect(url_for('logout'))
     elif request.method=='GET':
-        return render_template('register.html')
+        return render_template("about.html",loggedout=True,registered=False)
     elif request.method=='POST':
         if request.form['button']=='Register':
             username=request.form['username']
@@ -57,7 +53,7 @@ def register():
                                    exist=exist)
     return redirect(url_for(register))
 
-@app.route('/profile')
+@app.route('/profile',methods=['GET','POST'])
 def profile():
     if not session.has_key('user'):
         return redirect(url_for('login'))
