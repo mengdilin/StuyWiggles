@@ -50,21 +50,42 @@
 	    <br> 
 	    
 </br>
-	    {% if not registered %}
-	    <a href="#" class="btn" id="register" rel="popover" data-content='
-	       <form id="registration" name="registration" method="POST" action="register">
-		 <!-- NEED TO CONTINUE POPOVER FOR REGISTRATION: username, password, verify password, schedule, osis -->
-		 <p>
-		   <label>Name :</label>
-		   <input type="text" id="name" placeholder="First Last" name="name" />
-		 </p>
-		 <p>
-		   <label>Id : </label>
-		   <input type="text" id="id" placehold="4-digit" name="id" />
-		 </p>
-		 <button class="btn" type="submit" name="button" value="Register">Register</button>
-	       </form>
-	       ' data-placement="right" data-original-title="Register">Register</a>
+{% if not registered %}
+<a href="#" class="btn" id="register" data-toggle="modal">Register</a>
+<div id="register" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
+<div class="modal-body">
+  <form id="registration" name="registration" method="POST" action="register">
+    <!-- NEED TO CONTINUE POPOVER FOR REGISTRATION: username, password, verify password, schedule, osis -->
+    <p>
+      <label>Username :</label>
+      <input type="text" id="username" name="username" />
+    </p>
+    <p> 
+      <label>Password :</label>
+      <!-- Use tool for validation -->
+      <input type="password" id="password" name="password"/>
+    </p>
+    <p>
+      <label>Verify Password : </label>
+      <input type="password" id="verpassword" name="verpassword" />
+    </p>
+    <p>
+      <label>Name :</label>
+      <input type="text" id="name" placeholder="First Last" name="name" />
+    </p>
+    <p>
+      <label>Id : </label>
+      <input type="text" id="digit" placeholder="4-digit" name="digit" />
+    </p>
+    <p>
+      <label>Osis : </label>
+      <input type="text" id="osis" placeholder="9-digit" name="osis" />
+    </p>
+    
+    <button class="btn" type="submit" name="button" value="Register">Register</button>
+  </form>
+</div>
+</div>
 	    {% endif %}
 	  </div>
 	  <div class="span8 offset2">
@@ -91,7 +112,7 @@
 	
 	
     </body>
- 
+ <!-- Not using popover anymore
     <script type='text/javascript'>
       $(window).load(function(){
       $('#register').popover({
@@ -100,4 +121,5 @@
       })
       })
     </script>
+-->
 </html>
