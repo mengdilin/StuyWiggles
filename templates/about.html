@@ -85,7 +85,25 @@
       <label>Osis : </label>
       <input type="text" id="osis" placeholder="9-digit" name="osis" />
     </p>
-    
+    <p>
+      <label>Schedule :</label>
+      <table class="table-condensed">
+	<thead>
+	  <tr>
+	    <th>#</th>
+	    <th>Class Name</th>
+	    <th>Teacher</th>
+	</thead>
+	<tbody>
+	  {% for number in range(10) %}
+	  <tr>
+	    <td>{{ loop.index }}</td>
+	    <td><input type="text"  name="class" /></td>
+	    <td><input type="text" name="teacher" /></td>
+	  </tr>
+	  {% endfor %}
+	</tbody>
+      </table>
     <button class="btn" type="submit" name="button" value="Register">Register</button>
   </form>
 </div>
@@ -120,6 +138,15 @@
     <script type='text/javascript'>
       $('#bregister').click(function(){
       $('#register').modal()})
+    </script>
+    <script>
+      var metrics = [
+      ["#password","between:6:20","Must be 6-20 characters long please."],
+      ["#verpassword","same-as:#password","Your passwords don't match!"],
+      ["#digit","between-num:4:4","4-digit ID means 4 digits"],
+      ["#osis","between-num:9:9","Osis is 9 digits!"]
+      ];
+      $("#registration").nod(metrics);
     </script>
 
 </html>
