@@ -55,18 +55,16 @@ def register():
 
 @app.route('/profile',methods=['GET','POST'])
 def profile():
-    if not session.has_key('user'):
-        return redirect(url_for('login'))
-    elif request.method=='GET':
-        user=session['user']
-        schedule=database.get_schedule(user)
-        digit=database.get_id(user)
-        osis=database.get_osis(user)
-        return render_template("profile.html",
-                               user=user,
-                               schedule=schedule,
-                               digit=digit,
-                               osis=osis)
+
+    # if not session.has_key('user'):
+    #     return redirect(url_for('about'))
+
+    if request.method=='GET':
+        #user=session['user']
+        #schedule=database.get_schedule(user)
+        #digit=database.get_id(user)
+        #osis=database.get_osis(user)
+        return render_template("profile.html")
     elif request.method=='POST':
         if request.form['button']=='Set':
             return redirect(url_for("setschedule"))
