@@ -8,6 +8,7 @@
     <link  href="static/css/bootstrap.css" rel="stylesheet">
       <style>
 	body{padding-top:60px;padding-left:40px}
+	.requests{padding-left:40px}
       </style>
   </head>
 
@@ -41,8 +42,9 @@
   <div class="span8">
     <h3>Name: {{name}}</h3>
     <h3>Osis: {{osis}}</h3>
-    <h3>Id: {{id}}</h3>
-    <table class="table table-condensed">
+    <h3>Id: {{digits}}</h3>
+    <div class="span7">
+    <table class="table table-condensed table-hover">
       <thead>
 	<tr>
 	  <th>Period</th>
@@ -50,11 +52,45 @@
 	  <th>Teacher</th>
 	</tr>
       </thead>
+      <tbody>
+	{% for data in schedule %}
+	<tr>
+	  <th>{{loop.index}}</th>
+	  <th>{{data[0]}}</th>
+	  <th>{{data[1]}}</th>
+	</tr>
+	{% endfor %}
+      </tbody>
     </table>
+    </div>
+
   </div>
   <div class="span4">
     <div class="well">
-      <h3>Notifications:</h3>
+      <h2>Notifications:</h2>
+      <h3>Request Received:</h3>
+
+      {% for item in received %}  
+      <ul><h4>From {{item}}:</h4></ul>
+      <div class="requests">
+      {% for data in received[item] %}
+      <li><h5>{{data}}</h5></li>
+      {% endfor %}
+      </div>
+      {% endfor %}
+ 
+      <h3>Request Sent:</h3>
+      {% for item in sent %}  
+      <ul><h4>To {{item}}:</h4></ul>
+      <div class="requests">
+      {% for data in sent[item] %}
+      <li><h5>{{data}}</h5></li>
+      {% endfor %}
+      </div>
+      {% endfor %}
+
+
+
     </div>
   </div>
 </div>
