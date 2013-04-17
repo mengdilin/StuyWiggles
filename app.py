@@ -14,9 +14,10 @@ def index():
 @app.route('/logout')
 def logout():
     session.pop()
-    return redirect(url_for('index'))
+    return redirect(url_for('about'))
 
-#works
+#works 
+#logout does not work
 @app.route('/about',methods=['GET','POST'])
 def about():
     if request.method=='GET':
@@ -25,7 +26,7 @@ def about():
         if request.form['button']=='Login':
             username=request.form['username']
             password=request.form['password']
-            if not username in database.get_usernames():
+            if username not in database.get_usernames():
                 return render_template("about.html",loggedout=True,registered=False)
             if database.validate(username,password):
                 session["user"]=username
