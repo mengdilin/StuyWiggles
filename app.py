@@ -16,6 +16,7 @@ def logout():
     session.pop()
     return redirect(url_for('index'))
 
+#works
 @app.route('/about',methods=['GET','POST'])
 def about():
     if request.method=='GET':
@@ -26,9 +27,10 @@ def about():
             password=request.form['password']
             if not username in database.get_usernames():
                 return render_template("about.html",loggedout=True,registered=False)
-            session['user']=username
-            return render_template("profile.html",username=username,password=password)
-            
+            if database.validate(username,password):
+                session["user"]=username
+                return redirect(url_for("profile"))
+
 
 @app.route('/register',methods=['GET','POST'])
 def register():
@@ -53,6 +55,7 @@ def register():
                                    exist=exist)
     return redirect(url_for(register))
 
+#works
 @app.route('/profile',methods=['GET','POST'])
 def profile():
 
@@ -60,11 +63,20 @@ def profile():
     #     return redirect(url_for('about'))
 
     if request.method=='GET':
-        #user=session['user']
-        #schedule=database.get_schedule(user)
-        #digit=database.get_id(user)
-        #osis=database.get_osis(user)
-        return render_template("profile.html")
+        username=session['user']
+        name=database.get_name(username)
+        osis=database.get_osis(username)
+        digits=database.get_id(username)
+        schedule=database.get_schedule(username)
+        req=database.get_request(username)
+            
+        return render_template("profile.html"
+                               ,name=name
+                               ,osis=osis
+                               ,digits=digits
+                               ,schedule=schedule
+                               ,received=req["received"]
+                               ,sent=req["sent"])
     elif request.method=='POST':
         if request.form['button']=='Set':
             return redirect(url_for("setschedule"))

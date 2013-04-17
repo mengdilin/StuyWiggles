@@ -8,9 +8,9 @@ students=db.students
 
 def add_student(username,password):
     db=Connection["StuyWiggles"]
-    if not username in get_usernames():
+    if username not in get_usernames():
         #need to test this
-        student={"username":str(username),"password":str(password),"schedule":[], "osis":0,"id":0,"request":{"sent":{},"received":{}},"first name":"","last name":""}
+        student={"username":str(username),"password":str(password),"schedule":[], "osis":0,"id":0,"request":{"sent":{},"received":{},"approved":{},"declined":{}},"first name":"","last name":""}
         students.insert(student)
         return False
     else:
@@ -52,17 +52,62 @@ def request(sendername,receivername,request):
     dbupdate(sendername,sender_user)
     dbupdate(receivername,receiver_user)
 
+#approve requests received by username1
+#add request to the approve dict for both users
+#remove request from dict for both users
+def approve(username1,username2,request):
+    db=Connection["StuyWiggles"]
+    user1=find_student(username1)
+    user2=find_student(username2)
+    user1["request"]["approved"].append(request)
+    user2["request"]["approved"].append(request)
+    user1["request"]["received"][username2]=[data for data in user1["request"]["received"][username2] if str(data)!=str(request)]
+    user2["request"]["sent"][username1]=[data for data in user2["request"]["sent"][username1] if str(data)!=str(request)]
+    dbupdate(username1,user1)
+    dbupdate(username2,user2)
+
+#decline requests received by username1
+#add request to the declined dict for both users
+def decline(username1,username2,request):
+    db=Connection["StuyWiggles"]
+    user1=find_student(username1)
+    user2=find_student(username2)
+    user1["request"]["declined"].append(request)
+    user2["request"]["declined"].append(request)
+    dbupdate(username1,user1)
+    dbupdate(username2,user2)
+
+
+def get_request(username):
+    db=Connection["StuyWiggles"]
+    user=find_student(username)
+    return user["request"]
+
+#check if username matches with password
+def validate(username,password):
+    if username not in get_usernames():
+        return False
+    user=find_student(username)
+    if user["password"]!=password:
+        return False
+    return True
+
+#check if username is already taken
+#if user already taken, returns False
 def validate_user(username):
     if str(username) in get_usernames():
         return False
     return True
 
+#check if password has more than 6 characters
+#if no, returns False
 def validate_password(password):
     password=str(password)
     if len(password)<6:
         return False
     return True
 
+#check if the two passwords match 
 def match_password(p1,p2):
     if str(p1)!=str(p2):
         return False
@@ -182,9 +227,23 @@ set_lastname(username1,last1)
 set_id(username1,digits1)
 set_osis(username1,osis1)
 set_schedule(username1,schedule1)
+
+request_georgi="I want more and more and more of YOUR classes!!"
+#request(username2,username1,request_georgi)
+
+
+ss=find_student(username2)
+ss["request"]["approved"]=[]
+ss["request"]["declined"]=[]
+dbupdate(username2,ss)
+aa=find_student(username1)
+aa["request"]["approved"]=[]
+aa["request"]["declined"]=[]
+dbupdate(username1,aa)
+approve(username1,username2,request_georgi)
+
 '''
 
-request_georgi="I want mengdi's class"
-request(username2,username1,request_georgi)
 print find_student(username2)
-print find_student(username1)
+
+
