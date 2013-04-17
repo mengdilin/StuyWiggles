@@ -6,14 +6,11 @@ res=db.authenticate('ml7','ml7')
 db=Connection["StuyWiggles"]
 students=db.students
 
-#default setting: 
-#username: Osis
-#password: 4 digit ID
 def add_student(username,password):
     db=Connection["StuyWiggles"]
     if not username in get_usernames():
         #need to test this
-        student={"username":str(username),"password":str(password),"schedule":[], "osis":0,"id":0}
+        student={"username":str(username),"password":str(password),"schedule":[], "osis":0,"id":0,"request":{"sent":{},"received":{}},"first name":"","last name":""}
         students.insert(student)
         return False
     else:
@@ -41,7 +38,6 @@ def set_schedule(username,schedule):
     student["schedule"]=schedule
     students.update({"username":str(username)},student)
     
-#need to be tested
 def get_schedule(username):
     db=Connection["StuyWiggles"]
     student=find_student(username)
