@@ -13,7 +13,7 @@ def index():
 
 @app.route('/logout')
 def logout():
-    session.pop()
+    session.pop('user')
     return redirect(url_for('index'))
 
 @app.route('/about',methods=['GET','POST'])
