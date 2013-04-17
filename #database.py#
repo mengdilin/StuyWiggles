@@ -182,9 +182,8 @@ set_lastname(username1,last1)
 set_id(username1,digits1)
 set_osis(username1,osis1)
 set_schedule(username1,schedule1)
-'''
-
 request_georgi="I want mengdi's class"
 request(username2,username1,request_georgi)
+'''
 print find_student(username2)
 print find_student(username1)
