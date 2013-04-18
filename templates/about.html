@@ -21,7 +21,7 @@
 	      <!--	    <span class="icon-bar"></span>
 			    <span class="icon-bar"></span> -->
 	    </a>
-	    <a class="brand" href="/profile">Stuy Wiggles</a>
+	    <a class="brand" href="/">Stuy Wiggles</a>
 	    <div class="nav-collapse navbar-responsive-collapse in collapse">
 	      <ul class="nav">
 		<li class="active">
@@ -59,7 +59,6 @@
 </div>
 <div class="modal-body">
   <form id="registration" name="registration" method="POST" action="register">
-    <!-- NEED TO CONTINUE POPOVER FOR REGISTRATION: username, password, verify password, schedule, osis -->
     <p>
       <label>Username :</label>
       <input type="text" id="username" name="username" />
@@ -130,23 +129,24 @@
       <script>window.jQuery || document.write('<script src="static/js/jquery-1.7.2.min.js"><\/script>')</script>
 	
 	<script src="static/js/bootstrap.min.js"></script>
+	<script src="static/js/nod.js"></script>
 	
 	
 	
     </body>
 
-    <script type='text/javascript'>
+    <script language="javascript" type="text/javascript">
       $('#bregister').click(function(){
       $('#register').modal()})
-    </script>
-    <script>
+      $("#register").on("shown", function(){
       var metrics = [
       ["#password","between:6:20","Must be 6-20 characters long please."],
       ["#verpassword","same-as:#password","Your passwords don't match!"],
-      ["#digit","between-num:4:4","4-digit ID means 4 digits"],
-      ["#osis","between-num:9:9","Osis is 9 digits!"]
+      ["#digit","exact-length:4","4-digit ID means 4 digits"],
+      ["#osis","exact-length:9","Osis is 9 digits!"]
       ];
-      $("#registration").nod(metrics);
+      $("#register").nod(metrics);
+      });
     </script>
 
 </html>
