@@ -43,17 +43,18 @@ def register():
         if request.form['button']=='Register':
             username=request.form['username']
             password=request.form['password']
-            invalid = (username==password)
             osis=request.form['osis']
             digit=request.form['digit']
-            exist=database.add_student(username,password,osis,digit)
-            return render_template("register.html",
-                                   username=username,
-                                   password=password,
-                                   invalid=invalid,
-                                   osis=osis,
-                                   digit=digit,
-                                   exist=exist)
+            #classes=request.form.getlist['class'] 
+            #teachers=request.form.getlist['teachers']
+            name=request.form['name']
+            exist=database.add_student(username,password)
+            if exist:
+                return render_template("register.html",exist=exist)
+            database.set_osis(username,osis)
+            database.set_id(username,digit)
+            database.set_name(username,name)
+            return redirect(url_for(profile))
     return redirect(url_for(register))
 
 #works
