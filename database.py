@@ -8,9 +8,9 @@ students=db.students
 
 def add_student(username,password):
     db=Connection["StuyWiggles"]
-    if username not in get_usernames():
+    if (username not in get_usernames()) and validate_password(password):
         #need to test this
-        student={"username":str(username),"password":str(password),"schedule":[], "osis":0,"id":0,"request":{"sent":{},"received":{},"approved":{},"declined":{}},"first name":"","last name":""}
+        student={"username":str(username),"password":str(password),"schedule":[], "osis":0,"id":0,"posted request":[],"notification":[],"first name":"","last name":""}
         students.insert(student)
         return False
     else:
@@ -34,6 +34,21 @@ def get_name(username):
     name=user["first name"]+" "+user["last name"]
     return name
 
+#Incomeplete!!
+#request needs to add to trading floor collection
+def post_req(username,request):
+    db=Connection["StuyWiggles"]
+    user=find_student(username)
+    user["posted request"].append(request)
+    notif="You just requested "+request
+    user["notification"].append(notif)
+    dbupdate(username,user)
+
+def get_notification(username):
+    db=Connection["StuyWiggles"]
+    user=find_student(username)
+    return user["notification"]
+'''
 #sender:a username
 #receiver: a username
 #request:a request message in string
@@ -77,12 +92,13 @@ def decline(username1,username2,request):
     dbupdate(username1,user1)
     dbupdate(username2,user2)
 
-
+'''
 def get_request(username):
     db=Connection["StuyWiggles"]
     user=find_student(username)
-    return user["request"]
+    return user["posted request"]
 
+#THIS IS FOR APP.PY!!
 #check if username matches with password
 def validate(username,password):
     if username not in get_usernames():
@@ -242,8 +258,8 @@ aa["request"]["declined"]=[]
 dbupdate(username1,aa)
 approve(username1,username2,request_georgi)
 
-'''
 
 print find_student(username2)
+'''
 
 
