@@ -146,9 +146,14 @@
       ["#digit","exact-length:4","4-digit ID means 4 digits"],
       ["#osis","exact-length:9","Osis is 9 digits!"]
       ];
-      $("#register").nod(metrics);
+      
+      var options = {
+      'groupClass':'warning',
+      };
 
+      $("#register").nod(metrics,options);
 
+      
 
      // });
     </script>
