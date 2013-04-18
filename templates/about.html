@@ -138,7 +138,8 @@
     <script language="javascript" type="text/javascript">
       $('#bregister').click(function(){
       $('#register').modal()})
-      $("#register").on("shown", function(){
+
+     // $("#register").on("shown", function(){
       var metrics = [
       ["#password","between:6:20","Must be 6-20 characters long please."],
       ["#verpassword","same-as:#password","Your passwords don't match!"],
@@ -146,7 +147,10 @@
       ["#osis","exact-length:9","Osis is 9 digits!"]
       ];
       $("#register").nod(metrics);
-      });
+
+
+
+     // });
     </script>
 
 </html>
