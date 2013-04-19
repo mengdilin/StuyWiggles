@@ -68,11 +68,32 @@
   <div class="span4">
     <div class="well">
       <h2>Notifications:</h2>
+      <h3>Your Posts</h3>
       <ul>
-      {% for item in notif %}  
-      <li><h4>{{item}}</h4></li>
+      {% for item in post %}
+      <li><h4>You requested class:{{item[1]}} with teacher {{item[2]}} in period {{item[0]}}</h4></li>
       {% endfor %}
       </ul>
+
+      <h3>Request Acceptance From Others</h3>
+      {% for item in accepted %}  
++      <ul><h4>From {{item}}:</h4></ul>
++      <div class="requests">
++      {% for data in accepted[item] %}
++      <li><h5>{{data}}</h5></li>
++      {% endfor %}
++      </div>
++      {% endfor %}
++ 
++      <h3>Requests You Have Accepted:</h3>
++      {% for item in accept %}  
++      <ul><h4>To {{item}}:</h4></ul>
++      <div class="requests">
++      {% for data in accept[item] %}
++      <li><h5>{{data}}</h5></li>
++      {% endfor %}
++      </div>
++      {% endfor %}
 
 
 
