@@ -40,14 +40,13 @@ def register():
     elif request.method=='GET':
         return render_template("register.html",loggedout=True)
     elif request.method=='POST':
-        if request.form.get("button"):
+        if request.form.get("button")=="bregister":
+            """
             return "post"
         else:
             return "not"
             """
             username=request.form['nusername']
-            return username
-
             password=request.form['password']
             osis=request.form['osis']
             digit=request.form['digit']
