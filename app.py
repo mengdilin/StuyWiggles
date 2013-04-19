@@ -27,7 +27,7 @@ def about():
             username=request.form['username']
             password=request.form['password']
             if username not in database.get_usernames():
-                return render_template("about.html",loggedout=True,registered=False)
+                return render_template("register.html",loggedout=True)
             if database.validate(username,password):
                 session["user"]=username
                 return redirect(url_for("profile"))
@@ -38,25 +38,31 @@ def register():
     if session.has_key('user'):
         return redirect(url_for('logout'))
     elif request.method=='GET':
-        return render_template("about.html",loggedout=True,registered=False)
+        return render_template("register.html",loggedout=True)
     elif request.method=='POST':
-        if request.form['button']=='Register':
-            username=request.form['username']
+        if request.form.get("button")=="bregister":
+            """
+            return "post"
+        else:
+            return "not"
+            """
+            username=request.form['nusername']
             password=request.form['password']
             osis=request.form['osis']
             digit=request.form['digit']
             #classes=request.form.getlist['class'] 
             #teachers=request.form.getlist['teachers']
             name=request.form['name']
-            exist=database.add_student(username,password)
-            if exist:
-                return render_template("register.html",exist=exist)
+            exists=database.add_student(username,password)
+            if exists:
+                return render_template("register.html",exists=exists)
             database.set_osis(username,osis)
             database.set_id(username,digit)
             database.set_name(username,name)
             return redirect(url_for(profile))
-    return redirect(url_for(register))
 
+    return redirect(url_for(register))
+"""
 #works
 @app.route('/profile',methods=['GET','POST'])
 def profile():
