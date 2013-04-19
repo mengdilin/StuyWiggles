@@ -6,11 +6,13 @@ res=db.authenticate('ml7','ml7')
 db=Connection["StuyWiggles"]
 students=db.students
 
+#accept: when user accepts other people's requests
+#accepted: when other people accept user's requests
 def add_student(username,password):
     db=Connection["StuyWiggles"]
     if (username not in get_usernames()) and validate_password(password):
         #need to test this
-        student={"username":str(username),"password":str(password),"schedule":[], "osis":0,"id":0,"posted request":[],"notification":[],"name":""}
+        student={"username":str(username),"password":str(password),"schedule":[], "osis":0,"id":0,"posted request":[],"notification":{"post":[],"accept":{},"accepted":{}},"name":""}
         students.insert(student)
         return False
     else:
@@ -30,18 +32,37 @@ def get_name(username):
 
 #Incomeplete!!
 #request needs to add to trading floor collection
-def post_req(username,request):
+#request: [period, class, teacher]
+def post_request(username,request):
     db=Connection["StuyWiggles"]
     user=find_student(username)
     user["posted request"].append(request)
-    notif="You just requested "+request
-    user["notification"].append(notif)
+    user["notification"]["post"].append(request)
     dbupdate(username,user)
 
 def get_notification(username):
     db=Connection["StuyWiggles"]
     user=find_student(username)
     return user["notification"]
+
+def accept_request(postername,acceptername,request):
+    db=Connection["StuyWiggles"]
+    poster=find_student(postername)
+    accepter=find_student(acceptername)
+    poster["posted request"]=remove_item(poster["posted request"],request)
+    if postername not in accepter["notification"]["accept"].keys():
+        accepter["notification"]["accept"][postername]=[]
+    if acceptername not in poster["notification"]["accepted"].keys():
+        poster["notification"]["accepted"][acceptername]=[]
+    accepter["notification"]["accept"][postername].append(request)
+    poster["notification"]["accepted"][acceptername].append(request)
+    dbupdate(postername,poster)
+    dbupdate(acceptername,accepter)
+
+def remove_item(l,x):
+    l=[item for item in l if item!=x]
+    return l
+
 '''
 #sender:a username
 #receiver: a username
@@ -141,6 +162,16 @@ def dbupdate(username,user):
     db=Connection["StuyWiggles"]
     students.update({"username":username},user)
 
+
+def set_schedule(username,clas,teacher):
+    db=Connection["StuyWiggles"]
+    student=find_student(username)
+    l=[]
+    l=[[clas[i],teacher[i]] for i in range(len(clas))]
+    student["schedule"]=l
+    dbupdate(username,student)
+
+'''
 #format for parameter schedule:
 #A list length of 10 which contains 10 lists: [list 1, list 2, list 3, ..., list 10]
 #for each list within the big list: ["class","teacher"]
@@ -149,7 +180,8 @@ def set_schedule(username,schedule):
     student=find_student(username)
     student["schedule"]=schedule
     students.update({"username":str(username)},student)
-    
+
+'''
 def get_schedule(username):
     db=Connection["StuyWiggles"]
     student=find_student(username)
@@ -199,10 +231,11 @@ def find_student(username):
 
 username1="mengdilin"
 password1="abcdefg"
-first1="mengdi"
-last1="lin"
+name1="mengdi lin"
 digits1="8744"
 osis1="211451265"
+teacher=["a","b","c","d","e","f","g","h","i","j"]
+class=["0","1","2","3","4","5","6","7","8","9"]
 schedule1=[["a","a1"]
           ,["b","b2"]
           ,["c","c3"]
@@ -216,8 +249,8 @@ schedule1=[["a","a1"]
 
 username2="georgiii"
 password2="abcdefg"
-first2="georgi"
-last2="huh"
+name2="georgi yang"
+
 digits2="1111"
 osis2="111111111"
 schedule2=[["A","a1"]
@@ -231,29 +264,41 @@ schedule2=[["A","a1"]
           ,["I","i9"]
           ,["J","j10"]]
 '''
+students.drop()
+
 add_student(username1,password1)
-set_firstname(username1,first1)
-set_lastname(username1,last1)
+set_name(username1,name1)
+
+
 set_id(username1,digits1)
 set_osis(username1,osis1)
-set_schedule(username1,schedule1)
-
-request_georgi="I want more and more and more of YOUR classes!!"
-#request(username2,username1,request_georgi)
+set_schedule(username1,class,teacher)
 
 
-ss=find_student(username2)
-ss["request"]["approved"]=[]
-ss["request"]["declined"]=[]
-dbupdate(username2,ss)
-aa=find_student(username1)
-aa["request"]["approved"]=[]
-aa["request"]["declined"]=[]
-dbupdate(username1,aa)
-approve(username1,username2,request_georgi)
+add_student(username2,password2)
+set_name(username2,name2)
+
+
+set_id(username2,digits2)
+set_osis(username2,osis2)
+set_schedule(username2,class,teacher)
+
+request=["cocoros","calculus bc","3"]
+#request(username2,username1,request)
+
 
 
 print find_student(username2)
+
+
+
+print find_student(username2)
+
 '''
 
+request=["3","calculus bc","cocoros"]
+#accept_request(username1,username2,request)
+#post_request(username1,request)
+#print find_student(username1)
+#print find_student(username2)
 

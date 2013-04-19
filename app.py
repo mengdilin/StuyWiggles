@@ -61,8 +61,8 @@ def register():
 @app.route('/profile',methods=['GET','POST'])
 def profile():
 
-    # if not session.has_key('user'):
-    #     return redirect(url_for('about'))
+    if not session.has_key('user'):
+        return redirect(url_for('about'))
 
     if request.method=='GET':
         username=session['user']
@@ -70,15 +70,14 @@ def profile():
         osis=database.get_osis(username)
         digits=database.get_id(username)
         schedule=database.get_schedule(username)
-        req=database.get_request(username)
+        notif=database.get_notification(username)
             
         return render_template("profile.html"
                                ,name=name
                                ,osis=osis
                                ,digits=digits
                                ,schedule=schedule
-                               ,received=req["received"]
-                               ,sent=req["sent"])
+                               ,notif=notif)
     elif request.method=='POST':
         if request.form['button']=='Set':
             return redirect(url_for("setschedule"))

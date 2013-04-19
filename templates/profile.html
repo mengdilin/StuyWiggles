@@ -68,26 +68,11 @@
   <div class="span4">
     <div class="well">
       <h2>Notifications:</h2>
-      <h3>Request Received:</h3>
-
-      {% for item in received %}  
-      <ul><h4>From {{item}}:</h4></ul>
-      <div class="requests">
-      {% for data in received[item] %}
-      <li><h5>{{data}}</h5></li>
+      <ul>
+      {% for item in notif %}  
+      <li><h4>{{item}}</h4></li>
       {% endfor %}
-      </div>
-      {% endfor %}
- 
-      <h3>Request Sent:</h3>
-      {% for item in sent %}  
-      <ul><h4>To {{item}}:</h4></ul>
-      <div class="requests">
-      {% for data in sent[item] %}
-      <li><h5>{{data}}</h5></li>
-      {% endfor %}
-      </div>
-      {% endfor %}
+      </ul>
 
 
 
