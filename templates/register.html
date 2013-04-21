@@ -28,7 +28,7 @@ body{padding-top:60px;padding-left:40px}
 		<li class="active"><a href="/register">Register</a></li>
 		{% if not loggedout %}
 		<li><a href="/profile">Profile</a></li>
-		
+		<li><a href="/tradingfloor">Trading Floor</a></li>
 		<p class="navbar-text pull-right"> <a href="/logout" class="navbar-link">Logout</p></a>
 		{% endif %}
 	      </ul>
@@ -63,7 +63,7 @@ body{padding-top:60px;padding-left:40px}
 	  <input type="text" id="name" placeholder="First Last" name="nname" />
 	</p>
 	<p>
-	  <label>Id : </label>
+	  <label class="control-label">Id : </label>
 	  <input type="text" id="digit" placeholder="4-digit" name="ndigit" />
 	</p>
 	<p>
@@ -104,24 +104,26 @@ body{padding-top:60px;padding-left:40px}
       
       
       
-      <!--
+
       
       <script language="javascript" type="text/javascript">
 	var metrics = [
 	["#password","between:6:20","Must be 6-20 characters long please."],
 	["#verpassword","same-as:#password","Your passwords don't match!"],
 	["#digit","exact-length:4","4-digit ID means 4 digits"],
+	["#digit","integer","4-digit ID means 4 digits"],
+	["#osis","integer","Osis is 9 digits!"],
 	["#osis","exact-length:9","Osis is 9 digits!"]
 	];
 	
 	var options = {
-	'groupClass':'error',
+	'groupClass':'warning',
 	'disableSubmitBtn':false,
 	};
 	
-	$("#registration").nod(metrics,options);
+	$("#registration").nod(metrics);
 	
       </script>
--->
+
   </form>      
 </html>

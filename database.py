@@ -5,6 +5,8 @@ db=Connection.admin
 res=db.authenticate('ml7','ml7')
 db=Connection["StuyWiggles"]
 students=db.students
+floor=db.floor
+
 
 #accept: when user accepts other people's requests
 #accepted: when other people accept user's requests
@@ -38,7 +40,13 @@ def post_request(username,request):
     user=find_student(username)
     user["posted request"].append(request)
     user["notification"]["post"].append(request)
+    current_schedule=get_schedule(username)
+    current_schedule=current_schedule[int(request[0])-1]
+    current_schedule.insert(0,request[0])
+    button_value=username+" "+request[0]+" "+request[1]+" "+request[2]
+    row_data={"name":get_name(username),"username":username,"request":request,"current schedule":current_schedule,"button_value":button_value}
     dbupdate(username,user)
+    floor.insert(row_data)
 
 def get_notification(username):
     db=Connection["StuyWiggles"]
@@ -56,8 +64,17 @@ def accept_request(postername,acceptername,request):
         poster["notification"]["accepted"][acceptername]=[]
     accepter["notification"]["accept"][postername].append(request)
     poster["notification"]["accepted"][acceptername].append(request)
+    accept_class=accepter["schedule"][int(request[0])]
+    post_class=poster["schedule"][int(request[0])]
+    accepter["schedule"][int(request[0])]=post_class
+    print [accepter["schedule"][int(request[0])],post_class]
+    poster["schedule"][int(request[0])]=accept_class
+    floor.remove({"name":get_name(postername),"request":request})
     dbupdate(postername,poster)
     dbupdate(acceptername,accepter)
+
+
+
 
 def remove_item(l,x):
     l=[item for item in l if item!=x]
@@ -162,6 +179,8 @@ def dbupdate(username,user):
     db=Connection["StuyWiggles"]
     students.update({"username":username},user)
 
+def floorupdate(row_data):
+    floor.insert(row_data)
 
 def set_schedule(username,clas,teacher):
     db=Connection["StuyWiggles"]
@@ -170,6 +189,12 @@ def set_schedule(username,clas,teacher):
     l=[[clas[i],teacher[i]] for i in range(len(clas))]
     student["schedule"]=l
     dbupdate(username,student)
+
+def get_floor():
+    l=[item for item in floor.find()]
+    return l
+
+
 
 '''
 #format for parameter schedule:
@@ -180,8 +205,8 @@ def set_schedule(username,schedule):
     student=find_student(username)
     student["schedule"]=schedule
     students.update({"username":str(username)},student)
-
 '''
+
 def get_schedule(username):
     db=Connection["StuyWiggles"]
     student=find_student(username)
@@ -235,7 +260,7 @@ name1="mengdi lin"
 digits1="8744"
 osis1="211451265"
 teacher=["a","b","c","d","e","f","g","h","i","j"]
-class=["0","1","2","3","4","5","6","7","8","9"]
+clas=["0","1","2","3","4","5","6","7","8","9"]
 schedule1=[["a","a1"]
           ,["b","b2"]
           ,["c","c3"]
@@ -272,7 +297,7 @@ set_name(username1,name1)
 
 set_id(username1,digits1)
 set_osis(username1,osis1)
-set_schedule(username1,class,teacher)
+set_schedule(username1,clas,teacher)
 
 
 add_student(username2,password2)
@@ -301,4 +326,15 @@ request=["3","calculus bc","cocoros"]
 #post_request(username1,request)
 #print find_student(username1)
 #print find_student(username2)
+
+
+
+#accept_request("mengdilin","georgiii",["7","Calculus","C"])
+
+#print get_floor()
+
+#print find_student("mengdilin")
+
+
+
 
