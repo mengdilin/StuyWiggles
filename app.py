@@ -16,8 +16,6 @@ def logout():
     session.pop('user')
     return redirect(url_for('about'))
 
-#works 
-#logout does not work
 @app.route('/about',methods=['GET','POST'])
 def about():
     if request.method=='GET':
@@ -27,69 +25,92 @@ def about():
             username=request.form['username']
             password=request.form['password']
             if username not in database.get_usernames():
-                return render_template("register.html",loggedout=True)
+                return render_template("about.html",loggedout=True,registered=False)
             if database.validate(username,password):
                 session["user"]=username
                 return redirect(url_for("profile"))
+        if request.form['button']=='Register':
+            return redirect(url_for("register"))
 
 
 @app.route('/register',methods=['GET','POST'])
 def register():
     if session.has_key('user'):
-        return redirect(url_for('logout'))
-    elif request.method=='GET':
-        return render_template("register.html",loggedout=True)
+        session.pop('user')
+    if request.method=="GET":
+        return render_template("register.html", loggedout=True)
     elif request.method=='POST':
-        if request.form.get("button")=="bregister":
-            """
-            return "post"
-        else:
-            return "not"
-            """
-            username=request.form['nusername']
+        if request.form['button']=='Register':
+            username=request.form['username']
             password=request.form['password']
             osis=request.form['osis']
             digit=request.form['digit']
-            #classes=request.form.getlist['class'] 
-            #teachers=request.form.getlist['teachers']
+            classes=request.form.getlist['class'] 
+            teachers=request.form.getlist['teachers']
             name=request.form['name']
-            exists=database.add_student(username,password)
-            if exists:
-                return render_template("register.html",exists=exists)
+            exist=database.add_student(username,password)
+            if exist:
+                return render_template("register.html",loggedout=True,exist=exist)
             database.set_osis(username,osis)
             database.set_id(username,digit)
             database.set_name(username,name)
-            return redirect(url_for(profile))
+            database.set_schedule(username,classes,teachers)
+            return redirect(url_for("profile"))
+    return redirect(url_for("register"))
 
-    return redirect(url_for(register))
-"""
-#works
+@app.route("/tradingfloor",methods=['GET','POST'])
+def tradingfloor():
+    if not session.has_key('user'):
+        return redirect(url_for("about"))
+    username=session['user']
+    name=database.get_name(username)
+    osis=database.get_osis(username)
+    digits=database.get_id(username)
+    floor=database.get_floor()
+    if request.method=='GET':
+        return render_template("trading.html"
+                               ,name=name
+                               ,osis=osis
+                               ,digits=digits
+                               ,floor=floor)
+    if request.method=='POST':
+        if request.form['button']=='posts':
+            clas=request.form['clas']
+            period=request.form['period']
+            teacher=request.form['teacher']
+            req=[str(period),str(clas),str(teacher)]
+            database.post_request(username,req)
+            return redirect(url_for("tradingfloor"))
+        else:
+            index=int(request.form['button'])-1
+            req=floor[index]["request"]
+            postername=floor[index]["username"]
+            acceptername=username
+            database.accept_request(postername,acceptername,req)
+            return redirect(url_for("tradingfloor"))
+
+
 @app.route('/profile',methods=['GET','POST'])
 def profile():
 
-    # if not session.has_key('user'):
-    #     return redirect(url_for('about'))
-
-    if request.method=='GET':
-        username=session['user']
-        name=database.get_name(username)
-        osis=database.get_osis(username)
-        digits=database.get_id(username)
-        schedule=database.get_schedule(username)
-        req=database.get_request(username)
-            
+    if not session.has_key('user'):
+        return redirect(url_for('about'))
+    username=session['user']
+    name=database.get_name(username)
+    osis=database.get_osis(username)
+    digits=database.get_id(username)
+    schedule=database.get_schedule(username)
+    notif=database.get_notification(username)
+    if request.method=='GET':        
         return render_template("profile.html"
                                ,name=name
                                ,osis=osis
                                ,digits=digits
                                ,schedule=schedule
-                               ,received=req["received"]
-                               ,sent=req["sent"])
-    elif request.method=='POST':
-        if request.form['button']=='Set':
-            return redirect(url_for("setschedule"))
-    return redirect(url_for(profile))
-
+                               ,post=notif["post"]
+                               ,accept=notif["accept"]
+                               ,accepted=notif["accepted"]
+                               )
 if __name__=="__main__":
     app.debug=True
     app.run(port=7007)

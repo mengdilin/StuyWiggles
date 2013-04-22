@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Stuy Wiggles</title>
-
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     <link href="static/css/bootstrap-responsive.css" rel="stylsheet">
     <link  href="static/css/bootstrap.css" rel="stylesheet">
@@ -26,10 +26,11 @@
 	<a class="brand" href="/profile">Stuy Wiggles</a>
 	<div class="nav-collapse navbar-responsive-collapse in collapse">
 	  <ul class="nav">
-	    <li class="active">
+	    <li>
 	      <a href="/about">About</a>
 	    </li>
-	  <li><a href="/profile">Profile</a></li>
+	  <li class="active"><a href="/profile">Profile</a></li>
+	  <li><a href="/tradingfloor">Trading Floor</a></li>
 	  <p class="navbar-text pull-right"> <a href="/logout" class="navbar-link">Logout</p></a>
 	  </ul>
 	</div> <!-- /.nav-collapse --> 
@@ -38,6 +39,7 @@
   </div>
 
 <div class="container-fluid">
+<form action="profile" method="POST" class="form-inline">
 <div class="row-fluid">
   <div class="span8">
     <h3>Name: {{name}}</h3>
@@ -50,14 +52,18 @@
 	  <th>Period</th>
 	  <th>Class</th>
 	  <th>Teacher</th>
+
 	</tr>
       </thead>
       <tbody>
 	{% for data in schedule %}
 	<tr>
-	  <th>{{loop.index}}</th>
-	  <th>{{data[0]}}</th>
-	  <th>{{data[1]}}</th>
+
+	  <td>{{loop.index}}</td>
+	  <td>{{data[0]}}</td>
+	  <td>{{data[1]}}</td>
+
+
 	</tr>
 	{% endfor %}
       </tbody>
@@ -68,23 +74,29 @@
   <div class="span4">
     <div class="well">
       <h2>Notifications:</h2>
-      <h3>Request Received:</h3>
+      <h3>Your Posts</h3>
+      <ul>
+      {% for item in post %}
+      <li><h5>You requested class:{{item[1]}} with teacher {{item[2]}} in period {{item[0]}}</h5></li>
+      {% endfor %}
+      </ul>
 
-      {% for item in received %}  
-      <ul><h4>From {{item}}:</h4></ul>
+      <h3>Request Acceptance From Others</h3>
+      {% for item in accepted %}  
+      <ul><h4>{{item}} accepted your request:</h4></ul>
       <div class="requests">
-      {% for data in received[item] %}
-      <li><h5>{{data}}</h5></li>
+      {% for data in accepted[item] %}
+      <li><h5>{{data[1]}} with teacher {{data[2]}} and period {{data[0]}}</h5></li>
       {% endfor %}
       </div>
       {% endfor %}
  
-      <h3>Request Sent:</h3>
-      {% for item in sent %}  
-      <ul><h4>To {{item}}:</h4></ul>
+      <h3>Requests You Have Accepted:</h3>
+      {% for item in accept %}  
+      <ul><h4>You have accepted {{item}}'s request:</h4></ul>
       <div class="requests">
-      {% for data in sent[item] %}
-      <li><h5>{{data}}</h5></li>
+      {% for data in accept[item] %}
+      <li><h5>{{data[1]}} with teacher {{data[2]}} and period {{data[0]}}</h5></li>
       {% endfor %}
       </div>
       {% endfor %}
@@ -94,6 +106,7 @@
     </div>
   </div>
 </div>
+</form>
 </div>
   
 

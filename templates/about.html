@@ -30,7 +30,7 @@
 		<li><a href="/register">Register</a></li>
 	      {% if not loggedout %}
 	      <li><a href="/profile">Profile</a></li>
-	      
+	      <li><a href="/tradingfloor">Trading Floor</a></li>
 	      <p class="navbar-text pull-right"> <a href="/logout" class="navbar-link">Logout</p></a>
 	      {% endif %}
 	      </ul>
@@ -48,10 +48,11 @@
 	    <label class="control-label" for="lpassword">Password</label>
 	    <input type="password" name="password" placeholder="Password"></input>
 	    <button class="btn" type="submit" name="button" value="Login">Login</button>
+	    <button class="btn" type="submit" name="button" value="Register">Register</button>
 	    <br> 
 	    
 </br>
-<a href="/register" role="button" class="btn" id="register">Register</a>
+<!--<a href="/register" role="button" class="btn" id="register">Register</a>-->
 <!--
 {% if not registered %}
 <a href="#" role="button" class="btn" id="bregister" data-toggle="modal">Register</a>
