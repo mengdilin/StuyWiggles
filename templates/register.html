@@ -7,7 +7,20 @@
       <link href="static/css/bootstrap-responsive.css" rel="stylsheet">
       <link href="static/css/bootstrap.css" rel="stylesheet">
       <style>
-body{padding-top:60px;padding-left:40px}
+	body{padding-top:60px;padding-left:40px}
+	label.valid{
+	width: 24px;
+	height: 24px;
+	background: url(static/img/valid.png) center center nc-repeat;
+	display:inline-block
+	text-indent: -9999px;
+	}
+	label.error {
+	font-weight: bold;
+	color:red;
+	padding:2px 8px;
+	margin-top: 2px;
+	}
       </style>
     </head>
     
@@ -45,67 +58,124 @@ body{padding-top:60px;padding-left:40px}
 	  <h3>Invalid username! Please choose another.</h3>
 	</div>
 	{% endif %}
-	<p>
-	  <label>Username :</label>
-	  <input type="text" id="username" name="nusername" />
-	</p>
-	<p>
+	<div class="control-group">
+	  <label class="control-label" for="username">Username :</label>
+	  <div class="controls">
+	    <input type="text" id="username" name="username" />
+	  </div>
+	</div>
+	<div class="control-group">
 	  <label>Password :</label>
 	  <!-- Use tool for validation -->
-	  <input type="password" id="password" name="npassword"/>
-	</p>
-	<p>
+	  <div class="controls">
+	    <input type="password" id="password" name="password"/>
+	  </div>
+	</div>
+	<div class="control-group">
 	  <label>Verify Password : </label>
-	  <input type="password" id="verpassword" name="nverpassword" />
-	</p>
-	<p>
+	  <div class="controls">
+	    <input type="password" id="verpassword" name="verpassword" />
+	  </div>
+	</div>
+	<div class="control-group">
 	  <label>Name :</label>
-	  <input type="text" id="name" placeholder="First Last" name="nname" />
-	</p>
-	<p>
+	  <div class="controls">
+	    <input type="text" id="name" placeholder="First Last" name="name" />
+	  </div>
+	</div>
+	<div class="control-group">
 	  <label>Id : </label>
-	  <input type="text" id="digit" placeholder="4-digit" name="ndigit" />
-	</p>
-	<p>
+	  <div class="controls">
+	    <input type="text" id="digit" placeholder="4-digit" name="digit" />
+	  </div>
+	</div>
+	<div class="control-group">
 	  <label>Osis : </label>
-	  <input type="text" id="osis" placeholder="9-digit" name="nosis" />
-	</p>
-	<p>
-	  <label>Schedule :</label>
-	  <table class="table-condensed">
-	    <thead>
-	      <tr>
-		<th>#</th>
-		<th>Class Name</th>
-		<th>Teacher</th>
-	    </thead>
-	    <tbody>
-	      {% for number in range(10) %}
-	      <tr>
-		<td>{{ loop.index }}</td>
-		<td><input type="text" name="nclass" /></td>
-		<td><input type="text" name="nteacher" /></td>
-	      </tr>
-	      {% endfor %}
-	    </tbody>
-	  </table>
-	</p>
+	  <div class="controls">
+	    <input type="text" id="osis" placeholder="9-digit" name="osis" />
+	  </div>
+	</div>
+	<label>Schedule :</label>
+	<table class="table-condensed">
+	  <thead>
+	    <tr>
+	      <th>#</th>
+	      <th>Class Name</th>
+	      <th>Teacher</th>
+	  </thead>
+	  <tbody>
+	    {% for number in range(10) %}
+	    <tr>
+	      <td>{{ loop.index }}</td>
+	      <td><input type="text" name="class" /></td>
+	      <td><input type="text" name="teacher" /></td>
+	    </tr>
+	    {% endfor %}
+	  </tbody>
+	</table>
+	
 	<button class="btn" type="submit" name="button" value="bregister">Register</button>
       </div>
-      
-      
-    </body>
-    
+
+
+</body>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="static/js/jquery-1.7.2.min.js"><\/script>')</script>
       
       <script src="static/js/bootstrap.min.js"></script>
-      <script src="static/js/nod.js"></script>
+      <script src="static/js/jquery-1.7.2.min.js"></script>
+      <script src="static/js/jquery.validate.min.js"></script>
       
+      <script>
+	$(document).ready(function(){
+	$("#registration").validate(
+	{
+	rules: {
+	username: {
+	minlength: 2,
+	required: true
+	},
+	password:{
+	minlength: 6,
+	maxlength: 12,
+	required: true
+	},
+	vpassword:{
+	equalTo: "#password",
+	required: true
+	},
+	name: {
+	minlength: 2,
+	required: true
+	},
+	digit: {
+	minlength: 4,
+	maxlength: 4,
+	required: true
+	},
+	osis: {
+	minlength: 9,
+	maxlength: 9,
+	required: true
+	}
+	},
+	highlight: function(element){
+	$(element).closest('.control-group').removeClass('success').addClass('error');
+	},
+	success: function(element) {
+	element
+	.text('').addClass('valid')
+	.closest('.control-group').removeClass('error').addClass('success');
+	}
+	});
+	});
+      </script>
       
+	
       
       <!--
-      
+      Nod Validation runs conflict with Flask
       <script language="javascript" type="text/javascript">
 	var metrics = [
 	["#password","between:6:20","Must be 6-20 characters long please."],
