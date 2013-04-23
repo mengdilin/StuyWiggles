@@ -70,25 +70,25 @@
 	<div class="control-group">
 	  <label class="control-label" for="name">Change Name :</label>
 	  <div class="controls">
-	    <input type="text" id="name" placeholder="First Last" name="name" value={{name}}/>
+	    <input type="text" id="name" placeholder="First Last" name="name" value="{{name}}"/>
 	  </div>
 	</div>
 	<div class="control-group">
 	  <label class="control-label" for="email">Change Email :</label>
 	  <div class="controls">
-	    <input type="text" id="email" name="email" value={{email}}/>
+	    <input type="text" id="email" name="email" value="{{email}}"/>
 	  </div>
 	</div>
 	<div class="control-group">
 	  <label class="control-label" for="digit">Change Id : </label>
 	  <div class="controls">
-	    <input type="text" id="digit" placeholder="4-digit" name="digit" value={{digit}}/>
+	    <input type="text" id="digit" placeholder="4-digit" name="digit" value="{{digit}}"/>
 	  </div>
 	</div>
 	<div class="control-group">
 	  <label class="control-label" for="osis">Change Osis : </label>
 	  <div class="controls">
-	    <input type="text" id="osis" placeholder="9-digit" name="osis" value={{osis}}/>
+	    <input type="text" id="osis" placeholder="9-digit" name="osis" value="{{osis}}"/>
 	  </div>
 	</div>
 		<label>Change Schedule :</label>
@@ -105,8 +105,8 @@
 	      <td>{{ loop.index }}</td>
 	      {% for c in class %}
 	      {% for t in teacher %}
-	      <td><input type="text" name="class" value={{c}}/></td>
-	      <td><input type="text" name="teacher" value={{t}}/></td>
+	      <td><input type="text" name="class" value="{{c}}"/></td>
+	      <td><input type="text" name="teacher" value="{{t}}"/></td>
 	      {% endfor %}
 	      {% endfor %}
 	    </tr>
