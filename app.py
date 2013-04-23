@@ -45,12 +45,12 @@ def register():
             password=request.form['password']
             osis=request.form['osis']
             digit=request.form['digit']
-            classes=request.form.getlist['class'] 
-            teachers=request.form.getlist['teachers']
+            classes=request.form.getlist('class') 
+            teachers=request.form.getlist('teacher')
             name=request.form['name']
             exist=database.add_student(username,password)
             if exist:
-                return render_template("register.html",loggedout=True,exist=exist)
+                return render_template("register.html",loggedout=True,exists=exist)
             database.set_osis(username,osis)
             database.set_id(username,digit)
             database.set_name(username,name)
@@ -92,7 +92,6 @@ def tradingfloor():
 
 @app.route('/profile',methods=['GET','POST'])
 def profile():
-
     if not session.has_key('user'):
         return redirect(url_for('about'))
     username=session['user']

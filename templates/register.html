@@ -10,9 +10,9 @@
 	body{padding-top:60px;padding-left:40px}
 	label.valid{
 	width: 24px;
-	height: 24px;
-<!--	background: url(static/img/valid.png) center center no-repeat;
-	display: inline-block -->
+	height: 12px; 
+	background: url(static/img/valid3.png) center center no-repeat;
+	display: inline-block
 	}
 	label.error {
 	font-weight: bold;
@@ -113,7 +113,7 @@
 	  </tbody>
 	</table>
 	
-	<button class="btn" type="submit" name="button" value="bregister">Register</button>
+	<button class="btn" type="submit" name="button" value="Register">Register</button>
       </div>
 
 
@@ -164,7 +164,7 @@
 	},
 	success: function(element) {
 	$(element).closest('.control-group').removeClass('error').addClass('success');
-	$(element).addClass('valid')
+	$(element).addClass('valid') 
 	}
 	});
 	});
