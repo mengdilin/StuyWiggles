@@ -60,6 +60,40 @@ def register():
             return redirect(url_for("profile"))
     return redirect(url_for("register"))
 
+@app.route("/edit",methods=['GET','POST'])
+def edit():
+    if not session.has_key('user'):
+        return redirect(url_for("about"))
+    username=session['user']
+    name=database.get_name(username)
+    email=database.get_email(username)
+    osis=database.get_osis(username)
+    digit=database.get_id(username)
+    if request.method=='GET':
+        return render_template("edit.html"
+                               ,username=username
+                               ,name=name
+                               ,email=email
+                               ,osis=osis
+                               ,digit=digit)
+    if request.method=='POST':
+        if request.form['button']=='Edit':
+            password=request.form['password']
+            name=request.form['name']
+            email=request.form['email']
+            digit=request.form['digit']
+            osis=request.form['osis']
+            classes=request.form.getlist('class')
+            teachers=request.form.getlist('teacher')
+            database.set_password(username,password)
+            database.set_name(username,name)
+            database.set_email(username,email)
+            database.set_digit(username,digit)
+            database.set_osis(username,osis)
+            database.set_schedule(username,classes,teachers)
+            return redirect(url_for('profile'))
+        return redirect(url_for('edit'))
+
 @app.route("/tradingfloor",methods=['GET','POST'])
 def tradingfloor():
     if not session.has_key('user'):

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <form action="register" method="POST" id="registration">
+  <form action="edit" method="POST" id="editor">
     <head>
-      <title>STUY WIGGLES: Register</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+      <title>STUY WIGGLES: Edit</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0"></meta>
       <link href="static/css/bootstrap-responsive.css" rel="stylsheet">
       <link href="static/css/bootstrap.css" rel="stylesheet">
       <style>
@@ -38,10 +38,11 @@
 	      <ul class="nav">
 		{% if loggedout %}
 		<li><a href="/about">About</a></li>
-		<li class="active"><a href="/register">Register</a></li>
-		{% if else %}
+		<li><a href="/register">Register</a></li>
+		{% else %}
 		<li><a href="/profile">Profile</a></li>
 		<li><a href="/tradingfloor">Trading Floor</a></li>
+		<li class="active"><a href="/edit">Edit Profile</a></li>
 		<p class="navbar-text pull-right"> <a href="/logout" class="navbar-link">Logout</p></a>
 		{% endif %}
 	      </ul>
@@ -49,23 +50,12 @@
 	  </div>
 	</div>
       </div>
-      
+
       <div class="container">
-	<h1>REGISTER</h1>  
-	{% if exists %}
-	<div class="alert alert-error">
-	  <button type="button" name="alert" class="close" data-dismiss="alert">&times;</button>
-	  <h3>Invalid username! Please choose another.</h3>
-	</div>
-	{% endif %}
+	<h1>Edit Profile : {{username}}</h1>
+	
 	<div class="control-group">
-	  <label class="control-label" for="username">Username :</label>
-	  <div class="controls">
-	    <input type="text" id="username" name="username" />
-	  </div>
-	</div>
-	<div class="control-group">
-	  <label class="control-label" for="password">Password :</label>
+	  <label class="control-label" for="password">Change Password :</label>
 	  <!-- Use tool for validation -->
 	  <div class="controls">
 	    <input type="password" id="password" name="password"/>
@@ -78,30 +68,30 @@
 	  </div>
 	</div>
 	<div class="control-group">
-	  <label class="control-label" for="name">Name :</label>
+	  <label class="control-label" for="name">Change Name :</label>
 	  <div class="controls">
-	    <input type="text" id="name" placeholder="First Last" name="name" />
+	    <input type="text" id="name" placeholder="First Last" name="name" value={{name}}/>
 	  </div>
 	</div>
 	<div class="control-group">
-	  <label class="control-label" for="email">Email :</label>
+	  <label class="control-label" for="email">Change Email :</label>
 	  <div class="controls">
-	    <input type="text" id="email" name="email"/>
+	    <input type="text" id="email" name="email" value={{email}}/>
 	  </div>
 	</div>
 	<div class="control-group">
-	  <label class="control-label" for="digit">Id : </label>
+	  <label class="control-label" for="digit">Change Id : </label>
 	  <div class="controls">
-	    <input type="text" id="digit" placeholder="4-digit" name="digit" />
+	    <input type="text" id="digit" placeholder="4-digit" name="digit" value={{digit}}/>
 	  </div>
 	</div>
 	<div class="control-group">
-	  <label class="control-label" for="osis">Osis : </label>
+	  <label class="control-label" for="osis">Change Osis : </label>
 	  <div class="controls">
-	    <input type="text" id="osis" placeholder="9-digit" name="osis" />
+	    <input type="text" id="osis" placeholder="9-digit" name="osis" value={{osis}}/>
 	  </div>
 	</div>
-	<label>Schedule :</label>
+		<label>Change Schedule :</label>
 	<table class="table-condensed">
 	  <thead>
 	    <tr>
@@ -113,19 +103,23 @@
 	    {% for number in range(10) %}
 	    <tr>
 	      <td>{{ loop.index }}</td>
-	      <td><input type="text" name="class" /></td>
-	      <td><input type="text" name="teacher" /></td>
+	      {% for c in class %}
+	      {% for t in teacher %}
+	      <td><input type="text" name="class" value={{c}}/></td>
+	      <td><input type="text" name="teacher" value={{t}}/></td>
+	      {% endfor %}
+	      {% endfor %}
 	    </tr>
 	    {% endfor %}
 	  </tbody>
 	</table>
-	
-	<button class="btn" type="submit" name="button" value="Register">Register</button>
+
+	<button class="btn" type="submit" name="button" value="Edit">Edit</button>
       </div>
-
-
-</body>
-
+      
+      
+    </body>
+    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="static/js/jquery-1.7.2.min.js"><\/script>')</script>
       
@@ -135,7 +129,7 @@
       
       <script>
 	$(document).ready(function(){
-	$("#registration").validate(
+	$("#editor").validate(
 	{
 	rules: {
 	username: {
@@ -182,29 +176,5 @@
       </script>
       
 	
-      
-
-      <!--
-      Nod Validation runs conflict with Flask
-
-      <script language="javascript" type="text/javascript">
-	var metrics = [
-	["#password","between:6:20","Must be 6-20 characters long please."],
-	["#verpassword","same-as:#password","Your passwords don't match!"],
-	["#digit","exact-length:4","4-digit ID means 4 digits"],
-	["#digit","integer","4-digit ID means 4 digits"],
-	["#osis","integer","Osis is 9 digits!"],
-	["#osis","exact-length:9","Osis is 9 digits!"]
-	];
-	
-	var options = {
-	'groupClass':'warning',
-	'disableSubmitBtn':false,
-	};
-	
-	$("#registration").nod(metrics);
-	
-      </script>
-      -->
-  </form>      
+  </form>
 </html>
