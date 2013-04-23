@@ -64,10 +64,10 @@ def accept_request(postername,acceptername,request):
         poster["notification"]["accepted"][acceptername]=[]
     accepter["notification"]["accept"][postername].append(request)
     poster["notification"]["accepted"][acceptername].append(request)
-    accept_class=accepter["schedule"][int(request[0])]
-    post_class=poster["schedule"][int(request[0])]
+    accept_class=accepter["schedule"][int(request[0])-1]
+    post_class=poster["schedule"][int(request[0])-1]
     accepter["schedule"][int(request[0])-1]=post_class
-    print [accepter["schedule"][int(request[0])],post_class]
+    #print [accepter["schedule"][int(request[0])],post_class]
     poster["schedule"][int(request[0])-1]=accept_class
     floor.remove({"name":get_name(postername),"request":request})
     dbupdate(postername,poster)
