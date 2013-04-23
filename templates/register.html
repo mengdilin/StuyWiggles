@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <form action="register" method="POST" id="registration">
     <head>
+
       <title>STUY WIGGLES: Register</title>
+      <link rel="shortcut icon"  href="{{ url_for('static', filename='img/W.ico') }}">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       <link href="static/css/bootstrap-responsive.css" rel="stylsheet">
       <link href="static/css/bootstrap.css" rel="stylesheet">
@@ -22,7 +23,7 @@
 	}
       </style>
     </head>
-    
+    <form action="register" method="POST" id="registration">
     <body>
       <!-- <body bgcolor="#212122">-->
       <div class="navbar navbar-fixed-top navbar-inverse">
@@ -42,6 +43,7 @@
 		{% else %}
 		<li><a href="/profile">Profile</a></li>
 		<li><a href="/tradingfloor">Trading Floor</a></li>
+		<li><a href="/edit">Edit Profile</a></li>
 		<p class="navbar-text pull-right"> <a href="/logout" class="navbar-link">Logout</p></a>
 		{% endif %}
 	      </ul>

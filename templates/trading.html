@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <form action="tradingfloor" method="POST" name="formpost">
+
   <head>
     <title>Stuy Wiggles</title>
-
+    <link rel="shortcut icon"  href="{{ url_for('static', filename='img/W.ico') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     <link href="static/css/bootstrap-responsive.css" rel="stylsheet">
     <link  href="static/css/bootstrap.css" rel="stylesheet">
@@ -14,6 +14,7 @@
   </head>
 
   <body>
+    <form action="tradingfloor" method="POST" name="formpost">
     <!-- <body bgcolor="#212122">-->
 
   <div class="navbar navbar-fixed-top navbar-inverse">
@@ -27,12 +28,15 @@
 	<a class="brand" href="/profile">Stuy Wiggles</a>
 	<div class="nav-collapse navbar-responsive-collapse in collapse">
 	  <ul class="nav">
-	    <li>
-	      <a href="/about">About</a>
-	    </li>
-	  <li><a href="/profile">Profile</a></li>
-	  <li class="active"><a href="/tradingfloor">Trading Floor</a></li>
-	  <p class="navbar-text pull-right"> <a href="/logout" class="navbar-link">Logout</p></a>
+	    {% if loggedin %}
+	    <li> <a href="/about">About</a></li>
+	    <li><a href="/register">Register</a></li>
+	    {% else %}
+	    <li><a href="/profile">Profile</a></li>
+	    <li class="active"><a href="/tradingfloor">Trading Floor</a></li>
+	    <li><a href="/edit">Edit Profile</a></li>
+	    <p class="navbar-text pull-right"> <a href="/logout" class="navbar-link">Logout</p></a>
+	    {% endif %}
 	  </ul>
 	</div> <!-- /.nav-collapse --> 
       </div> 
