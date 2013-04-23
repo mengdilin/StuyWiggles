@@ -48,15 +48,52 @@ def register():
             classes=request.form.getlist('class') 
             teachers=request.form.getlist('teacher')
             name=request.form['name']
+            email=request.form['email']
             exist=database.add_student(username,password)
             if exist:
                 return render_template("register.html",loggedout=True,exists=exist)
             database.set_osis(username,osis)
             database.set_id(username,digit)
             database.set_name(username,name)
+            database.set_email(username,email)
             database.set_schedule(username,classes,teachers)
             return redirect(url_for("profile"))
     return redirect(url_for("register"))
+
+@app.route("/edit",methods=['GET','POST'])
+def edit():
+    if not session.has_key('user'):
+        return redirect(url_for("about"))
+    username=session['user']
+    name=database.get_name(username)
+    #email=database.get_email(username)
+    osis=database.get_osis(username)
+    digit=database.get_id(username)
+    if request.method=='GET':
+        return render_template("edit.html"
+                               ,username=username
+                               ,name=name
+                               #,email=email
+                               ,osis=osis
+                               ,digit=digit
+                               ,loggedout=False)
+    if request.method=='POST':
+        if request.form['button']=='Edit':
+            password=request.form['password']
+            name=request.form['name']
+            #email=request.form['email']
+            digit=request.form['digit']
+            osis=request.form['osis']
+            classes=request.form.getlist('class')
+            teachers=request.form.getlist('teacher')
+            database.set_password(username,password)
+            database.set_name(username,name)
+            #database.set_email(username,email)
+            database.set_id(username,digit)
+            database.set_osis(username,osis)
+            database.set_schedule(username,classes,teachers)
+            return redirect(url_for('profile'))
+        return redirect(url_for('edit'))
 
 @app.route("/tradingfloor",methods=['GET','POST'])
 def tradingfloor():
@@ -73,6 +110,7 @@ def tradingfloor():
                                ,osis=osis
                                ,digits=digits
                                ,floor=floor
+                               ,loggedout=False
                                ,validate=False)
     if request.method=='POST':
         if request.form['button']=='posts':
@@ -125,7 +163,7 @@ def profile():
                               # ,post=notif["post"]
                                ,accept=notif["accept"]
                                ,accepted=notif["accepted"]
-                               )
+                               ,loggedout=False)
 if __name__=="__main__":
     app.debug=True
     app.run(port=7007)

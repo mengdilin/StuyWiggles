@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>STUY WIGGLES</title>
+
+      <title>STUY WIGGLES: Register</title>
       <link rel="shortcut icon"  href="{{ url_for('static', filename='img/W.ico') }}">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       <link href="static/css/bootstrap-responsive.css" rel="stylsheet">
@@ -36,11 +37,13 @@
 	    <a class="brand" href="/">Stuy Wiggles</a>
 	    <div class="nav-collapse navbar-responsive-collapse in collapse">
 	      <ul class="nav">
+		{% if loggedout %}
 		<li><a href="/about">About</a></li>
 		<li class="active"><a href="/register">Register</a></li>
-		{% if not loggedout %}
+		{% else %}
 		<li><a href="/profile">Profile</a></li>
 		<li><a href="/tradingfloor">Trading Floor</a></li>
+		<li><a href="/edit">Edit Profile</a></li>
 		<p class="navbar-text pull-right"> <a href="/logout" class="navbar-link">Logout</p></a>
 		{% endif %}
 	      </ul>
@@ -80,6 +83,12 @@
 	  <label class="control-label" for="name">Name :</label>
 	  <div class="controls">
 	    <input type="text" id="name" placeholder="First Last" name="name" />
+	  </div>
+	</div>
+	<div class="control-group">
+	  <label class="control-label" for="email">Email :</label>
+	  <div class="controls">
+	    <input type="text" id="email" name="email"/>
 	  </div>
 	</div>
 	<div class="control-group">
@@ -146,6 +155,10 @@
 	},
 	name: {
 	minlength: 2,
+	required: true
+	},
+	email: {
+	email: true,
 	required: true
 	},
 	digit: {
