@@ -110,7 +110,7 @@ def tradingfloor():
                                ,osis=osis
                                ,digits=digits
                                ,floor=floor
-                               ,loggedout=False)
+                               ,loggedout=False
                                ,validate=False)
     if request.method=='POST':
         if request.form['button']=='posts':
