@@ -48,12 +48,14 @@ def register():
             classes=request.form.getlist('class') 
             teachers=request.form.getlist('teacher')
             name=request.form['name']
+            email=request.form['email']
             exist=database.add_student(username,password)
             if exist:
                 return render_template("register.html",loggedout=True,exists=exist)
             database.set_osis(username,osis)
             database.set_id(username,digit)
             database.set_name(username,name)
+            database.set_email(username,email)
             database.set_schedule(username,classes,teachers)
             return redirect(url_for("profile"))
     return redirect(url_for("register"))
