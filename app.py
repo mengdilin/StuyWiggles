@@ -122,7 +122,7 @@ def profile():
                                ,osis=osis
                                ,digits=digits
                                ,schedule=schedule
-                               ,post=notif["post"]
+                              # ,post=notif["post"]
                                ,accept=notif["accept"]
                                ,accepted=notif["accepted"]
                                )
