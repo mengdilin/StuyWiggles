@@ -111,14 +111,30 @@ def tradingfloor():
                                ,digits=digits
                                ,floor=floor
                                ,loggedout=False)
+                               ,validate=False)
     if request.method=='POST':
         if request.form['button']=='posts':
             clas=request.form['clas']
             period=request.form['period']
             teacher=request.form['teacher']
-            req=[str(period),str(clas),str(teacher)]
-            database.post_request(username,req)
-            return redirect(url_for("tradingfloor"))
+            error=False
+            tmp=0
+            try:
+                tmp=int(period)
+            except Exception:
+                error=True
+            if period=="" or teacher=="" or clas=="" or tmp<1 or tmp>10:
+                error=True
+                return render_template("trading.html"
+                                       ,name=name
+                                       ,osis=osis
+                                       ,digits=digits
+                                       ,floor=floor
+                                       ,validate=error)
+            else:
+                req=[str(period),str(clas),str(teacher)]
+                database.post_request(username,req)
+                return redirect(url_for("tradingfloor"))
         else:
             index=int(request.form['button'])-1
             req=floor[index]["request"]
