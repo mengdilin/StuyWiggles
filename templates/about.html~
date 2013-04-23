@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-
+  <form action="about" method="POST">
     <head>
       <title>STUY WIGGLES</title>
-      <link rel="shortcut icon"  href="{{ url_for('static', filename='img/W.ico') }}">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       <link href="static/css/bootstrap-responsive.css" rel="stylsheet">
       <link  href="static/css/bootstrap.css" rel="stylesheet">
@@ -11,8 +10,7 @@
 	body{padding-top:60px;padding-left:40px}
       </style>
     </head>
-
-    <form action="about" method="POST">
+    
     <body>
       <!-- <body bgcolor="#212122">-->
       <div class="navbar navbar-fixed-top navbar-inverse">
