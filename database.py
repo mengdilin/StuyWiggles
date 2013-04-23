@@ -14,11 +14,22 @@ def add_student(username,password):
     db=Connection["StuyWiggles"]
     if (username not in get_usernames()) and validate_password(password):
         #need to test this
-        student={"username":str(username),"password":str(password),"schedule":[], "osis":0,"id":0,"posted request":[],"notification":{"post":[],"accept":{},"accepted":{}},"name":""}
+        student={"username":str(username),"password":str(password),"schedule":[], "osis":0,"id":0,"posted request":[],"notification":{"post":[],"accept":{},"accepted":{}},"name":"","email":""}
         students.insert(student)
         return False
     else:
         return True
+
+def set_email(username,email):
+    db=Connection["StuyWiggles"]
+    user=find_student(username)
+    user["email"]=str(email)
+    dbupdate(username,user)
+
+def get_email(username):
+    db=Connection["StuyWiggles"]
+    user=find_student(username)
+    return user["email"]
 
 def set_name(username, name):
     db=Connection["StuyWiggles"]

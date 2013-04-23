@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <form action="tradingfloor" method="POST" name="formpost">
+ 
   <head>
     <title>Stuy Wiggles</title>
-
+    <link rel="shortcut icon"  href="{{ url_for('static', filename='img/W.ico') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     <link href="static/css/bootstrap-responsive.css" rel="stylsheet">
     <link  href="static/css/bootstrap.css" rel="stylesheet">
@@ -15,7 +15,7 @@
 
   <body>
     <!-- <body bgcolor="#212122">-->
-
+    <form action="tradingfloor" method="POST" name="formpost">
   <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
       <div class="container">
@@ -39,6 +39,11 @@
     </div>
   </div>
 
+  {% if validate %}
+<div class="alert alert-block alert-error fade in">
+<h4 class="alert-heading">Invalid Input! Period should be an integer between 1 and 10. Teacher and Class cannot be empty.</h4>
+</div>
+{% endif %}
 <div class="container-fluid">
 <div class="row-fluid">
   <div class="span12">
@@ -131,7 +136,7 @@
       <script type="text/javascript">
 	$('#bregister').click(function(){
 	$('#register').modal()})
-	
+
 	$('input.filter').live('keyup', function() {
 	var rex = new RegExp($(this).val(), 'i');
 	$('.searchable tr').hide();
@@ -140,18 +145,18 @@
         }).show();
 	});
 
-
+	$(".alert").alert()
 //	var metrics = [
 //	["#class","presence","Cannot be empty"],
 //	["#period","between-num:1:10","Between number 1-10"],
 //	["#teacher","presence","cannot be empty"],
 //	];
-	
+
 //	var options = {
 //	'groupClass':'warning',
 //	'disableSubmitBtn':false,
 //	};
-	
+
 //	$("formpost").nod(metrics,options);
 
 </script>
