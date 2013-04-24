@@ -9,7 +9,7 @@ app.secret_key="secret key"
 def index():
     if not session.has_key('user'):
         return redirect(url_for('about'))
-    return redirect(url_for('about'))
+    return redirect(url_for('profile'))
 
 @app.route('/logout')
 def logout():
@@ -25,7 +25,7 @@ def about():
             username=request.form['username']
             password=request.form['password']
             if username not in database.get_usernames():
-                return render_template("about.html",loggedout=True,registered=False)
+                return redirect(url_for("register"))
             if database.validate(username,password):
                 session["user"]=username
                 return redirect(url_for("profile"))
@@ -67,14 +67,14 @@ def edit():
     username=session['user']
     name=database.get_name(username)
     email=database.get_email(username)
-    osis=database.get_osis(username)
+    #osis=database.get_osis(username)
     digit=database.get_id(username)
     if request.method=='GET':
         return render_template("edit.html"
                                ,username=username
                                ,name=name
                                ,email=email
-                               ,osis=osis
+                               #,osis=osis
                                ,digit=digit
                                ,loggedout=False)
     if request.method=='POST':
@@ -84,14 +84,15 @@ def edit():
             email=request.form['email']
             digit=request.form['digit']
             osis=request.form['osis']
-            classes=request.form.getlist('class')
-            teachers=request.form.getlist('teacher')
-            database.set_password(username,password)
+            #classes=request.form.getlist('class')
+            #teachers=request.form.getlist('teacher')
+            if not password=="":
+                database.set_password(username,password)
             database.set_name(username,name)
             database.set_email(username,email)
             database.set_id(username,digit)
             database.set_osis(username,osis)
-            database.set_schedule(username,classes,teachers)
+            #database.set_schedule(username,classes,teachers)
             return redirect(url_for('profile'))
         return redirect(url_for('edit'))
 
@@ -150,19 +151,19 @@ def profile():
         return redirect(url_for('about'))
     username=session['user']
     name=database.get_name(username)
-    osis=database.get_osis(username)
+    #osis=database.get_osis(username)
     digits=database.get_id(username)
-    schedule=database.get_schedule(username)
-    notif=database.get_notification(username)
+    #schedule=database.get_schedule(username)
+    #notif=database.get_notification(username)
     if request.method=='GET':        
         return render_template("profile.html"
                                ,name=name
-                               ,osis=osis
+                               #,osis=osis
                                ,digits=digits
-                               ,schedule=schedule
-                               ,post=notif["post"]
-                               ,accept=notif["accept"]
-                               ,accepted=notif["accepted"]
+                               #,schedule=schedule
+                               #,post=notif["post"]
+                               #,accept=notif["accept"]
+                               #,accepted=notif["accepted"]
                                ,loggedout=False)
 if __name__=="__main__":
     app.debug=True
