@@ -19,23 +19,35 @@ APS22QAP, 01, 1, 0, Cappell, Acrylic Painting
 APS22QAP, 02, 2, 0, Cappell, Acrylic Painting
 AUS11QCG, 01, 4, 0, Cappell, Computer Graphics Design
 
-PES86QK, 01, 1, 0, Barth
-PES88QK, 01, 3, 0, Barth
-PFS86QP, 01, 4, 0, Bologna
-PFS88WA, 01, 8, 0, Choubaralian
-PFS88QW, 01, 2, 0, Barbin
-PPS82Q, 03, 3, 0, Bologna
-PPS82Q, 04, 4, 0, Choubaralian
-PPS82Q, 08, 7, 0, Bologna
-PPS82Q, 11, 10, 0, Choubaralian
-PPS84Q, 03, 2, 0, Choubaralian
-PPS84Q, 05, 5, 0, Barbin
-PPS84Q, 08, 8, 0, Barbin
-PPS84Q, 10, 10, Barbin
-PPS86Q, 01, 1, 0, Bologna
-PPS86Q, 02, 4, 0, Barbin
-PPS86Q, 04. 6, 0, Chobaralian
-PPS88Q, 03, 9, 0, Bologna
+E2FC, 01, 1, 0, Ferencz, Freshman Composition
+E2FC, 02, 1, 0, Henderson, Freshman Composition
+E2FC, 03, 1, 0, Nieves, Freshman Composition
+E2FC, 04, 2, 0, Nieves, Freshman Composition
+E2FC, 05, 2, 0, Schechter, Freshman Composition
+E2FC, 06, 2, 0, Weil, Freshman Composition
+E2FC, 07, 3, 0, La Bonne, Freshman Composition
+E2FC, 08, 3, 0, Moore, Freshman Composition
+E2FC, 09, 3, 0, Weil, Freshman Composition
+E2FC, 10, 4, 0, Bonsignore, Freshman Composition
+E2FC, 11, 4, 0, Ferencz, Freshman Composition
+E2FC, 12, 4, 0, Oberfield, Freshman Composition
+E2FC, 13, 5, 0, Bonsignore, Freshman Composition
+E2FC, 14, 5, 0, La Bonne, Freshman Composition
+E2FC, 15, 5, 0, Oberfield, Freshman Composition
+E2FC, 16, 6, 0, Garfinkel, Freshman Composition
+E2FC, 17, 6, 0, Henderson, Freshman Composition
+E2FC, 18, 6, 0, Manning, Freshman Composition
+E2FC, 19, 7, 0, Fletcher, Freshman Composition
+E2FC, 20, 7, 0, Garfinkel, Freshman Composition
+E2FC, 21, 7, 0, Henderson, Freshman Composition
+E2FC, 22, 8, 0, La Bonne, Freshman Composition
+E2FC, 23, 8, 0, Nieves, Freshman Composition
+E2FC, 24, 8, 0, Schechter, Freshman Composition
+E2FC, 25, 9, 0, Bonsignore, Freshman Composition
+E2FC, 26, 9, 0, Manning, Freshman Composition
+E2FC, 27, 9, 0, Weil, Freshman Composition
+E2FC, 28, 10, 0, Fletcher, Freshman Composition
+E2FC, 29, 10, 0, Moore, Freshman Composition
 
 SCS22A, 01, 1, 2, Orlando, Chemistry
 SCS22A, 04, 2, 3, Pluchino, Chemistry
