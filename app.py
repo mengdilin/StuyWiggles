@@ -151,19 +151,19 @@ def profile():
         return redirect(url_for('about'))
     username=session['user']
     name=database.get_name(username)
-    #osis=database.get_osis(username)
+    osis=database.get_osis(username)
     digits=database.get_id(username)
-    #schedule=database.get_schedule(username)
-    #notif=database.get_notification(username)
+    schedule=database.get_schedule(username)
+    notif=database.get_notification(username)
     if request.method=='GET':        
         return render_template("profile.html"
                                ,name=name
-                               #,osis=osis
+                               ,osis=osis
                                ,digits=digits
-                               #,schedule=schedule
-                               #,post=notif["post"]
-                               #,accept=notif["accept"]
-                               #,accepted=notif["accepted"]
+                               ,schedule=schedule
+                              # ,post=notif["post"]
+                               ,accept=notif["accept"]
+                               ,accepted=notif["accepted"]
                                ,loggedout=False)
 if __name__=="__main__":
     app.debug=True

@@ -7,6 +7,9 @@ db=Connection["StuyWiggles"]
 students=db.students
 floor=db.floor
 
+def dbupdate(username,user):
+    db=Connection["StuyWiggles"]
+    students.update({"username":username},user)
 
 #accept: when user accepts other people's requests
 #accepted: when other people accept user's requests
@@ -49,8 +52,8 @@ def get_name(username):
 def post_request(username,request):
     db=Connection["StuyWiggles"]
     user=find_student(username)
-    user["posted request"].append(request)
-    user["notification"]["post"].append(request)
+    #user["posted request"].append(request)
+    #user["notification"]["post"].append(request)
     current_schedule=get_schedule(username)
     current_schedule=current_schedule[int(request[0])-1]
     current_schedule.insert(0,request[0])
@@ -64,16 +67,25 @@ def get_notification(username):
     user=find_student(username)
     return user["notification"]
 
+
 def accept_request(postername,acceptername,request):
     db=Connection["StuyWiggles"]
     poster=find_student(postername)
     accepter=find_student(acceptername)
-    poster["posted request"]=remove_item(poster["posted request"],request)
+
+    #cannot update deletion
+    #poster["notification"]["post"]=remove_item(poster["notification"]["post"],request)
+
     if postername not in accepter["notification"]["accept"].keys():
         accepter["notification"]["accept"][postername]=[]
     if acceptername not in poster["notification"]["accepted"].keys():
         poster["notification"]["accepted"][acceptername]=[]
+    if len(accepter["notification"]["accept"][postername])>=7:
+        accepter["notification"]["accept"][postername].pop(0)
     accepter["notification"]["accept"][postername].append(request)
+    
+    if len(poster["notification"]["accepted"][acceptername])>=7:
+        poster["notification"]["accepted"][acceptername].pop(0)
     poster["notification"]["accepted"][acceptername].append(request)
     accept_class=accepter["schedule"][int(request[0])-1]
     post_class=poster["schedule"][int(request[0])-1]
@@ -81,14 +93,12 @@ def accept_request(postername,acceptername,request):
     #print [accepter["schedule"][int(request[0])],post_class]
     poster["schedule"][int(request[0])-1]=accept_class
     floor.remove({"name":get_name(postername),"request":request})
+
     dbupdate(postername,poster)
     dbupdate(acceptername,accepter)
 
-
-
-
 def remove_item(l,x):
-    l=[item for item in l if item!=x]
+    l=[item for item in l if (str(item[0])!=str(x[0]) or str(item[1])!=str(x[1]) or str(item[2])!=str(x[2]))]
     return l
 
 '''
@@ -186,9 +196,7 @@ def set_password(username,password):
     student={"username":str(username),"password":str(password)}
     students.update({"username":username},student)
 
-def dbupdate(username,user):
-    db=Connection["StuyWiggles"]
-    students.update({"username":username},user)
+
 
 def floorupdate(row_data):
     floor.insert(row_data)
@@ -345,6 +353,7 @@ request=["3","calculus bc","cocoros"]
 #print get_floor()
 
 #print find_student("mengdilin")
+
 
 
 
