@@ -1,4 +1,3 @@
-
 AHS11, 01, 1, Karp, Art Appreciation
 AHS11, 02, 2, 0, Barrow, Art Appreciation
 AHS11, 03, 3, 0, Barrow, Art Appreciation
@@ -19,6 +18,24 @@ APS11QWC, 02, 7, 0, Karp, Water Color
 APS22QAP, 01, 1, 0, Cappell, Acrylic Painting
 APS22QAP, 02, 2, 0, Cappell, Acrylic Painting
 AUS11QCG, 01, 4, 0, Cappell, Computer Graphics Design
+
+PES86QK, 01, 1, 0, Barth
+PES88QK, 01, 3, 0, Barth
+PFS86QP, 01, 4, 0, Bologna
+PFS88WA, 01, 8, 0, Choubaralian
+PFS88QW, 01, 2, 0, Barbin
+PPS82Q, 03, 3, 0, Bologna
+PPS82Q, 04, 4, 0, Choubaralian
+PPS82Q, 08, 7, 0, Bologna
+PPS82Q, 11, 10, 0, Choubaralian
+PPS84Q, 03, 2, 0, Choubaralian
+PPS84Q, 05, 5, 0, Barbin
+PPS84Q, 08, 8, 0, Barbin
+PPS84Q, 10, 10, Barbin
+PPS86Q, 01, 1, 0, Bologna
+PPS86Q, 02, 4, 0, Barbin
+PPS86Q, 04. 6, 0, Chobaralian
+PPS88Q, 03, 9, 0, Bologna
 
 SCS22A, 01, 1, 2, Orlando, Chemistry
 SCS22A, 04, 2, 3, Pluchino, Chemistry
