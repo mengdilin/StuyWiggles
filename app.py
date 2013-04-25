@@ -64,14 +64,14 @@ def edit():
         return redirect(url_for("about"))
     username=session['user']
     name=database.get_name(username)
-    #email=database.get_email(username)
+    email=database.get_email(username)
     osis=database.get_osis(username)
     digit=database.get_id(username)
     if request.method=='GET':
         return render_template("edit.html"
                                ,username=username
                                ,name=name
-                               #,email=email
+                               ,email=email
                                ,osis=osis
                                ,digit=digit
                                ,loggedout=False)
@@ -79,14 +79,14 @@ def edit():
         if request.form['button']=='Edit':
             password=request.form['password']
             name=request.form['name']
-            #email=request.form['email']
+            email=request.form['email']
             digit=request.form['digit']
             osis=request.form['osis']
             classes=request.form.getlist('class')
             teachers=request.form.getlist('teacher')
             database.set_password(username,password)
             database.set_name(username,name)
-            #database.set_email(username,email)
+            database.set_email(username,email)
             database.set_id(username,digit)
             database.set_osis(username,osis)
             database.set_schedule(username,classes,teachers)
@@ -101,12 +101,14 @@ def classinfo():
     name=database.get_name(username)
     osis=database.get_osis(username)
     digits=database.get_id(username)
+    email=database.get_email(username)
     classes=database.get_class_info()
     if request.method=='GET':
         return render_template("class.html"
                                ,name=name
                                ,osis=osis
                                ,digits=digits
+                               ,email=email
                                ,classes=classes)
     if request.method=="POST":
         value=request.form['button']
@@ -130,6 +132,7 @@ def tradingfloor():
     name=database.get_name(username)
     osis=database.get_osis(username)
     digits=database.get_id(username)
+    email=database.get_email(username)
     floor=database.get_floor()
     if request.method=='GET':
         return render_template("trading.html"
@@ -137,6 +140,7 @@ def tradingfloor():
                                ,osis=osis
                                ,digits=digits
                                ,floor=floor
+                               ,email=email
                                ,validate=False)
     if request.method=='POST':
         index=int(request.form['button'])-1
@@ -151,6 +155,7 @@ def tradingfloor():
                                    ,name=name
                                    ,osis=osis
                                    ,digits=digits
+                                   ,email=email
                                    ,floor=floor
                                    ,validate=True)
 
@@ -169,6 +174,7 @@ def profile():
     name=database.get_name(username)
     osis=database.get_osis(username)
     digits=database.get_id(username)
+    email=database.get_email(username)
     schedule=database.get_schedule(username)
     notif=database.get_notification(username)
     if request.method=='GET':        
@@ -177,7 +183,7 @@ def profile():
                                ,osis=osis
                                ,digits=digits
                                ,schedule=schedule
-                              # ,post=notif["post"]
+                               ,email=email
                                ,accept=notif["accept"]
                                ,accepted=notif["accepted"]
                                )
