@@ -109,7 +109,8 @@ def tradingfloor():
                                ,osis=osis
                                ,digits=digits
                                ,floor=floor
-                               ,validate=False)
+                               ,validate=False
+                               )
     if request.method=='POST':
         if request.form['button']=='posts':
             clas=request.form['clas']
@@ -128,7 +129,8 @@ def tradingfloor():
                                        ,osis=osis
                                        ,digits=digits
                                        ,floor=floor
-                                       ,validate=error)
+                                       ,validate=error
+                                       )
             else:
                 req=[str(period),str(clas),str(teacher)]
                 database.post_request(username,req)
@@ -162,6 +164,18 @@ def profile():
                                ,accept=notif["accept"]
                                ,accepted=notif["accepted"]
                                )
+
+@app.route('/classinfo',methods=['GET','POST'])
+def classinfo():
+    if not session.has_key('user'):
+        return redirect(url_for('about'))
+    username=session['user']
+    name=database.get_name(username)
+    osis=database.get_name(username)
+    digits=database.get_id(username)
+    if request.method=='GET':
+        return render_template("class.html",name=name,osis=osis,digits=digits)
+
 if __name__=="__main__":
     app.debug=True
     app.run(port=7007)
