@@ -48,14 +48,12 @@ def register():
             classes=request.form.getlist('class') 
             teachers=request.form.getlist('teacher')
             name=request.form['name']
-            email=request.form['email']
             exist=database.add_student(username,password)
             if exist:
                 return render_template("register.html",loggedout=True,exists=exist)
             database.set_osis(username,osis)
             database.set_id(username,digit)
             database.set_name(username,name)
-            database.set_email(username,email)
             database.set_schedule(username,classes,teachers)
             return redirect(url_for("profile"))
     return redirect(url_for("register"))
@@ -94,7 +92,6 @@ def edit():
             database.set_schedule(username,classes,teachers)
             return redirect(url_for('profile'))
         return redirect(url_for('edit'))
-
 @app.route("/tradingfloor",methods=['GET','POST'])
 def tradingfloor():
     if not session.has_key('user'):
@@ -110,7 +107,6 @@ def tradingfloor():
                                ,osis=osis
                                ,digits=digits
                                ,floor=floor
-                               ,loggedout=False
                                ,validate=False)
     if request.method=='POST':
         if request.form['button']=='posts':
@@ -163,7 +159,7 @@ def profile():
                               # ,post=notif["post"]
                                ,accept=notif["accept"]
                                ,accepted=notif["accepted"]
-                               ,loggedout=False)
+                               )
 if __name__=="__main__":
     app.debug=True
     app.run(port=7007)

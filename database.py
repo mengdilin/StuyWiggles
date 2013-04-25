@@ -193,10 +193,8 @@ def get_usernames():
 def set_password(username,password):
     db=Connection["StuyWiggles"]
     student=find_student(username)
-    student={"username":str(username),"password":str(password)}
+    student["password"]=password
     students.update({"username":username},student)
-
-
 
 def floorupdate(row_data):
     floor.insert(row_data)
@@ -352,7 +350,8 @@ request=["3","calculus bc","cocoros"]
 
 #print get_floor()
 
-#print find_student("mengdilin")
+
+
 
 
 
