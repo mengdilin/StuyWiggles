@@ -19,23 +19,62 @@ APS22QAP, 01, 1, 0, Cappell, Acrylic Painting
 APS22QAP, 02, 2, 0, Cappell, Acrylic Painting
 AUS11QCG, 01, 4, 0, Cappell, Computer Graphics Design
 
-PES86QK, 01, 1, 0, Barth
-PES88QK, 01, 3, 0, Barth
-PFS86QP, 01, 4, 0, Bologna
-PFS88WA, 01, 8, 0, Choubaralian
-PFS88QW, 01, 2, 0, Barbin
-PPS82Q, 03, 3, 0, Bologna
-PPS82Q, 04, 4, 0, Choubaralian
-PPS82Q, 08, 7, 0, Bologna
-PPS82Q, 11, 10, 0, Choubaralian
-PPS84Q, 03, 2, 0, Choubaralian
-PPS84Q, 05, 5, 0, Barbin
-PPS84Q, 08, 8, 0, Barbin
-PPS84Q, 10, 10, Barbin
-PPS86Q, 01, 1, 0, Bologna
-PPS86Q, 02, 4, 0, Barbin
-PPS86Q, 04. 6, 0, Chobaralian
-PPS88Q, 03, 9, 0, Bologna 
+PES86QK, 01, 1, 0, Barth, Grade 11 In-Line Skating
+PES88QD, 01. 1. 0, Choy, Grade 12 Ballroom Dancing
+PES88QD, 02, 2, 0, Choy, Grade 12 Ballroom Dancing
+PES88QD, 03, 5, 0, Choy, Grade 12 Ballroom Dancing
+PES88QK, 01, 3, 0, Barth, Grade 12 In-Line Skating
+PFS86QA, 01, 6, 0, Rosenthal, Grade 11 Step Aerobics
+PFS86QP, 01, 4, 0, Bologna, Grade 11 Polar Bear
+PFS86QW, 01, 9, 0, Miller, Grade 11 Weight Training and Physical Fitness
+PFS88QA, 01, 8, 0, Choubaralian, Grade 12 Stuy Box Aerobics
+PFS88QP, 01, 3, Luczak, Grade 12 Polar Bear
+PFS88QW, 01, 2, 0, Barbin, Grade 12 Weight Training and Physical Fitness
+PHS11, 01, 1, 0, Garber, Health Education
+PHS11, 02, 2, 0, Fang, Health Education
+PHS11, 03, 2, 0, Garber, Health Education
+PHS11, 04, 3, 0, Fang, Health Education
+PHS11, 05, 4, 0, Garber, Health Education
+PHS11, 06, 5, 0, Garber, Health Education
+PHS11, 07, 6, 0, Fang, Health Education
+PHS11, 08, 6, 0, Weinwurm, Health Education
+PHS11, 09, 7, 0, Weinwurm, Health Education
+PHS11, 10, 8, 0, Weinwurm, Health Education
+PHS11, 11, 9, 0, Fang, Health Education
+PHS11, 12, 9, 0, Garber, Health Education
+PHS11, 13, 10, 0, Fang, Health Education
+PPS82Q, 01, 1, 0, Markova, Grade 9 Physical Education
+PPS82Q, 02, 1, Rosenthal, Grade 9 Physical Education
+PPS82Q, 03, 3, 0, Bologna, Grade 9 Physical Education
+PPS82Q, 04, 3, 0, Choubaralian, Grade 9 Physical Education
+PPS82Q, 05, 3, 0, Rosenthal, Grade 9 Physical Education
+PPS82Q, 06, 4, 0, Luczak, Grade 9 Physical Education
+PPS82Q, 07, 4, 0, Markova, Grade 9 Physical Education
+PPS82Q, 08, 7, 0, Bologna, Grade 9 Physical Education
+PPS82Q, 09, 7, 0, Luczak, Grade 9 Physical Education
+PPS82Q, 10, 7, 0, Markova, Grade 9 Physical Education
+PPS82Q, 11, 10, 0, Choubaralian, Grade 9 Physical Education
+PPS82Q, 12, 10, 0, Luczak, Grade 9 Physical Education
+PPS84Q, 01, 2, 0, Markova, Grade 10 Physical Education
+PPS84Q, 02, 2, 0, Fisher, Grade 10 Physical Education
+PPS84Q, 03, 2, 0, Choubaralian, Grade 10 Physical Education
+PPS84Q, 04, 5, 0, Fisher, Grade 10 Physical Education
+PPS84Q, 05, 5, 0, Barbin, Grade 10 Physical Education
+PPS84Q, 06, 5, 0, Rosenthal, Grade 10 Physical Education
+PPS84Q, 07, 8, 0, Fisher, Grade 10 Physical Education
+PPS84Q, 08, 8, 0, Barbin, Grade 10 Physical Education
+PPS84Q, 09, 8, 0, Markova, Grade 10 Physical Education
+PPS84Q, 10, 10, 0, Barbin, Grade 10 Physical Education
+PPS86Q, 01, 1, 0, Bologna, Grade 11 Physical Education
+PPS86Q, 02, 4, 0, Barbin, Grade 11 Physical Education
+PPS86Q, 03, 6, 0, Luczak, Grade 11 Physical Education
+PPS86Q, 04. 6, 0, Chobaralian, Grade 11 Physical Education
+PPS86Q, 06, 9, 0, Rosenthal, Grade 11 Physical Education
+PPS86QB, 05, 9, 0, Fisher, Grade 11 Basketball
+PPS88Q, 01, 6, 0, Miller, Grade 12 Physical Education
+PPS88Q, 02, 7, 0, Miller, Grade 12 Physical Education
+PPS88Q, 03, 9, 0, Bologna, Grade 12 Physical Eductaion
+PTS86QV, 01, 4, 0, Fisher, Grade 11 Volleyball
 
 E2FC, 01, 1, 0, Ferencz, Freshman Composition
 E2FC, 02, 1, 0, Henderson, Freshman Composition
