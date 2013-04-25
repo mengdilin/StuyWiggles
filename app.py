@@ -95,6 +95,7 @@ def classinfo():
     osis=database.get_osis(username)
     digits=database.get_id(username)
     email=database.get_email(username)
+    schedule=database.get_schedule(username)
     classes=database.get_class_info()
     if request.method=='GET':
         return render_template("class.html"
@@ -103,6 +104,7 @@ def classinfo():
                                ,digits=digits
                                ,email=email
                                ,classes=classes
+                               ,schedule=schedule
                                ,validate=False)
     if request.method=="POST":
         value=request.form['button']
@@ -121,6 +123,7 @@ def classinfo():
                                ,digits=digits
                                ,email=email
                                ,classes=classes
+                               ,schedule=schedule
                                ,validate=True)
 
 @app.route("/tradingfloor",methods=['GET','POST'])
