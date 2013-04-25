@@ -45,8 +45,6 @@ def register():
             password=request.form['password']
             osis=request.form['osis']
             digit=request.form['digit']
-            classes=request.form.getlist('class') 
-            teachers=request.form.getlist('teacher')
             name=request.form['name']
             exist=database.add_student(username,password)
             if exist:
@@ -54,7 +52,6 @@ def register():
             database.set_osis(username,osis)
             database.set_id(username,digit)
             database.set_name(username,name)
-            database.set_schedule(username,classes,teachers)
             return redirect(url_for("profile"))
     return redirect(url_for("register"))
 
@@ -106,7 +103,8 @@ def classinfo():
                                ,osis=osis
                                ,digits=digits
                                ,email=email
-                               ,classes=classes)
+                               ,classes=classes
+                               ,validate=False)
     if request.method=="POST":
         value=request.form['button']
         value=value.split(" ")
@@ -114,12 +112,17 @@ def classinfo():
         if (str(value[0])=="set"):
             period=classes[index][0]
             clas=classes[index]
-            print period
             database.set_period(username,period,clas)
         if (str(value[0])=="req"):
             req=classes[index]
             database.post_request(username,req)
-        return redirect(url_for("classinfo"))
+        return render_template("class.html"
+                               ,name=name
+                               ,osis=osis
+                               ,digits=digits
+                               ,email=email
+                               ,classes=classes
+                               ,validate=True)
 
 @app.route("/tradingfloor",methods=['GET','POST'])
 def tradingfloor():

@@ -386,5 +386,6 @@ c={"name":"name","classes":[]}
 #floor.drop()
 #students.drop()
 
+print find_student("mango")
 
 
