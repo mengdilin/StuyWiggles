@@ -6,6 +6,7 @@ res=db.authenticate('ml7','ml7')
 db=Connection["StuyWiggles"]
 students=db.students
 floor=db.floor
+class_info=db.classinfo
 
 def dbupdate(username,user):
     db=Connection["StuyWiggles"]
@@ -51,15 +52,10 @@ def get_name(username):
 #request: [period, class, teacher]
 def post_request(username,request):
     db=Connection["StuyWiggles"]
-    user=find_student(username)
-    #user["posted request"].append(request)
-    #user["notification"]["post"].append(request)
     current_schedule=get_schedule(username)
     current_schedule=current_schedule[int(request[0])-1]
     current_schedule.insert(0,request[0])
-    button_value=username+" "+request[0]+" "+request[1]+" "+request[2]
-    row_data={"name":get_name(username),"username":username,"request":request,"current schedule":current_schedule,"button_value":button_value}
-    dbupdate(username,user)
+    row_data={"name":get_name(username),"username":username,"request":request,"current schedule":current_schedule}
     floor.insert(row_data)
 
 def get_notification(username):
@@ -263,7 +259,7 @@ def set_period(username,period,clas):
     db=Connection["StuyWiggles"]
     student=find_student(username)
     schedule=student["schedule"]
-    schedule[period-1]=clas
+    schedule[int(period)-1]=clas
     students.update({"username":str(username)},student)
 
 def find_student(username):
@@ -343,17 +339,43 @@ request=["3","calculus bc","cocoros"]
 #post_request(username1,request)
 #print find_student(username1)
 #print find_student(username2)
-
-
-
 #accept_request("mengdilin","georgiii",["7","Calculus","C"])
-
 #print get_floor()
 
 
+'''
+=================================================================
+Methods for the class info page database
+'''
 
+def prep_class_file():
+    f=open("classes.txt","r")
+    classes=f.readlines()
+    classes=[x.strip() for x in classes]
+    classes=[x.split(",") for x in classes]
+    classes=[[x[2],x[5],x[4],x[0],x[1]] for x in classes]
+    return classes
 
+def get_class_info():
+    l=class_info.find_one()["classes"]
+    return l
+def save_classes():
+    clas=prep_class_file()
+    info=class_info.find_one()
+    for item in clas:
+        #print item
+        info["classes"].append(item)
+    classupdate(info)
 
+def classupdate(info):
+    db=Connection["StuyWiggles"]
+    class_info.update({"name":"name"},info)
 
+c={"name":"name","classes":[]}
 
+#class_info.insert(c)
+#save_classes()
+#class_info.drop()
+#print prep_class_file()
 
+#print get_class_info()

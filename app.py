@@ -45,8 +45,8 @@ def register():
             password=request.form['password']
             osis=request.form['osis']
             digit=request.form['digit']
-            classes=request.form.getlist('class') 
-            teachers=request.form.getlist('teacher')
+            #classes=request.form.getlist('class') 
+            #teachers=request.form.getlist('teacher')
             name=request.form['name']
             exist=database.add_student(username,password)
             if exist:
@@ -54,7 +54,7 @@ def register():
             database.set_osis(username,osis)
             database.set_id(username,digit)
             database.set_name(username,name)
-            database.set_schedule(username,classes,teachers)
+            #database.set_schedule(username,classes,teachers)
             session['user']=username
             return redirect(url_for("profile"))
     return redirect(url_for("register"))
@@ -94,6 +94,37 @@ def edit():
             #database.set_schedule(username,classes,teachers)
             return redirect(url_for('profile'))
         return redirect(url_for('edit'))
+
+@app.route("/classinfo",methods=['GET','POST'])
+def classinfo():
+    if not session.has_key('user'):
+        return redirect(url_for("about"))
+    username=session['user']
+    name=database.get_name(username)
+    osis=database.get_osis(username)
+    digits=database.get_id(username)
+    classes=database.get_class_info()
+    if request.method=='GET':
+        return render_template("class.html"
+                               ,name=name
+                               ,osis=osis
+                               ,digits=digits
+                               ,classes=classes)
+    if request.method=="POST":
+        value=request.form['button']
+        value=value.split(" ")
+        index=int(value[1])-1
+        if (str(value[0])=="set"):
+            period=classes[index][0]
+            clas=classes[index]
+            print clas
+            database.set_period(username,period,clas)
+        if (str(value[0])=="req"):
+            req=classes[index]
+            print "req"
+            database.post_request(username,req)
+        return redirect(url_for("classinfo"))
+
 @app.route("/tradingfloor",methods=['GET','POST'])
 def tradingfloor():
     if not session.has_key('user'):
@@ -112,38 +143,28 @@ def tradingfloor():
                                ,validate=False
                                )
     if request.method=='POST':
-        if request.form['button']=='posts':
-            clas=request.form['clas']
-            period=request.form['period']
-            teacher=request.form['teacher']
-            error=False
-            tmp=0
-            try:
-                tmp=int(period)
-            except Exception:
-                error=True
-            if period=="" or teacher=="" or clas=="" or tmp<1 or tmp>10:
-                error=True
-                return render_template("trading.html"
-                                       ,name=name
-                                       ,osis=osis
-                                       ,digits=digits
-                                       ,floor=floor
-                                       ,validate=error
-                                       )
-            else:
-                req=[str(period),str(clas),str(teacher)]
-                database.post_request(username,req)
-                return redirect(url_for("tradingfloor"))
-        else:
-            index=int(request.form['button'])-1
-            req=floor[index]["request"]
-            postername=floor[index]["username"]
-            acceptername=username
+        index=int(request.form['button']-1)
+        req=floor[index]["request"]
+        acceptername=username
+        schedule=get_schedule(username)[index]
+        if l_equal(req,schedule):
             database.accept_request(postername,acceptername,req)
             return redirect(url_for("tradingfloor"))
+        else:
+            return render_template("trading.html"
+                                   ,name=name
+                                   ,osis=osis
+                                   ,digits=digits
+                                   ,floor=floor
+                                   ,validate=True)
 
 
+def l_equal(a,b):
+    for index in range(len(a)):
+        if (a[index]!=b[index]):
+            return False
+    return True
+    
 @app.route('/profile',methods=['GET','POST'])
 def profile():
     if not session.has_key('user'):
@@ -164,7 +185,7 @@ def profile():
                                ,accept=notif["accept"]
                                ,accepted=notif["accepted"]
                                )
-
+"""
 @app.route('/classinfo',methods=['GET','POST'])
 def classinfo():
     if not session.has_key('user'):
@@ -181,7 +202,14 @@ def classinfo():
                                digits=digits,
                                classes=info)
     elif request.method=='POST':
-        return
+        val=request.form['button']
+        if val[:3]=="set":
+            ind=int(val[4:])
+            clas=info[ind]
+            
+            database.set_period(username,clas[0],
+            
+     """       
 
 if __name__=="__main__":
     app.debug=True
