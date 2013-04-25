@@ -45,8 +45,6 @@ def register():
             password=request.form['password']
             osis=request.form['osis']
             digit=request.form['digit']
-            #classes=request.form.getlist('class') 
-            #teachers=request.form.getlist('teacher')
             name=request.form['name']
             exist=database.add_student(username,password)
             if exist:
@@ -54,7 +52,6 @@ def register():
             database.set_osis(username,osis)
             database.set_id(username,digit)
             database.set_name(username,name)
-            #database.set_schedule(username,classes,teachers)
             session['user']=username
             return redirect(url_for("profile"))
     return redirect(url_for("register"))
@@ -83,15 +80,12 @@ def edit():
             email=request.form['email']
             digit=request.form['digit']
             osis=request.form['osis']
-            #classes=request.form.getlist('class')
-            #teachers=request.form.getlist('teacher')
             if not password=="":
                 database.set_password(username,password)
             database.set_name(username,name)
             database.set_email(username,email)
             database.set_id(username,digit)
             database.set_osis(username,osis)
-            #database.set_schedule(username,classes,teachers)
             return redirect(url_for('profile'))
         return redirect(url_for('edit'))
 
@@ -183,32 +177,7 @@ def profile():
                               # ,post=notif["post"]
                                ,accept=notif["accept"]
                                ,accepted=notif["accepted"]
-                               )
-"""
-@app.route('/classinfo',methods=['GET','POST'])
-def classinfo():
-    if not session.has_key('user'):
-        return redirect(url_for('about'))
-    username=session['user']
-    name=database.get_name(username)
-    osis=database.get_name(username)
-    digits=database.get_id(username)
-    info=database.get_class_info()
-    if request.method=='GET':
-        return render_template("class.html",
-                               name=name,
-                               osis=osis,
-                               digits=digits,
-                               classes=info)
-    elif request.method=='POST':
-        val=request.form['button']
-        if val[:3]=="set":
-            ind=int(val[4:])
-            clas=info[ind]
-            
-            database.set_period(username,clas[0],
-            
-     """       
+                               )  
 
 if __name__=="__main__":
     app.debug=True
