@@ -49,6 +49,7 @@
 <h4 class="alert-heading">Invalid Input! Period should be an integer between 1 and 10. Teacher and Class cannot be empty.</h4>
 </div>
 {% endif %}
+
 <div class="container-fluid">
 <div class="row-fluid">
   <div class="span12">
@@ -56,34 +57,6 @@
     <h3>Name: {{name}}</h3>
     <h3>Osis: {{osis}}</h3>
     <h3>Id: {{digits}}</h3>
-    <a href="#" role="button" class="btn btn-primary" id="bregister" data-toggle="modal"><i class="icon-th-large icon-white"></i>post request</a><br></br>
-</div>
-
-<div id="register" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
-<div class="modal-header">
-  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-<h3 id="modelLabel">Register for StuyWiggles</h3>
-</div>
-<div class="modal-body">
-    <p>
-      <label>What class are you requesting? </label>
-      <input type="text" id="class" name="clas" />
-    </p>
-    <p>
-      <label>What period is the class? </label>
-      <input type="text" id="period" name="period" />
-    </p>
-
-    <p>
-      <label>Which teacher is teaching the class? </label>
-      <input type="text" id="teacher" name="teacher" />
-    </p>
-
-    <button class="btn" type="submit" name="button" value="posts">post</button>
-
-</div>
-</div>
-
 
     <div class="span10">
       <form class="navbar-search pull-left">
