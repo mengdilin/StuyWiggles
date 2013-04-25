@@ -66,19 +66,92 @@ E2FC, 26, 9, 0, Manning, Freshman Composition
 E2FC, 27, 9, 0, Weil, Freshman Composition
 E2FC, 28, 10, 0, Fletcher, Freshman Composition
 E2FC, 29, 10, 0, Moore, Freshman Composition
-E4EL, 00, 7, 0, Francis, European Literature
-E4EL, 00, 9, 0, Francis, European Literature
-E4EL, 00, 3, 0, Grossman, European Literature
-E4ME, 00, 5, 0, Ferencz, Modern European Literature
-E4ME, 00, 8, 0, Ferencz, Modern European Literature
-E4ME, 00, 9, 0, Ferencz, Modern European Literature
-E4ME, 00, 1, 0, Gerety, Modern European Literature
-E4ME, 00, 2, 0, Gerety, Modern European Literature
-E4ME, 00, 3, 0, Gerety, Modern European Literature
-E4ME, 00, 6, 0, Gern, Modern European Literature
-E4ME, 00, 9, 0, Gern, Modern European Literature
-E4ME, 00, 10, 0, Gern, Modern European Literature
-
+E4EL, 01, 1, 0, Schechter, European Literature
+E4EL, 02, 2, 0, Moore, European Literature
+E4EL, 03, 3, 0, Grossman, European Literature
+E4EL, 04, 4, 0, Manning, European Literature
+E4EL, 05, 5, 0, Mazzurco, European Literature
+E4EL, 06, 6, 0, Mazzurco, European Literature
+E4EL, 07, 7, 0, Francis, European Literature
+E4EL, 08, 9, 0, Francis, European Literature
+E4EL, 09, 10, 0, Manning, European Literature
+E4ME, 01, 1, 0, Gerety, Modern European Literature
+E4ME, 02, 2, 0, Gerety, Modern European Literature
+E4ME, 03, 3, 0, Gerety, Modern European Literature
+E4ME, 04, 3, 0, Swartz, Modern European Literature
+E4ME, 05, 4, 0, Swartz, Modern European Literature
+E4ME, 06, 5, 0, Ferencz, Modern European Literature
+E4ME, 07, 5, 0, Mandler, Modern European Literature
+E4ME, 08, 6, 0, Gern, Modern European Literature
+E4ME, 09, 6, 0, Swartz, Modern European Literature
+E4ME, 10, 7, 0, Mandler, Modern European Literature
+E4ME, 11, 7, 0, Sheinman, Modern European Literature
+E4ME, 12, 8, 0, Sheinman, Modern European Literature
+E4ME, 13, 8, 0, Ferencz, Modern European Literature
+E4ME, 14, 9, 0, Ferencz, Modern European Literature
+E4ME, 15, 9, 0, Gern, Modern European Literature
+E4ME, 16, 10, 0, Gern, Modern European Literature
+E61X, 01, 6, 0, Nieves, AP English Language - American Literary History
+E61X, 02, 7, 0, Nieves, AP English Language - American Literary History
+E63X, 01, 2, 0, Garfinkel, AP English Language - Contemporaries and Classics
+E63X, 02, 3, 0, Garfinkel, AP English Language - Contemporaries and Classics
+E6X5, 01, 4, 0, Francis, AP English Language - American Studies
+E6X5, 02, 5, 0, Francis, AP English Language - American Studies
+E6AC, 01, 3, 0, Sheinman, Acting Workshop
+E6AC, 02, 4, 0, Sheinman, Acting Workshop
+E6DF, 01, 2, 0, Halperin, Detective Fiction
+E6DF, 02, 8, 0, Halperin, Detective Fiction
+E6HA, 01, 7, 0, Oberfield, Asian American Literature
+E6LA, 01, 1, 0, La Bonne, Later American Literature
+E6LA, 02, 2, 0, Brown, Later American Literature
+E6LA, 03, 2, 0, Mott, Later American Literature
+E6LA, 04, 3, 0, Oberfield, Later American Literature
+E6LA, 05, 4, 0, Grossman, Later American Literature
+E6LA, 06, 5, 0, Gerety, Later American Literature
+E6LA, 07, 6, 0, La Bonne, Later American Literature
+E6LA, 08, 7, 0, Gerety, Later American Literature
+E6LA, 09, 8, 0, Mott, Later American Literature
+E6LA, 10, 9, 0, Brown, Later American Literature
+E6LA, 11, 9, 0, Mott, Later American Literature
+E6LA, 12, 10, 0, Oberfield, Later American Literature
+E6CN, 01, 7, 0, Weil, Creative Nonfiction Workshop
+E6CN, 02, 8, 0, Weil, Creative Nonfiction Worskshop
+E8CN, 01, 7, 0, Weil, Creative Nonfiction Workshop
+E8CN, 02, 8, 0, Weil, Creative Nonfiction Workshop
+E6PW, 01, 6, 0, Moore, Poetry Workshop
+E6PW, 02, 7, 0, Moore, Poetry Workshop
+E8PW, 01, 6, 0, Moore, Poetry Workshop
+E8PW, 02, 7, 0, Moore, Poetry Workshop
+E6SW, 01, 2, 0, Fletcher, Science Writing
+E8SW, 01, 2, 0, Fletcher, Science Writing
+E6WW, 01, 3, 0, Fletcher, Writers Workshop
+E6WW, 02, 4, 0, Fletcher, Writers Workshop
+E8WW, 01, 3, 0, Fletcher, Writers Workshop
+E8WW, 02, 4, 0, Fletcher, Writers Workshop
+E81X, 01, 4, 0, Gern, AP English Literature - Ancients & Moderns
+E81X, 02, 5, 0, Gern, AP English Literature - Ancients & Moderns
+E83X, 01, 5, 0, Schechter, AP English Literature - Great Books
+E83X, 02, 6, 0, Schechter, AP English Literature - Great Books
+E85X, 01, 5, 0, Henderson, AP English Literature - Society & Self
+E85X, 02, 9, 0, Henderson, AP English Literature - Society & Self
+E8EE, 01, 9, 0, Mazzurco, Existentialism
+E8LB, 01, 1, 0, Halperin, Later British and World Literatute
+E8LB, 02, 2, 0, Mandler, Later British and World Literatute
+E8LB, 03, 3, 0, Mandler, Later British and World Literatute
+E8LB, 04, 3, 0, Brown, Later British and World Literatute
+E8LB, 05, 4, 0, Brown, Later British and World Literatute
+E8LB, 06, 6, 0, Brown, Later British and World Literatute
+E8LB, 07, 7, 0, Halperin, Later British and World Literatute
+E8LB, 08, 8, 0, Manning, Later British and World Literatute
+E8LB, 09, 9, 0, Mandler, Later British and World Literatute
+E8LB, 10, 9, 0, Swartz, Later British and World Literatute
+E8LB, 11, 10, 0, Swartz, Later British and World Literatute
+E8SF, 01, 1, 0, Bonsignore, Science Fiction & Fantasy
+E8SF, 02, 8, 0, Bonsignore, Science Fiction & Fantasy
+E8SL, 01, 3, 0, Mott, Shakespearean Literature
+E8SL, 02, 7, 0, Mott, Shakespearean Literature
+ECDT, 01, 10, 0, Scheinman, Debate Team
+EJMS, 01, 10, 0, Garfinkel, Spectator
 
 SCS22A, 01, 1, 2, Orlando, Chemistry
 SCS22A, 04, 2, 3, Pluchino, Chemistry
