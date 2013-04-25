@@ -28,7 +28,7 @@
 	<a class="brand" href="/profile">Stuy Wiggles</a>
 	<div class="nav-collapse navbar-responsive-collapse in collapse">
 	  <ul class="nav">
-	    {% if loggedout %}
+	    {% if loggedin %}
 	    <li> <a href="/about">About</a></li>
 	    <li><a href="/register">Register</a></li>
 	    {% else %}
@@ -46,7 +46,7 @@
 
   {% if validate %}
 <div class="alert alert-block alert-error fade in">
-<h4 class="alert-heading">Invalid Input! Period should be an integer between 1 and 10. Teacher and Class cannot be empty.</h4>
+<h4 class="alert-heading">Sorry, your schedule does not satisfy the request D:</h4>
 </div>
 {% endif %}
 

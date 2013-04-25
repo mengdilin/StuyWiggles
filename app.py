@@ -9,7 +9,7 @@ app.secret_key="secret key"
 def index():
     if not session.has_key('user'):
         return redirect(url_for('about'))
-    return redirect(url_for('profile'))
+    return redirect(url_for('about'))
 
 @app.route('/logout')
 def logout():
@@ -25,7 +25,7 @@ def about():
             username=request.form['username']
             password=request.form['password']
             if username not in database.get_usernames():
-                return redirect(url_for("register"))
+                return render_template("about.html",loggedout=True,registered=False)
             if database.validate(username,password):
                 session["user"]=username
                 return redirect(url_for("profile"))
@@ -45,6 +45,8 @@ def register():
             password=request.form['password']
             osis=request.form['osis']
             digit=request.form['digit']
+            classes=request.form.getlist('class') 
+            teachers=request.form.getlist('teacher')
             name=request.form['name']
             exist=database.add_student(username,password)
             if exist:
@@ -52,7 +54,7 @@ def register():
             database.set_osis(username,osis)
             database.set_id(username,digit)
             database.set_name(username,name)
-            session['user']=username
+            database.set_schedule(username,classes,teachers)
             return redirect(url_for("profile"))
     return redirect(url_for("register"))
 
@@ -62,14 +64,14 @@ def edit():
         return redirect(url_for("about"))
     username=session['user']
     name=database.get_name(username)
-    email=database.get_email(username)
+    #email=database.get_email(username)
     osis=database.get_osis(username)
     digit=database.get_id(username)
     if request.method=='GET':
         return render_template("edit.html"
                                ,username=username
                                ,name=name
-                               ,email=email
+                               #,email=email
                                ,osis=osis
                                ,digit=digit
                                ,loggedout=False)
@@ -77,15 +79,17 @@ def edit():
         if request.form['button']=='Edit':
             password=request.form['password']
             name=request.form['name']
-            email=request.form['email']
+            #email=request.form['email']
             digit=request.form['digit']
             osis=request.form['osis']
-            if not password=="":
-                database.set_password(username,password)
+            classes=request.form.getlist('class')
+            teachers=request.form.getlist('teacher')
+            database.set_password(username,password)
             database.set_name(username,name)
-            database.set_email(username,email)
+            #database.set_email(username,email)
             database.set_id(username,digit)
             database.set_osis(username,osis)
+            database.set_schedule(username,classes,teachers)
             return redirect(url_for('profile'))
         return redirect(url_for('edit'))
 
@@ -133,13 +137,12 @@ def tradingfloor():
                                ,osis=osis
                                ,digits=digits
                                ,floor=floor
-                               ,validate=False
-                               )
+                               ,validate=False)
     if request.method=='POST':
-        index=int(request.form['button']-1)
+        index=int(request.form['button'])-1
         req=floor[index]["request"]
         acceptername=username
-        schedule=get_schedule(username)[index]
+        schedule=database.get_schedule(username)[index]
         if l_equal(req,schedule):
             database.accept_request(postername,acceptername,req)
             return redirect(url_for("tradingfloor"))
@@ -177,8 +180,12 @@ def profile():
                               # ,post=notif["post"]
                                ,accept=notif["accept"]
                                ,accepted=notif["accepted"]
-                               )  
+                               )
 
+
+                                           
+                                           
+                                           
 if __name__=="__main__":
     app.debug=True
     app.run(port=7007)
