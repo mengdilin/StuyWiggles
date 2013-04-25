@@ -54,7 +54,6 @@ def post_request(username,request):
     db=Connection["StuyWiggles"]
     current_schedule=get_schedule(username)
     current_schedule=current_schedule[int(request[0])-1]
-    current_schedule.insert(0,request[0])
     row_data={"name":get_name(username),"username":username,"request":request,"current schedule":current_schedule}
     floor.insert(row_data)
 
@@ -379,3 +378,4 @@ c={"name":"name","classes":[]}
 #print prep_class_file()
 
 #print get_class_info()
+#floor.drop()
