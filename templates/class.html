@@ -46,7 +46,8 @@
 <div class="container-fluid">
   {% if validate %}
   <div class="span4 alert alert-success">
-    <a class="close">&times;</a>Action Success!
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    Action Success!
   </div>
 {% endif %}
 
@@ -84,9 +85,10 @@
 	      <td>{{item[3]}}</td>
 	      <td>{{item[4]}}</td>
 	      <td> 
-		{% for i in schedule %}
-		{% if i==["{{item[1]}}","{{item[2]}}"] %}
-		{% set bool=True %}
+		{% for it in schedule %}
+		{% set bool = false %}
+		{% if <!--it==item[class,teacher] --> %}
+	<!-- set bool=true -->
 		{% endif %}
 		{% endfor %}
 		{% if bool %}
