@@ -119,11 +119,10 @@ def classinfo():
             database.set_period(username,period,clas)
         if (str(value[0])=="req"):
             req=classes[index]
-            print "req"
             database.post_request(username,req)
         return redirect(url_for("classinfo"))
 
-@app.route("/tradingfloor",methods=['GET','POST'])
+@app.route("/tradingfloor#disqus_thread",methods=['GET','POST'])
 def tradingfloor():
     if not session.has_key('user'):
         return redirect(url_for("about"))
