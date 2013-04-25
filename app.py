@@ -121,7 +121,6 @@ def classinfo():
             database.set_period(username,period,clas)
         if (str(value[0])=="req"):
             req=classes[index]
-            print "req"
             database.post_request(username,req)
         return redirect(url_for("classinfo"))
 
