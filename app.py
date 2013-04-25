@@ -122,7 +122,7 @@ def classinfo():
             database.post_request(username,req)
         return redirect(url_for("classinfo"))
 
-@app.route("/tradingfloor#disqus_thread",methods=['GET','POST'])
+@app.route("/tradingfloor",methods=['GET','POST'])
 def tradingfloor():
     if not session.has_key('user'):
         return redirect(url_for("about"))
