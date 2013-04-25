@@ -17,8 +17,7 @@ def dbupdate(username,user):
 def add_student(username,password):
     db=Connection["StuyWiggles"]
     if (username not in get_usernames()) and validate_password(password):
-        schedule=[0]*10
-        student={"username":str(username),"password":str(password),"schedule":schedule, "osis":0,"id":0,"posted request":[],"notification":{"post":[],"accept":{},"accepted":{}},"name":"","email":""}
+        student={"username":str(username),"password":str(password),"schedule":[0,0,0,0,0,0,0,0,0,0], "osis":0,"id":0,"posted request":[],"notification":{"post":[],"accept":{},"accepted":{}},"name":"","email":""}
         students.insert(student)
         return False
     else:
@@ -30,16 +29,22 @@ def set_email(username,email):
     user["email"]=str(email)
     dbupdate(username,user)
 
-def get_email(username):
+def set_password(username,password):
     db=Connection["StuyWiggles"]
-    user=find_student(username)
-    return user["email"]
+    student=find_student(username)
+    student["password"]=password
+    students.update({"username":username},student)
 
 def set_name(username, name):
     db=Connection["StuyWiggles"]
     user=find_student(username)
     user["name"]=str(name)
     dbupdate(username,user)
+
+def get_email(username):
+    db=Connection["StuyWiggles"]
+    user=find_student(username)
+    return user["email"]
 
 def get_name(username):
     db=Connection["StuyWiggles"]
@@ -380,3 +385,5 @@ c={"name":"name","classes":[]}
 #print get_class_info()
 #floor.drop()
 #students.drop()
+
+

@@ -82,14 +82,11 @@ def edit():
             email=request.form['email']
             digit=request.form['digit']
             osis=request.form['osis']
-            classes=request.form.getlist('class')
-            teachers=request.form.getlist('teacher')
             database.set_password(username,password)
             database.set_name(username,name)
             database.set_email(username,email)
             database.set_id(username,digit)
             database.set_osis(username,osis)
-            database.set_schedule(username,classes,teachers)
             return redirect(url_for('profile'))
         return redirect(url_for('edit'))
 
@@ -117,7 +114,7 @@ def classinfo():
         if (str(value[0])=="set"):
             period=classes[index][0]
             clas=classes[index]
-            print clas
+            print period
             database.set_period(username,period,clas)
         if (str(value[0])=="req"):
             req=classes[index]
