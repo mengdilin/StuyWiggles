@@ -56,7 +56,7 @@
 	<h1>Edit Profile : {{username}}</h1>
 	
 	<div class="control-group">
-	  <label class="control-label" for="password">Change Password :</label>
+	  <label class="control-label" for="password">Password :</label>
 	  <!-- Use tool for validation -->
 	  <div class="controls">
 	    <input type="password" id="password" name="password"/>
@@ -66,12 +66,6 @@
 	  <label class="control-label" for="verpassword">Verify Password : </label>
 	  <div class="controls">
 	    <input type="password" id="verpassword" name="verpassword" />
-	  </div>
-	</div>
-	<div class="control-group">
-	  <label class="control-label" for="name">Change Name :</label>
-	  <div class="controls">
-	    <input type="text" id="name" placeholder="First Last" name="name" value="{{name}}"/>
 	  </div>
 	</div>
 	<div class="control-group">
@@ -117,10 +111,6 @@
 	},
 	verpassword:{
 	equalTo: "#password",
-	required: true
-	},
-	name: {
-	minlength: 2,
 	required: true
 	},
 	email: {

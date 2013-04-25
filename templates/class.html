@@ -44,13 +44,11 @@
     </div>
   </div>
 
-
   {% if validate %}
 <div class="alert alert-block alert-error fade in">
-<h4 class="alert-heading">Action Success!</h4>
+<h4 class="alert-heading">Invalid Input! Period should be an integer between 1 and 10. Teacher and Class cannot be empty.</h4>
 </div>
 {% endif %}
-
 <div class="container-fluid">
 <div class="row-fluid">
   <div class="span12">
@@ -92,9 +90,9 @@
 		{% endif %}
 		{% endfor %}
 		{% if bool %}
-		<button class="btn btn-primary btn-small" type="submit" name="button" value="remove {{loop.index}}"><i class="icon-chevron-up icon-white"></i>remove</button>
+		<button class="btn btn-primary btn-small" type="submit" name="button" value="remove {{loop.index}}"><i class="icon-remove icon-white"></i>remove</button>
 		{% else %}
-		<button class="btn btn-primary btn-small" type="submit" name="button" value="set {{loop.index}}"><i class="icon-remove icon-white"></i>set</button>
+		<button class="btn btn-primary btn-small" type="submit" name="button" value="set {{loop.index}}"><i class="icon-chevron-up icon-white"></i>set</button>
 		{% endif %}
 		
 	      </td>

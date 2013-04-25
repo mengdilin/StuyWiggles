@@ -46,12 +46,14 @@ def register():
             osis=request.form['osis']
             digit=request.form['digit']
             name=request.form['name']
+            email=request.form['email']
             exist=database.add_student(username,password)
             if exist:
                 return render_template("register.html",loggedout=True,exists=exist)
             database.set_osis(username,osis)
             database.set_id(username,digit)
             database.set_name(username,name)
+            database.set_email(username,email)
             return redirect(url_for("profile"))
     return redirect(url_for("register"))
 
@@ -60,14 +62,12 @@ def edit():
     if not session.has_key('user'):
         return redirect(url_for("about"))
     username=session['user']
-    name=database.get_name(username)
     email=database.get_email(username)
     osis=database.get_osis(username)
     digit=database.get_id(username)
     if request.method=='GET':
         return render_template("edit.html"
                                ,username=username
-                               ,name=name
                                ,email=email
                                ,osis=osis
                                ,digit=digit
@@ -75,12 +75,10 @@ def edit():
     if request.method=='POST':
         if request.form['button']=='Edit':
             password=request.form['password']
-            name=request.form['name']
             email=request.form['email']
             digit=request.form['digit']
             osis=request.form['osis']
             database.set_password(username,password)
-            database.set_name(username,name)
             database.set_email(username,email)
             database.set_id(username,digit)
             database.set_osis(username,osis)
