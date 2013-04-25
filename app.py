@@ -31,6 +31,7 @@ def about():
                 return redirect(url_for("profile"))
         if request.form['button']=='Register':
             return redirect(url_for("register"))
+        return redirect(url_for("about"))
 
 
 @app.route('/register',methods=['GET','POST'])
