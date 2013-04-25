@@ -151,14 +151,19 @@ def tradingfloor():
         acceptername=username
         postername=floor[index]['username']
         schedule=database.get_schedule(username)[period]
-        print req
-        print schedule
- 
-        print l_equal(req,schedule)
-        if l_equal(req,schedule):
-            database.accept_request(postername,acceptername,req)
-            return redirect(url_for("tradingfloor"))
-        else:
+        try:
+            if l_equal(req,schedule):
+                database.accept_request(postername,acceptername,req)
+                return redirect(url_for("tradingfloor"))
+            else:
+                return render_template("trading.html"
+                                       ,name=name
+                                       ,osis=osis
+                                       ,digits=digits
+                                       ,email=email
+                                       ,floor=floor
+                                       ,validate=True)
+        except Exception:
             return render_template("trading.html"
                                    ,name=name
                                    ,osis=osis
@@ -166,7 +171,6 @@ def tradingfloor():
                                    ,email=email
                                    ,floor=floor
                                    ,validate=True)
-
 
 def l_equal(a,b):
     for index in range(len(a)):
