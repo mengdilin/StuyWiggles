@@ -173,8 +173,11 @@ def classinfo():
     name=database.get_name(username)
     osis=database.get_name(username)
     digits=database.get_id(username)
+    info=database.get_classinfo()
     if request.method=='GET':
-        return render_template("class.html",name=name,osis=osis,digits=digits)
+        return render_template("class.html",name=name,osis=osis,digits=digitsclasses=info)
+    elif request.method=='POST':
+        return
 
 if __name__=="__main__":
     app.debug=True
