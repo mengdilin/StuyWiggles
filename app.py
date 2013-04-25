@@ -113,7 +113,11 @@ def classinfo():
         if (str(value[0])=="set"):
             period=classes[index][0]
             clas=classes[index]
-            database.set_period(username,period,clas)
+            schedule=database.get_schedule(username)
+            if l_equal(schedule[int(period)-1],clas):
+                database.drop_class(username,period)
+            else:
+                database.set_period(username,period,clas)
         if (str(value[0])=="req"):
             req=classes[index]
             database.post_request(username,req)
