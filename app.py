@@ -57,6 +57,7 @@ def register():
             database.set_name(username,name)
             database.set_email(username,email)
             database.set_schedule(username,classes,teachers)
+            session['user']=username
             return redirect(url_for("profile"))
     return redirect(url_for("register"))
 
@@ -67,14 +68,14 @@ def edit():
     username=session['user']
     name=database.get_name(username)
     email=database.get_email(username)
-    #osis=database.get_osis(username)
+    osis=database.get_osis(username)
     digit=database.get_id(username)
     if request.method=='GET':
         return render_template("edit.html"
                                ,username=username
                                ,name=name
                                ,email=email
-                               #,osis=osis
+                               ,osis=osis
                                ,digit=digit
                                ,loggedout=False)
     if request.method=='POST':
