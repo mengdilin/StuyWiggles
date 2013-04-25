@@ -83,19 +83,10 @@
 	      <td>{{item[2]}}</td>
 	      <td>{{item[3]}}</td>
 	      <td>{{item[4]}}</td>
-	      <td> 
-		{% for i in schedule %}
-		{% if i==["{{item[1]}}","{{item[2]}}"] %}
-		{% set bool=True %}
-		{% endif %}
-		{% endfor %}
-		{% if bool %}
-		<button class="btn btn-primary btn-small" type="submit" name="button" value="remove {{loop.index}}"><i class="icon-remove icon-white"></i>remove</button>
-		{% else %}
-		<button class="btn btn-primary btn-small" type="submit" name="button" value="set {{loop.index}}"><i class="icon-chevron-up icon-white"></i>set</button>
-		{% endif %}
-		
-	      </td>
+	      <!--
+		  <button class="btn btn-primary btn-small" type="submit" name="button" value="remove {{loop.index}}"><i class="icon-remove icon-white"></i>remove</button>
+		  -->
+	      <td><button class="btn btn-primary btn-small" type="submit" name="button" value="set {{loop.index}}"><i class="icon-chevron-up icon-white"></i>set</button></td>
 	      <td><button class="btn btn-primary btn-small" type="submit" name="button" value="req {{loop.index}}"><i class="icon-flag icon-white"></i>request</button></td>
 	    </tr>
 	    {% endfor %}
@@ -119,6 +110,6 @@
         return rex.test($(this).text());
         }).show();
 	});
-
-</script>
+	
+      </script>
 </html>
