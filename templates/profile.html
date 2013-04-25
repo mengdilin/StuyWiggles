@@ -32,6 +32,7 @@
 	    {% else %}
 	    <li class="active"><a href="/profile">Profile</a></li>
 	    <li><a href="/tradingfloor">Trading Floor</a></li>
+	    <li><a href="/classinfo">Class Information</a></li>
 	    <li><a href="/edit">Edit Profile</a></li>
 	    <p class="navbar-text pull-right"> <a href="/logout" class="navbar-link">Logout</p></a>
 	    {% endif %}
@@ -63,8 +64,8 @@
 	<tr>
 
 	  <td>{{loop.index}}</td>
-	  <td>{{data[0]}}</td>
 	  <td>{{data[1]}}</td>
+	  <td>{{data[2]}}</td>
 
 
 	</tr>
