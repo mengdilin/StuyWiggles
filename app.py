@@ -142,8 +142,14 @@ def tradingfloor():
     if request.method=='POST':
         index=int(request.form['button'])-1
         req=floor[index]["request"]
+        period=int(req[0])-1
         acceptername=username
-        schedule=database.get_schedule(username)[index]
+        postername=floor[index]['username']
+        schedule=database.get_schedule(username)[period]
+        print req
+        print schedule
+ 
+        print l_equal(req,schedule)
         if l_equal(req,schedule):
             database.accept_request(postername,acceptername,req)
             return redirect(url_for("tradingfloor"))
