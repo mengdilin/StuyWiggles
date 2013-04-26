@@ -192,6 +192,39 @@ E8SL, 02, 7, 0, Mott, Shakespearean Literature
 ECDT, 01, 10, 0, Scheinman, Debate Team
 EJMS, 01, 10, 0, Garfinkel, Spectator
 
+FFS64, 00, 3, 0, Augustave, French 2
+FFS66, 00, 2, 0, Augustave, French 3
+FFS66, 00, 8, 0, Augustave, French 3
+FFS66, 00, 9, 0, Augustave, French 3
+FFS88X, 00, 6, 0, Augustave, AP French Language
+FGS64, 00, 2, Dehn-Knight, German 2
+FGS64, 00, 4, Dehn-Knight, German 2
+FLS62, 00, 2, 0, Brockman, Latin 1
+FLS62, 00, 6, 0, Brockman, Latin 1
+FLS64, 00, 9, 0, Brockman, Latin 2
+FLS66, 00, 3, 0, Brockman, Latin 3
+FLS88X, 00, 7, 0, Brockman, AP Latin Literature
+FSS62, 00, 1, 0, Carpenter, Spanish 1
+FSS62, 00, 2, 0, Bravo, Spanish 1
+FSS64, 00, 3, 0, Bravo, Spanish 1
+FSS62, 00, 8, 0, Carpenter, Spanish 1
+FSS64, 00, 1, 0, Bravo, Spanish 2
+FSS64, 00, 2, 0, Diaz, Spanish 2
+FSS64, 00, 3, 0, Diaz, Spanish 2
+FSS64, 00, 4, 0, Ambia, Spanish 2
+FSS64, 00, 5, 0, Carpenter, Spanish 2
+FSS64, 00, 6, 0, Bravo, Spanish 2
+FSS64, 00, 8, 0, Ambia, Spanish 2
+FSS64, 00, 8, Dehn-Knight, Spanish 2
+FSS64, 00, 9, Dehn-Knight, Spanish 2
+FSS64, 00, 10, Dehn-Knight, Spanish 2
+FSS66, 00, 1, 0, Ambia, Spanish 3
+FSS66, 00, 2, 0, Ambia, Spanish 3
+FSS66, 00, 6, 0, Carpenter, Spanish 3
+FSS66, 00, 9, 0, Bravo, Spanish 3
+FSS66, 00, 9, 0, Carpenter, Spanish 3
+FSS88, 00, 7, 0, Ambia, Spanish Conversation and Composition
+
 SCS22A, 01, 1, 2, Orlando, Chemistry
 SCS22A, 04, 2, 3, Pluchino, Chemistry
 SCS22A, 05, 2, 3, Kivi, Chemistry
