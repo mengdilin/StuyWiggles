@@ -46,7 +46,8 @@
 <div class="container-fluid">
   {% if validate %}
   <div class="span4 alert alert-success">
-    <a class="close">&times;</a>Action Success!
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    Action Success!
   </div>
 {% endif %}
 
@@ -83,6 +84,7 @@
 	      <td>{{item[2]}}</td>
 	      <td>{{item[3]}}</td>
 	      <td>{{item[4]}}</td>
+
 	      <!--
 		  <button class="btn btn-primary btn-small" type="submit" name="button" value="remove {{loop.index}}"><i class="icon-remove icon-white"></i>remove</button>
 		  -->
