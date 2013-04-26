@@ -104,6 +104,16 @@
 	    <input type="text" id="osis" placeholder="9-digit" name="osis" />
 	  </div>
 	</div>
+	<div class="control-group">
+	  <label class="control-label" for="lunch">Lunch Period :</label>
+	  <div class="controls">
+	    <div class="in-line radio">
+	      {% for i in range(5) %}
+	      <input type="radio" id="lunch" name="lunch" value="{{i+4}}">
+	      {% endfor %}
+	    </div>
+	  </div>
+	</div>
 <!--
 	<label>Schedule :</label>
 	<table class="table-condensed">
@@ -171,6 +181,9 @@
 	osis: {
 	minlength: 9,
 	maxlength: 9,
+	required: true
+	}
+	lunch: {
 	required: true
 	}
 	},

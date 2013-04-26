@@ -33,7 +33,6 @@ def about():
             return redirect(url_for("register"))
         return redirect(url_for("about"))
 
-
 @app.route('/register',methods=['GET','POST'])
 def register():
     if session.has_key('user'):
@@ -48,6 +47,7 @@ def register():
             digit=request.form['digit']
             name=request.form['name']
             email=request.form['email']
+            lunch=request.form['lunch']
             exist=database.add_student(username,password)
             if exist:
                 return render_template("register.html",loggedout=True,exists=exist)
@@ -55,6 +55,13 @@ def register():
             database.set_id(username,digit)
             database.set_name(username,name)
             database.set_email(username,email)
+            database.sett_period(username,
+                                 int(lunch),
+                                 [str(lunch),
+                                  "Cafe",
+                                  "Chi Kun Wang",
+                                  "ZLN5",
+                                  "0"+str(lunch)])
             return redirect(url_for("profile"))
     return redirect(url_for("register"))
 

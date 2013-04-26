@@ -275,7 +275,7 @@ def drop_period(username,period):
     db=Connection["StuyWiggles"]
     student=find_student(username)
     schedule=student["schedule"]
-    schedule[int(period)-1]=["","","","",""]
+    schedule[int(period)-1]=["","free","n/a","",""]
     students.update({"username":str(username)},student)
 
 username1="mengdilin"
