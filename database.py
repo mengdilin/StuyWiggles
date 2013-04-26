@@ -269,7 +269,13 @@ def set_period(username,period,clas):
 def find_student(username):
     return students.find_one({"username":str(username)})
 
-
+#This is for dropping classes
+def drop_period(username,period):
+    db=Connection["StuyWiggles"]
+    student=find_student(username)
+    schedule=student["schedule"]
+    schedule[int(period)-1]=["","","","",""]
+    students.update({"username":str(username)},student)
 
 username1="mengdilin"
 password1="abcdefg"
