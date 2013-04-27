@@ -333,6 +333,161 @@ HVS11, 09, 8, 0, Weissman, American Government
 HVS11, 10, 9, 0, Trainor, American Government
 HVS11, 11, 10, 0, Trainor, American Government
 
+MCS22, 00, 4, 0, Goldberg, Calculus
+MCS22, 00, 5, 0, Goldberg, Calculus
+MCS22, 00, 6, 0, Goldberg, Calculus
+MCS22, 00, 8, 0, Maksudian, Calculus
+MCS22, 00, 9, 0, Maksudian, Calculus
+MCS22, 00, 10, 0, Maksudian, Calculus
+MCS22X, 00, 2, 0, Ferrara, AP Calculus AB
+MCS22X, 00, 3, 0, Jaye, AP Calculus AB
+MCS22X, 00, 4, 0, Jaye, AP Calculus AB
+MCS22X, 00, 5, 0, Usoroh, AP Calculus AB
+MCS22X, 00, 6, 0, Usoroh, AP Calculus AB
+MCS22X, 00, 7, 0, Usoroh, AP Calculus AB
+MCS22X, 00, 8, 0, Stonescu, AP Calculus AB
+MCS22X, 00, 9, 0, Stonescu, AP Calculus AB
+MCS44X, 00, 1, 0, Avigdor, AP Calculus BC
+MCS44X, 00, 2, 0, Avigdor, AP Calculus BC
+MCS44X, 00, 3, 0, Cocoros, AP Calculus BC
+MCS44X, 00, 4, 0, Cocoros, AP Calculus BC
+MCS44X, 00, 5, 0, Cocoros, AP Calculus BC
+MCS44X, 00, 6, 0, Pascu, AP Calculus BC
+MCS44X, 00, 7, 0, Pascu, AP Calculus BC
+MCS66C, 00, 3, 0, Chen, Differential Equations
+MCS66C, 00, 4, 0, Chen, Differential Equations
+MES44, 00, 5, 0, Fenyves, **********
+MES44, 00, 9, 0, Fenyves, **********
+MES44X, 00, 2, 0, Protass, *********
+MES44X, 00, 6, 0, Protass, *********
+MGS44, 00, 1, 0, Fenyves, Geometry
+MGS44, 00, 2, 0, Fenyves, Geometry
+MGS44, 00, 2, 0, Herrera, Geometry
+MGS44, 00, 3, 0, Fenyves, Geometry
+MGS44, 00, 3, 0, Herrera, Geometry
+MGS44, 00, 3, 0, Protass, Geometry
+MGS44, 00, 4, 0, Chew, Geometry
+MGS44, 00, 4, 0, Levy, Geometry
+MGS44, 00, 5, 0, Chew, Geometry
+MGS44, 00, 5, 0, Levy, Geometry
+MGS44, 00, 5, 0, Sterr, Geometry
+MGS44, 00, 6, 0, Ku, Geometry
+MGS44, 00, 6, 0, Levy, Geometry
+MGS44, 00, 6, 0, Sterr, Geometry
+MGS44, 00, 7, 0, Ku, Geometry
+MGS44, 00, 7, 0, Protass, Geometry
+MGS44, 00, 7, 0, Sterr, Geometry
+MGS44, 00, 8, 0, Butler, Geometry
+MGS44, 00, 8, 0, Protass, Geometry
+MGS44, 00, 9, 0, Butler, Geometry
+MGS44, 00, 9, 0, Kavanagh, Geometry
+MGS44, 00, 10, 0, Kavanagh, Geometry
+MGS44H, 00, 4, 0, Avigdor, Honors Geometry
+MGS44H, 00, 7, 0, Avigdor, Honors Geometry
+MGS44H, 00, 8, 0, Avigdor, Honors Geometry
+MKS22, 00, 1, 0, Brooks, Introduction to Computer Science
+MKS22, 00, 1, 0, Brown Mykolyk, Introduction to Computer Science
+MKS22, 00, 1, 0, Griffith, Introduction to Computer Science
+MKS22, 00, 1, 0, Zamansky, Introduction to Computer Science
+MKS22, 00, 2, 0, Zamansky, Introduction to Computer Science
+MKS22, 00, 3, 0, Griffith, Introduction to Computer Science
+MKS22, 00, 3, 0, Konstantonivich, Introduction to Computer Science
+MKS22, 00, 3, 0, Zamansky, Introduction to Computer Science
+MKS22, 00, 4, 0, Griffith, Introduction to Computer Science
+MKS22, 00, 4, 0, Konstantonivich, Introduction to Computer Science
+MKS22, 00, 4, 0, Pascu, Introduction to Computer Science
+MKS22, 00, 5, 0, Brooks, Introduction to Computer Science
+MKS22, 00, 5, 0, Brown Mykolyk, Introduction to Computer Science
+MKS22, 00, 5, 0, Platek, Introduction to Computer Science
+MKS22, 00, 6, 0, Brooks, Introduction to Computer Science
+MKS22, 00, 6, 0, Brown Mykolyk, Introduction to Computer Science
+MKS22, 00, 6, 0, Konstantonivich, Introduction to Computer Science
+MKS22, 00, 7, 0, Brooks, Introduction to Computer Science
+MKS22, 00, 7, 0, Griffith, Introduction to Computer Science
+MKS22, 00, 7, 0, Konstantonivich, Introduction to Computer Science
+MKS22, 00, 8, 0, Dyrland-Weaver, Introduction to Computer Science
+MKS22, 00, 8, 0, Jaishankar, Introduction to Computer Science
+MKS22, 00, 8, 0, Platek, Introduction to Computer Science
+MKS22, 00, 9, 0, Dyrland-Weaver, Introduction to Computer Science
+MKS22, 00, 9, 0, Griffith, Introduction to Computer Science
+MKS22, 00, 9, 0, Jaishankar, Introduction to Computer Science
+MKS22, 00, 10, 0, Dyrland-Weaver, Introduction to Computer Science
+MKS22, 00, 10, 0, Konstantonivich, Introduction to Computer Science
+MKS22QJI, 00, 6, 0, Zamansky, Software Development
+MKS22QJI, 00, 7, 0, Zamansky, Software Development
+MKS22X, 00, 1, 0, Platek, AP Computer Science
+MKS22X, 00, 2, 0, Platek, AP Computer Science
+MKS22X, 00, 3, 0, Platek, AP Computer Science
+MKS22X, 00, 8, 0, Brown Mykolyk, AP Computer Science
+MKS22X, 00, 9, 0, Brown Mykolyk, AP Computer Science
+MKS66C, 00, 4, 0, Dyrland-Weaver, Computer Graphics
+MKS66C, 00, 5, 0, Dyralnd-Weaver, Computer Graphics
+MPS22, 00, 1, 0, Ku, Pre-calculus
+MPS22, 00, 1, 0, Usoroh, Pre-calculus
+MPS22, 00, 2, 0, Ku, Pre-calculus
+MPS22, 00, 2, 0, Usoroh, Pre-calculus
+MPS22, 00, 3, 0, Maksudian, Pre-calculus
+MPS22, 00, 3, 0, Maksudian, Pre-calculus
+MPS22, 00, 3, 0, Rubenstein, Pre-calculus
+MPS22, 00, 5, 0, Herrera, Pre-calculus
+MPS22, 00, 5, 0, Ku, Pre-calculus
+MPS22, 00, 6, 0, Herrera, Pre-calculus
+MPS22, 00, 7, 0, Chew, Pre-calculus
+MPS22, 00, 8, 0, Chew, Pre-calculus
+MPS22, 00, 8, 0, Park, Pre-calculus
+MPS22, 00, 9, 0, Chen, Pre-calculus
+MPS22, 00, 9, 0, Park, Pre-calculus
+MPS22, 00, 10, 0, Chen, Pre-calculus
+MPS22, 00, 10, 0, Herrera, Pre-calculus
+MPS22H, 00, 4, 0, Jaishankar, Honors Pre-calculus
+MPS22H, 00, 5, 0, Jaishankar, Honors Pre-calculus
+MPS22H, 00, 8, 0, Cocoros, Honors Pre-calculus
+MPS22H, 00, 9, 0, Cocoros, Honors Pre-calculus
+MQS11QAL, 00, 7, 0, Chen, Linear Algebra
+MQS11QQS, 00, 2, 0, Feigenbaum, Statistics
+MQS22, 00, 2, 0, Butler, Advanced Algebra 
+MQS22, 00, 3, 0, Butler, Advanced Algebra 
+MQS22, 00, 6, 0, Butler, Advanced Algebra
+MQS42QPS, 00, 1, 0, Goldberg, *********
+MQS42QPS, 00, 1, 0, Jumash, ***********
+MQS42QPS, 00, 1, 0, Stonescu, *********
+MQS44QPS, 00, 1, 0, Chew, *************
+MQS44QPS, 00, 1, 0, Pascu, ************
+MQS81QJ, 00, 5, 0, Rubenstein, Math Research
+MQS81QJ, 00, 6, 0, Rubenstein, Math Research
+MQS86QJI, 00, 10, 0, Brooks, Research Intel Talent Search
+MRS22, 00, 1, 0, Jaye, Algebra 2 & Trigonometry
+MRS22, 00, 1, 0, Levy, Algebra 2 & Trigonometry
+MRS22, 00, 2, 0, Kavanagh, Algebra 2 & Trigonometry
+MRS22, 00, 2, 0, Park, Algebra 2 & Trigonometry
+MRS22, 00, 2, 0, Sterr, Algebra 2 & Trigonometry
+MRS22, 00, 3, 0, Jumash, Algebra 2 & Trigonometry
+MRS22, 00, 3, 0, Lostal, Algebra 2 & Trigonometry
+MRS22, 00, 3, 0, Sterr, Algebra 2 & Trigonometry
+MRS22, 00, 4, 0, Jumash, Algebra 2 & Trigonometry
+MRS22, 00, 4, 0, Kavanagh, Algebra 2 & Trigonometry
+MRS22, 00, 4, 0, Lostal, Algebra 2 & Trigonometry
+MRS22, 00, 5, 0, Kavanagh, Algebra 2 & Trigonometry
+MRS22, 00, 5, 0, Park, Algebra 2 & Trigonometry
+MRS22, 00, 6, 0, Jumash, Algebra 2 & Trigonometry
+MRS22, 00, 6, 0, Park, Algebra 2 & Trigonometry
+MRS22, 00, 7, 0, Jumash, Algebra 2 & Trigonometry
+MRS22, 00, 7, 0, Liang, Algebra 2 & Trigonomtetry
+MRS22, 00, 8, 0, Goldberg, Algebra 2 & Trigonometry
+MRS22, 00, 8, 0, Jaye, Algebra 2 & Trigonometry
+MRS22, 00, 9, 0, Jaye, Algebra 2 & Trigonometry
+MRS22, 00, 9, 0, Levy, Algebra 2 & Trigonometry
+MRS22, 00, 9, 0, Lostal, Algebra 2 & Trigonometry
+MRS22, 00, 10, 0, Lostal, Algebra 2 & Trigonometry
+MRS22H, 00, 2, 0, Stonescu, Honors Algebra 2 & Trigonometry
+MRS22H, 00, 3, 0, Stonescu, Honors Algebra 2 & Trigonometry
+MRS22H, 00, 9, 0, Pascu, Honors Algebra 2 & Trigonometry
+MSS22X, 00, 4, 0, Feigenbaum, AP Statistics
+MSS22X, 00, 5, 0, Feigenbaum, AP Statistics
+MSS22X, 00, 8, 0, Feigenbaum, AP Statistics
+MSS22X, 00, 9, 0, Feigenbaum, AP Statistics
+ZMTEAM, 01, 1, 0, Jaishankar, Math Team
+
 PES86QK, 01, 1, 0, Barth, Grade 11 In-Line Skating
 PES88QD, 01. 1. 0, Choy, Grade 12 Ballroom Dancing
 PES88QD, 02, 2, 0, Choy, Grade 12 Ballroom Dancing
