@@ -216,71 +216,71 @@ FTS64, 01, 7, 0, Rocchio, Italian 2
 FTS66, 01, 9, 0, Rocchio, Italian 3
 FTS88X, 01, 6, 0, Rocchio, AP Italian Language
 
-HES11, 00, 1, 0, Kennedy, Economics
-HES11, 00, 2, 0, Kennedy, Economics
-HES11, 00, 2, 0, McRoy, Economics
-HES11, 00, 3, 0, Kennedy, Economics
-HES11, 00, 4, 0, Mannino, Economics
-HES11, 00, 5, 0, Mannino, Economics
-HES11, 00, 6, 0, McRoy, Economics
-HES11, 00, 7, 0, Kennedy, Economics
-HES11, 00, 8, 0, Boericke, Economics
-HES11, 00, 8, 0, Greez, Economics
-HES11QWS, 00, 5, 0, Kennedy, Wall Street
-HES11QWS, 00, 6, 0, Kennedy, Wall Street
-HES22X, 00, 1, 0, McRoy, AP Microeconomics
-HES22X, 00, 2, 0, Schweitzer, AP Microeconomics
-HES22X, 00, 5, 0, McRoy, AP Microeconomics
-HES22X, 00, 6, 0, Schweitzer, AP Microeconomics
-HES22X, 00, 7, 0, Schweitzer, AP Microeconomics
-HES22X, 00, 9, 0, McRoy, AP Microeconomics
-HGS42, 00, 1, 0, Mannino, Freshman Global History
-HGS42, 00, 2, 0, Valentin, Freshman Global History
-HGS42, 00, 2, 0, Badgley, Freshman Global History
-HGS42, 00, 2, 0, Waxman, Freshman Global History
-HGS42, 00, 3, 0, Garcia, Freshman Global History
-HGS42, 00, 3, 0, Mannino, Freshman Global History
-HGS42, 00, 3, 0, Waxman, Freshman Global History
-HGS42, 00, 4, 0, Garcia, Freshman Global History
-HGS42, 00, 4, 0, Valentin, Freshman Global History
-HGS42, 00, 5, 0, Garcia, Freshman Global History
-HGS42, 00, 5, 0, Valentin, Freshman Global History
-HGS42, 00, 5, 0, Suri, Freshman Global History
-HGS42, 00, 6, 0, Suri, Freshman Global History
-HGS42, 00, 6, 0, Waxman, Freshman Global History
-HGS42, 00, 7, 0, Tillman, Freshman Global History
-HGS42, 00, 7, 0, Waxman, Freshman Global History
-HGS42, 00, 8, 0, Valentin, Freshman Global History
-HGS42, 00, 8, 0, Waxman, Freshman Global History
-HGS42, 00, 9, 0, Garcia, Freshman Global History
-HGS42, 00, 9, 0, Mannino, Freshman Global History
-HGS42, 00, 9, 0, Valentin, Freshman Global History
-HGS42, 00, 10, 0, Garcia, Freshman Global History
-HGS42QAT, 00, 6, 0, Badgley, Freshman Advanced Topics Global History
-HGS42QAT, 00, 7, 0, Badgley, Freshman Advanced Topics Global History
-HGS42QAT, 00, 9, 0, Badgley, Freshman Advanced Topics Global History
-HGS44, 00, 1, 0, Feldman, Sophomore Global History
-HGS44, 00, 2, 0, Jezer, Sophomore Global History
-HGS44, 00, 3, 0, Olivi, Sophomore Global History
-HGS44, 00, 4, 0, Feldman, Sophomore Global History
-HGS44, 00, 5, 0, Feldman, Sophomore Global History
-HGS44, 00, 6, 0, Jezer, Sophomore Global History
-HGS44, 00, 6, 0, Shuman, Sophomore Global History
-HGS44, 00, 7, 0, Jezer, Sophomore Global History
-HGS44, 00, 7, 0, Shuman, Sophomore Global History
-HGS44, 00, 8, 0, Feldman, Sophomore Global History
-HGS44, 00, 9, 0, Jezer, Sophomore Global History
-HGS44, 00, 9, 0, Shuman, Sophomore Global History
-HGS44, 00, 10, 0, Jezer, Sophomore Global History
-HGS44XE, 00, 2, 0, Hanna, AP European History
-HGS44XE, 00, 3, 0, Hanna, AP European History
-HGS44XW, 00, 2, 0, Trainor, AP World History
-HGS44XW, 00, 3, 0, Trainor, AP World History
-HGS44XW, 00, 4, 0, Trainor, AP World History
-HGS44XW, 00, 5, 0, Olivi, AP World History
-HGS44XW, 00, 6, 0, Olivi, AP World History
-HGS44XW, 00, 9, 0, Olivi, AP World History
-HGS44XW, 00, 10, 0, Olivi, AP World History
+HES11, 01, 1, 0, Kennedy, Economics
+HES11, 02, 2, 0, Kennedy, Economics
+HES11, 03, 2, 0, McRoy, Economics
+HES11, 04, 3, 0, Kennedy, Economics
+HES11, 05, 4, 0, Mannino, Economics
+HES11, 06, 5, 0, Mannino, Economics
+HES11, 07, 6, 0, McRoy, Economics
+HES11, 08, 7, 0, Kennedy, Economics
+HES11, 09, 8, 0, Boericke, Economics
+HES11, 10, 8, 0, Greez, Economics
+HES11QWS, 01, 5, 0, Kennedy, Wall Street
+HES11QWS, 02, 6, 0, Kennedy, Wall Street
+HES22X, 01, 1, 0, McRoy, AP Microeconomics
+HES22X, 02, 2, 0, Schweitzer, AP Microeconomics
+HES22X, 03, 5, 0, McRoy, AP Microeconomics
+HES22X, 04, 6, 0, Schweitzer, AP Microeconomics
+HES22X, 05, 7, 0, Schweitzer, AP Microeconomics
+HES22X, 06, 9, 0, McRoy, AP Microeconomics
+HGS42, 01, 1, 0, Mannino, Freshman Global History
+HGS42, 02, 2, 0, Valentin, Freshman Global History
+HGS42, 03, 2, 0, Badgley, Freshman Global History
+HGS42, 04, 2, 0, Waxman, Freshman Global History
+HGS42, 05, 3, 0, Garcia, Freshman Global History
+HGS42, 06, 3, 0, Mannino, Freshman Global History
+HGS42, 07, 3, 0, Waxman, Freshman Global History
+HGS42, 08, 4, 0, Garcia, Freshman Global History
+HGS42, 09, 4, 0, Valentin, Freshman Global History
+HGS42, 10, 5, 0, Garcia, Freshman Global History
+HGS42, 11, 5, 0, Valentin, Freshman Global History
+HGS42, 12, 5, 0, Suri, Freshman Global History
+HGS42, 13, 6, 0, Suri, Freshman Global History
+HGS42, 14, 6, 0, Waxman, Freshman Global History
+HGS42, 15, 7, 0, Tillman, Freshman Global History
+HGS42, 16, 7, 0, Waxman, Freshman Global History
+HGS42, 17, 8, 0, Valentin, Freshman Global History
+HGS42, 18, 8, 0, Waxman, Freshman Global History
+HGS42, 19, 9, 0, Garcia, Freshman Global History
+HGS42, 20, 9, 0, Mannino, Freshman Global History
+HGS42, 21, 9, 0, Valentin, Freshman Global History
+HGS42, 22, 10, 0, Garcia, Freshman Global History
+HGS42QAT, 01, 6, 0, Badgley, Freshman Advanced Topics Global History
+HGS42QAT, 02, 7, 0, Badgley, Freshman Advanced Topics Global History
+HGS42QAT, 03, 9, 0, Badgley, Freshman Advanced Topics Global History
+HGS44, 01, 1, 0, Feldman, Sophomore Global History
+HGS44, 02, 2, 0, Jezer, Sophomore Global History
+HGS44, 03, 3, 0, Olivi, Sophomore Global History
+HGS44, 04, 4, 0, Feldman, Sophomore Global History
+HGS44, 05, 5, 0, Feldman, Sophomore Global History
+HGS44, 06, 6, 0, Jezer, Sophomore Global History
+HGS44, 07, 6, 0, Shuman, Sophomore Global History
+HGS44, 08, 7, 0, Jezer, Sophomore Global History
+HGS44, 09, 7, 0, Shuman, Sophomore Global History
+HGS44, 10, 8, 0, Feldman, Sophomore Global History
+HGS44, 11, 9, 0, Jezer, Sophomore Global History
+HGS44, 12, 9, 0, Shuman, Sophomore Global History
+HGS44, 13, 10, 0, Jezer, Sophomore Global History
+HGS44XE, 01, 2, 0, Hanna, AP European History
+HGS44XE, 02, 3, 0, Hanna, AP European History
+HGS44XW, 01, 2, 0, Trainor, AP World History
+HGS44XW, 02, 3, 0, Trainor, AP World History
+HGS44XW, 03, 4, 0, Trainor, AP World History
+HGS44XW, 04, 5, 0, Olivi, AP World History
+HGS44XW, 05, 6, 0, Olivi, AP World History
+HGS44XW, 06, 9, 0, Olivi, AP World History
+HGS44XW, 07, 10, 0, Olivi, AP World History
 HRS11QCR, 01, 3, 0, Weissman, Criminal Law
 HRS11QCR, 02, 4, 0, Weissman, Criminal Law
 HRS11QGP, 01, 5, 0, Badgley, Geopolitics
@@ -290,48 +290,48 @@ HRS11QMC, 03, 8, 0, Boericke, Modern China
 HRS11QNY, 01, 7, 0, Sandler, New York City History
 HRS11QNY, 02, 8, 0, Sandler, New York City History
 HRS22QPT, 01, 3, 0, Polazzo, History of Western Political Theory
-HSS86QJI, 00, 9, 0, Schweitzer, Intel Research Social Science
-HSS86QJI, 00, 10, 0, Schweitzer, Intel Research Social Science
-HTS11X, 00, 4, 0, Polazzo, AP Comparative Government
-HTS11X, 00, 7, 0, Polazzo, AP Comparative Government
-HTS11X, 00, 8, 0, Polazzo, AP Comparative Government
-HTS11X, 00, 10, 0, Polazzo, AP Comparative Government
-HUS22, 00, 1, 0, Wisotsky, US History
-HUS22, 00, 2, 0, Feldman, US History
-HUS22, 00, 2, 0, Shuman, US History
-HUS22, 00, 3, 0, Greenwald, US History
-HUS22, 00, 3, 0, Shuman, US History
-HUS22, 00, 4, 0, Hanna, US History
-HUS22, 00, 4, 0 Wisotsky, US History
-HUS22, 00, 5, 0, Stern, US History
-HUS22, 00, 7, 0, Greenwald, US History
-HUS22, 00, 7, 0, Hanna, US History
-HUS22, 00, 8, 0, Hanna, US History
-HUS22, 00, 8, 0, Wisotsky, US History
-HUS22, 00, 9, 0, Wisotsky, US History
-HUS22, 00, 10, 0, Greenwald, US History
-HUS22X, 00, 1, 0, Greez, AP US History
-HUS22X, 00, 2, 0, Stern, AP US History
-HUS22X, 00, 3, 0, Sandler, AP US History
-HUS22X, 00, 4, 0, Sandler, AP US History
-HUS22X, 00, 6, 0, Stern, AP US History
-HUS22X, 00, 7, 0, Greez, AP US History
-HUS22X, 00, 8, 0, Stern, AP US History
-HUS22X, 00, 9, 0, Stern, AP US History
-HUS22X, 00, 10, 0, Sandler, AP US History
-HUS22XAS, 00, 4, 0, Greez, AP US History: American Studies
-HUS22XAS, 00, 5, 0, Greez, AP US History: American Studies
-HVS11, 00, 1, 0, Tillman, American Government
-HVS11, 00, 1, 0, Weissman, American Government
-HVS11, 00, 2, 0, Tillman, American Government
-HVS11, 00, 3, 0, Wisotsky, American Government
-HVS11, 00, 4, 0, Tillman, American Government
-HVS11, 00, 5, 0, Tillman, American Government
-HVS11, 00, 6, 0, Weissman, American Government
-HVS11, 00, 7, 0, Weissman, American Government
-HVS11, 00, 8, 0, Weissman, American Government
-HVS11, 00, 9, 0, Trainor, American Government
-HVS11, 00, 10, 0, Trainor, American Government
+HSS86QJI, 01, 9, 0, Schweitzer, Intel Research Social Science
+HSS86QJI, 02, 10, 0, Schweitzer, Intel Research Social Science
+HTS11X, 01, 4, 0, Polazzo, AP Comparative Government
+HTS11X, 02, 7, 0, Polazzo, AP Comparative Government
+HTS11X, 03, 8, 0, Polazzo, AP Comparative Government
+HTS11X, 04, 10, 0, Polazzo, AP Comparative Government
+HUS22, 01, 1, 0, Wisotsky, US History
+HUS22, 02, 2, 0, Feldman, US History
+HUS22, 03, 2, 0, Shuman, US History
+HUS22, 04, 3, 0, Greenwald, US History
+HUS22, 05, 3, 0, Shuman, US History
+HUS22, 06, 4, 0, Hanna, US History
+HUS22, 07, 4, 0 Wisotsky, US History
+HUS22, 08, 5, 0, Stern, US History
+HUS22, 09, 7, 0, Greenwald, US History
+HUS22, 10, 7, 0, Hanna, US History
+HUS22, 11, 8, 0, Hanna, US History
+HUS22, 12, 8, 0, Wisotsky, US History
+HUS22, 13, 9, 0, Wisotsky, US History
+HUS22, 14, 10, 0, Greenwald, US History
+HUS22X, 01, 1, 0, Greez, AP US History
+HUS22X, 02, 2, 0, Stern, AP US History
+HUS22X, 03, 3, 0, Sandler, AP US History
+HUS22X, 04, 4, 0, Sandler, AP US History
+HUS22X, 05, 6, 0, Stern, AP US History
+HUS22X, 06, 7, 0, Greez, AP US History
+HUS22X, 07, 8, 0, Stern, AP US History
+HUS22X, 08, 9, 0, Stern, AP US History
+HUS22X, 09, 10, 0, Sandler, AP US History
+HUS22XAS, 01, 4, 0, Greez, AP US History: American Studies
+HUS22XAS, 02, 5, 0, Greez, AP US History: American Studies
+HVS11, 01, 1, 0, Tillman, American Government
+HVS11, 02, 1, 0, Weissman, American Government
+HVS11, 03, 2, 0, Tillman, American Government
+HVS11, 04, 3, 0, Wisotsky, American Government
+HVS11, 05, 4, 0, Tillman, American Government
+HVS11, 06, 5, 0, Tillman, American Government
+HVS11, 07, 6, 0, Weissman, American Government
+HVS11, 08, 7, 0, Weissman, American Government
+HVS11, 09, 8, 0, Weissman, American Government
+HVS11, 10, 9, 0, Trainor, American Government
+HVS11, 11, 10, 0, Trainor, American Government
 
 PES86QK, 01, 1, 0, Barth, Grade 11 In-Line Skating
 PES88QD, 01. 1. 0, Choy, Grade 12 Ballroom Dancing
@@ -422,6 +422,43 @@ SCS44XA, 04, 5, 6, O'Malley, AP Chemistry
 SCS44XA, 05, 7, 8, Paik, AP Chemistry
 SCS44XB, 02, 2, 3, Paik, AP Chemistry
 SCS44XB, 03, 4, 5, O'Malley, AP Chemistry
+
+SPS11QAS, 01, 2, 0, Akhmedov, Astronomy
+SPS11QAS, 02, 6, 0, Lam, Astronomy
+SPS11QAS, 03, 7, 0, Lam, Astronomy
+SPS22QMP, 01, 9, 0, Ali, Modern Physics and Nanotechnology
+SPS22QMP, 02, 9, 0, Esper, Modern Physics and Nanotechnology
+SPS22A, 03, 3, 4, Strasser, Junior Physics
+SPS22A, 04, 3, 4, Avallone, Junior Physics
+SPS22A, 06, 5, 6, Wang, Junior Physics
+SPS22A, 08, 5, 6, Majewski, Junior Physics
+SPS22A, 09, 6, 7, Ali, Junior Physics
+SPS22A, 10, 8, 9, Strasser, Junior Physics
+SPS22A, 15, 9, 10, Wang, Junior Physics
+SPS22A, 16, 9, 10, Lam, Junior Physics
+SPS22B, 01, 1, 2, Ali, Junior Physics
+SPS22B, 02, 1, 2, Wang, Junior Physics
+SPS22B, 05, 3, 4, Lam, Junior Physics
+SPS22B, 07, 4, 5, Avallone, Junior Physics
+SPS22B, 11, 6, 7, Strasser, Junior Physics
+SPS22B, 12, 5, 6, Ali, Junior Physics
+SPS22B, 13, 8, 9, Wang, Junior Physics
+SPS22B, 14, 8, 9, Majewski, Junior Physics
+SPS22FA, 17, 1, 2, Majewski, Freshman Physics
+SPS22FA, 19, 3, 4, Akhmedov, Freshman Physics
+SPS22FA, 21, 9, 10, Akhmedov, Freshman Physics
+SPS22FB, 18, 1, 2, Thomas, Freshman Physics
+SPS22FB, 20, 7, 8, Akhmedov, Freshman Physics
+SPS22HJA, 01, 3, 4, Gorla, Research Physics
+SPS22HJB, 02, 4, 5, Gorla, Research Physics
+SPS22HJB, 03, 9, 10, Gorla, Research Physics
+SPS22X, 01, 1, 0, Strasser, AP Physics Level B
+SPS22X, 02, 2, 0, Strasser, AP Physics Level B
+SPS22X, 03, 9, 0, Avallone, AP Physics Level B
+SPS22X, 04, 10, 0, Avallone, AP Physics Level B
+SPS44X, 01, 3, 4, Esper, AP Physics Level C
+SPS44X, 02, 7, 8, Esper, AP Physics Level C
+SQS86QJ5, 01, 7, 0, Gorla, Intel Research Physics
 
 TAS22QPA, 01, 2, 0, Winston, Senior Photography
 TAS22QPA, 02, 3, 0, Winston, Senior Photography
