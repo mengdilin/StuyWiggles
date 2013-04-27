@@ -19,87 +19,6 @@ APS22QAP, 01, 1, 0, Cappell, Acrylic Painting
 APS22QAP, 02, 2, 0, Cappell, Acrylic Painting
 AUS11QCG, 01, 4, 0, Cappell, Computer Graphics Design
 
-UAS11, 00, 2, 0, Hall, Music Appreciation
-UAS11, 00, 3, 0, Hall, Music Appreciation
-UVS11, 00, 5, 0, Hall, Concert Chorus
-UCS11, 00, 8, 0, Hall, Chamber Choir
-UAS11, 00, 9, 0, Hall, Music Appreciation
-UAS11, 00, 1, 0, Shamazov, Music Appreciation
-UAS11, 00, 4, 0, Shamazov, Music Appreciation
-UVS11, 00, 5, 0, Shamazov, Concert Chorus
-UAS11, 00, 7, 0, Shamazov, Music Appreciation
-UCS11, 00, 8, 0, Shamazov, Chamber Choir
-UUS21X, 00, 1, 0, Tamosaitis, AP Music Theory
-UYS11, 00, 5, 0, Tamosaitis, Symphony Orchestra
-UZS32, 00, 6, 0, Tamosaitis, Intermediate String Techniques
-UZS33, 00, 7, 0, Tamosaitis, Advanced String Techniques
-UAS11, 00, 8, 0, Tamosaitis, Music Appreciation
-UJS11, 00, 1, 0, Winkel, Jazz Band
-UDS11Q2, 00, 2, 0, Winkel, Advanced Wind/Brass Techniques
-UDS11Q3, 00, 3, 0, Winkel, Symphonic Band
-UDS11Q4, 00, 4, 0, Winkel, Intermediate Wind/Brass Techniques
-UDS11Q8, 00, 8, 0, Winkel, Beginning Wind/Brass Techniques
-UDS11Q2, 00, 2, 0, Wheeler, Advanced Wind/Brass Techniques
-UDS11Q3, 00, 3, 0, Wheeler, Symphonic Band
-UDS11Q4, 00, 4, 0, Wheeler, Intermediate Wind/Brass Techniques
-
-PES86QK, 01, 1, 0, Barth, Grade 11 In-Line Skating
-PES88QD, 01. 1. 0, Choy, Grade 12 Ballroom Dancing
-PES88QD, 02, 2, 0, Choy, Grade 12 Ballroom Dancing
-PES88QD, 03, 5, 0, Choy, Grade 12 Ballroom Dancing
-PES88QK, 01, 3, 0, Barth, Grade 12 In-Line Skating
-PFS86QA, 01, 6, 0, Rosenthal, Grade 11 Step Aerobics
-PFS86QP, 01, 4, 0, Bologna, Grade 11 Polar Bear
-PFS86QW, 01, 9, 0, Miller, Grade 11 Weight Training and Physical Fitness
-PFS88QA, 01, 8, 0, Choubaralian, Grade 12 Stuy Box Aerobics
-PFS88QP, 01, 3, Luczak, Grade 12 Polar Bear
-PFS88QW, 01, 2, 0, Barbin, Grade 12 Weight Training and Physical Fitness
-PHS11, 01, 1, 0, Garber, Health Education
-PHS11, 02, 2, 0, Fang, Health Education
-PHS11, 03, 2, 0, Garber, Health Education
-PHS11, 04, 3, 0, Fang, Health Education
-PHS11, 05, 4, 0, Garber, Health Education
-PHS11, 06, 5, 0, Garber, Health Education
-PHS11, 07, 6, 0, Fang, Health Education
-PHS11, 08, 6, 0, Weinwurm, Health Education
-PHS11, 09, 7, 0, Weinwurm, Health Education
-PHS11, 10, 8, 0, Weinwurm, Health Education
-PHS11, 11, 9, 0, Fang, Health Education
-PHS11, 12, 9, 0, Garber, Health Education
-PHS11, 13, 10, 0, Fang, Health Education
-PPS82Q, 01, 1, 0, Markova, Grade 9 Physical Education
-PPS82Q, 02, 1, Rosenthal, Grade 9 Physical Education
-PPS82Q, 03, 3, 0, Bologna, Grade 9 Physical Education
-PPS82Q, 04, 3, 0, Choubaralian, Grade 9 Physical Education
-PPS82Q, 05, 3, 0, Rosenthal, Grade 9 Physical Education
-PPS82Q, 06, 4, 0, Luczak, Grade 9 Physical Education
-PPS82Q, 07, 4, 0, Markova, Grade 9 Physical Education
-PPS82Q, 08, 7, 0, Bologna, Grade 9 Physical Education
-PPS82Q, 09, 7, 0, Luczak, Grade 9 Physical Education
-PPS82Q, 10, 7, 0, Markova, Grade 9 Physical Education
-PPS82Q, 11, 10, 0, Choubaralian, Grade 9 Physical Education
-PPS82Q, 12, 10, 0, Luczak, Grade 9 Physical Education
-PPS84Q, 01, 2, 0, Markova, Grade 10 Physical Education
-PPS84Q, 02, 2, 0, Fisher, Grade 10 Physical Education
-PPS84Q, 03, 2, 0, Choubaralian, Grade 10 Physical Education
-PPS84Q, 04, 5, 0, Fisher, Grade 10 Physical Education
-PPS84Q, 05, 5, 0, Barbin, Grade 10 Physical Education
-PPS84Q, 06, 5, 0, Rosenthal, Grade 10 Physical Education
-PPS84Q, 07, 8, 0, Fisher, Grade 10 Physical Education
-PPS84Q, 08, 8, 0, Barbin, Grade 10 Physical Education
-PPS84Q, 09, 8, 0, Markova, Grade 10 Physical Education
-PPS84Q, 10, 10, 0, Barbin, Grade 10 Physical Education
-PPS86Q, 01, 1, 0, Bologna, Grade 11 Physical Education
-PPS86Q, 02, 4, 0, Barbin, Grade 11 Physical Education
-PPS86Q, 03, 6, 0, Luczak, Grade 11 Physical Education
-PPS86Q, 04. 6, 0, Chobaralian, Grade 11 Physical Education
-PPS86Q, 06, 9, 0, Rosenthal, Grade 11 Physical Education
-PPS86QB, 05, 9, 0, Fisher, Grade 11 Basketball
-PPS88Q, 01, 6, 0, Miller, Grade 12 Physical Education
-PPS88Q, 02, 7, 0, Miller, Grade 12 Physical Education
-PPS88Q, 03, 9, 0, Bologna, Grade 12 Physical Eductaion
-PTS86QV, 01, 4, 0, Fisher, Grade 11 Volleyball
-
 E2FC, 01, 1, 0, Ferencz, Freshman Composition
 E2FC, 02, 1, 0, Henderson, Freshman Composition
 E2FC, 03, 1, 0, Nieves, Freshman Composition
@@ -216,38 +135,143 @@ E8SL, 02, 7, 0, Mott, Shakespearean Literature
 ECDT, 01, 10, 0, Scheinman, Debate Team
 EJMS, 01, 10, 0, Garfinkel, Spectator
 
-FFS64, 00, 3, 0, Augustave, French 2
-FFS66, 00, 2, 0, Augustave, French 3
-FFS66, 00, 8, 0, Augustave, French 3
-FFS66, 00, 9, 0, Augustave, French 3
-FFS88X, 00, 6, 0, Augustave, AP French Language
-FGS64, 00, 2, Dehn-Knight, German 2
-FGS64, 00, 4, Dehn-Knight, German 2
-FLS62, 00, 2, 0, Brockman, Latin 1
-FLS62, 00, 6, 0, Brockman, Latin 1
-FLS64, 00, 9, 0, Brockman, Latin 2
-FLS66, 00, 3, 0, Brockman, Latin 3
-FLS88X, 00, 7, 0, Brockman, AP Latin Literature
-FSS62, 00, 1, 0, Carpenter, Spanish 1
-FSS62, 00, 2, 0, Bravo, Spanish 1
-FSS64, 00, 3, 0, Bravo, Spanish 1
-FSS62, 00, 8, 0, Carpenter, Spanish 1
-FSS64, 00, 1, 0, Bravo, Spanish 2
-FSS64, 00, 2, 0, Diaz, Spanish 2
-FSS64, 00, 3, 0, Diaz, Spanish 2
-FSS64, 00, 4, 0, Ambia, Spanish 2
-FSS64, 00, 5, 0, Carpenter, Spanish 2
-FSS64, 00, 6, 0, Bravo, Spanish 2
-FSS64, 00, 8, 0, Ambia, Spanish 2
-FSS64, 00, 8, Dehn-Knight, Spanish 2
-FSS64, 00, 9, Dehn-Knight, Spanish 2
-FSS64, 00, 10, Dehn-Knight, Spanish 2
-FSS66, 00, 1, 0, Ambia, Spanish 3
-FSS66, 00, 2, 0, Ambia, Spanish 3
-FSS66, 00, 6, 0, Carpenter, Spanish 3
-FSS66, 00, 9, 0, Bravo, Spanish 3
-FSS66, 00, 9, 0, Carpenter, Spanish 3
-FSS88, 00, 7, 0, Ambia, Spanish Conversation and Composition
+FFS64, 01, 3, 0, Augustave, French 2
+FFS66, 01, 2, 0, Augustave, French 3
+FFS66, 02, 8, 0, Augustave, French 3
+FFS66, 03, 9, 0, Augustave, French 3
+FFS88X, 01, 6, 0, Augustave, AP French Language
+FGS64, 01, 2, 0, Dehn-Knight, German 2
+FGS64, 02, 4, 0, Dehn-Knight, German 2
+FJS62, 01, 4, 0, Helinski, Japanese 1
+FJS64, 01, 2, 0, Helinski, Japanese 2
+FJS64, 02, 3, 0, Helinski, Japanese 2
+FJS66, 01, 9, 0, Helinski, Japanese 3
+FJS88X, 01, 8, 0, Helinski, AP Japanese Language
+FLS62, 01, 2, 0, Brockman, Latin 1
+FLS62, 02, 6, 0, Brockman, Latin 1
+FLS64, 01, 9, 0, Brockman, Latin 2
+FLS66, 01, 3, 0, Brockman, Latin 3
+FLS88X, 01, 7, 0, Brockman, AP Latin Literature
+FMS62, 01, 2, 0, Pan, Mandarin 1
+FMS62, 02, 4, 0, Pan, Mandarin 1
+FMS62, 03, 6, 0, Pan, Mandarin 1
+FMS62, 04, 7, 0, Pan, Mandarin 1
+FMS64, 01, 1, 0, Pan, Mandarin 2
+FMS64, 02, 2, 0, Yang, Mandarin 2
+FMS64, 03, 5, 0, Guan, Mandarin 2
+FMS64, 04, 7, 0, Guan, Mandarin 2
+FMS66, 01, 3, 0, Guan, Mandarin 3
+FMS66, 02, 4, 0, Guan, Mandarin 3
+FMS66, 03, 9, 0, Yang, Mandarin 3
+FMS66, 04, 10, 0, Yang, Mandarin 3
+FMS88, 01, 5, 0, Yang, Mandarin Chinese Conversation and Composition
+FMS88, 02, 6, 0, Yang, Mandarin Chinese Conversation and Composition
+FMS88X, 01, 8, 0, Guan, AP Mandarin Chinese Language
+FSS62, 01, 1, 0, Carpenter, Spanish 1
+FSS62, 02, 2, 0, Bravo, Spanish 1
+FSS62, 03, 3, 0, Bravo, Spanish 1
+FSS62, 04, 8, 0, Carpenter, Spanish 1
+FSS64, 01, 1, 0, Bravo, Spanish 2
+FSS64, 02, 2, 0, Diaz, Spanish 2
+FSS64, 03, 2, 0, Silverio, Spanish 2
+FSS64, 04, 3, 0, Diaz, Spanish 2
+FSS64, 05, 3, 0, Silverio, Spanish 2
+FSS64, 06, 4, 0, Ambia, Spanish 2
+FSS64, 07, 5, 0, Carpenter, Spanish 2
+FSS64, 08, 5, 0, Weldon, Spanish 2
+FSS64, 09, 6, 0, Bravo, Spanish 2
+FSS64, 10, 7, 0, Weldon, Spanish 2
+FSS64, 11, 8, 0, Ambia, Spanish 2
+FSS64, 12, 8, 0, Dehn-Knight, Spanish 2
+FSS64, 13, 9, 0, Dehn-Knight, Spanish 2
+FSS64, 14, 9, 0, Monserrat, Spanish 2
+FSS64, 15, 10, Dehn-Knight, Spanish 2
+FSS66, 01, 1, 0, Ambia, Spanish 3
+FSS66, 02, 1, 0, Monserrat, Spanish 3
+FSS66, 03, 2, 0, Ambia, Spanish 3
+FSS66, 04, 3, 0, Simon, Spanish 3
+FSS66, 05, 4, 0, Diaz, Spanish 3
+FSS66, 06, 4, 0, Simon, Spanish 3
+FSS66, 07, 5, 0, Monserrat, Spanish 3
+FSS66, 08, 6, 0, Carpenter, Spanish 3
+FSS66, 09, 6, 0, Monserrat, Spanish 3
+FSS66, 10, 7, 0, Diaz, Spanish 3
+FSS66, 11, 7, 0, Silverio, Spanish 3
+FSS66, 12, 8, 0, Silverio, Spanish 3
+FSS66, 13, 8, 0, Weldon, Spanish 3
+FSS66, 14, 9, 0, Bravo, Spanish 3
+FSS66, 15, 9, 0, Carpenter, Spanish 3
+FSS66, 16, 9, 0, Weldon, Spanish 3
+FSS66, 17, 10, 0, Silverio, Spanish 3
+FSS66, 18, 10, 0, Simon, Spanish 3
+FSS88, 01, 7, 0, Ambia, Spanish Conversation and Composition
+FSS88, 02, 8, 0, Diaz, Spanish Conversation and Composition
+FSS88X, 01, 1, 0, Weldon, AP Spanish Language
+FSS88X, 02, 3, 0, Ubieta, AP Spanish Language
+FSS88X, 03, 4, 0, Ubieta, AP Spanish Language
+FSSAAX, 01, 7, 0, Monserrat, AP Spanish Literature
+FTS62, 01, 1, 0, Rocchio, Italian 1
+FTS62, 02, 2, 0, Rocchio, Italian 1
+FTS64, 01, 7, 0, Rocchio, Italian 2
+FTS66, 01, 9, 0, Rocchio, Italian 3
+FTS88X, 01, 6, 0, Rocchio, AP Italian Language
+
+PES86QK, 01, 1, 0, Barth, Grade 11 In-Line Skating
+PES88QD, 01. 1. 0, Choy, Grade 12 Ballroom Dancing
+PES88QD, 02, 2, 0, Choy, Grade 12 Ballroom Dancing
+PES88QD, 03, 5, 0, Choy, Grade 12 Ballroom Dancing
+PES88QK, 01, 3, 0, Barth, Grade 12 In-Line Skating
+PFS86QA, 01, 6, 0, Rosenthal, Grade 11 Step Aerobics
+PFS86QP, 01, 4, 0, Bologna, Grade 11 Polar Bear
+PFS86QW, 01, 9, 0, Miller, Grade 11 Weight Training and Physical Fitness
+PFS88QA, 01, 8, 0, Choubaralian, Grade 12 Stuy Box Aerobics
+PFS88QP, 01, 3, Luczak, Grade 12 Polar Bear
+PFS88QW, 01, 2, 0, Barbin, Grade 12 Weight Training and Physical Fitness
+PHS11, 01, 1, 0, Garber, Health Education
+PHS11, 02, 2, 0, Fang, Health Education
+PHS11, 03, 2, 0, Garber, Health Education
+PHS11, 04, 3, 0, Fang, Health Education
+PHS11, 05, 4, 0, Garber, Health Education
+PHS11, 06, 5, 0, Garber, Health Education
+PHS11, 07, 6, 0, Fang, Health Education
+PHS11, 08, 6, 0, Weinwurm, Health Education
+PHS11, 09, 7, 0, Weinwurm, Health Education
+PHS11, 10, 8, 0, Weinwurm, Health Education
+PHS11, 11, 9, 0, Fang, Health Education
+PHS11, 12, 9, 0, Garber, Health Education
+PHS11, 13, 10, 0, Fang, Health Education
+PPS82Q, 01, 1, 0, Markova, Grade 9 Physical Education
+PPS82Q, 02, 1, Rosenthal, Grade 9 Physical Education
+PPS82Q, 03, 3, 0, Bologna, Grade 9 Physical Education
+PPS82Q, 04, 3, 0, Choubaralian, Grade 9 Physical Education
+PPS82Q, 05, 3, 0, Rosenthal, Grade 9 Physical Education
+PPS82Q, 06, 4, 0, Luczak, Grade 9 Physical Education
+PPS82Q, 07, 4, 0, Markova, Grade 9 Physical Education
+PPS82Q, 08, 7, 0, Bologna, Grade 9 Physical Education
+PPS82Q, 09, 7, 0, Luczak, Grade 9 Physical Education
+PPS82Q, 10, 7, 0, Markova, Grade 9 Physical Education
+PPS82Q, 11, 10, 0, Choubaralian, Grade 9 Physical Education
+PPS82Q, 12, 10, 0, Luczak, Grade 9 Physical Education
+PPS84Q, 01, 2, 0, Markova, Grade 10 Physical Education
+PPS84Q, 02, 2, 0, Fisher, Grade 10 Physical Education
+PPS84Q, 03, 2, 0, Choubaralian, Grade 10 Physical Education
+PPS84Q, 04, 5, 0, Fisher, Grade 10 Physical Education
+PPS84Q, 05, 5, 0, Barbin, Grade 10 Physical Education
+PPS84Q, 06, 5, 0, Rosenthal, Grade 10 Physical Education
+PPS84Q, 07, 8, 0, Fisher, Grade 10 Physical Education
+PPS84Q, 08, 8, 0, Barbin, Grade 10 Physical Education
+PPS84Q, 09, 8, 0, Markova, Grade 10 Physical Education
+PPS84Q, 10, 10, 0, Barbin, Grade 10 Physical Education
+PPS86Q, 01, 1, 0, Bologna, Grade 11 Physical Education
+PPS86Q, 02, 4, 0, Barbin, Grade 11 Physical Education
+PPS86Q, 03, 6, 0, Luczak, Grade 11 Physical Education
+PPS86Q, 04. 6, 0, Chobaralian, Grade 11 Physical Education
+PPS86Q, 06, 9, 0, Rosenthal, Grade 11 Physical Education
+PPS86QB, 05, 9, 0, Fisher, Grade 11 Basketball
+PPS88Q, 01, 6, 0, Miller, Grade 12 Physical Education
+PPS88Q, 02, 7, 0, Miller, Grade 12 Physical Education
+PPS88Q, 03, 9, 0, Bologna, Grade 12 Physical Eductaion
+PTS86QV, 01, 4, 0, Fisher, Grade 11 Volleyball
 
 SCS22A, 01, 1, 2, Orlando, Chemistry
 SCS22A, 04, 2, 3, Pluchino, Chemistry
@@ -281,3 +305,27 @@ SCS44XA, 04, 5, 6, O'Malley, AP Chemistry
 SCS44XA, 05, 7, 8, Paik, AP Chemistry
 SCS44XB, 02, 2, 3, Paik, AP Chemistry
 SCS44XB, 03, 4, 5, O'Malley, AP Chemistry
+
+UAS11, 01, 1, 0, Shamazov, Music Appreciation
+UAS11, 02, 2, 0, Hall, Music Appreciation
+UAS11, 03, 3, 0, Hall, Music Appreciation
+UAS11, 04, 4, 0, Shamazov, Music Appreciation
+UAS11, 05, 7, 0, Shamazov, Music Appreciation
+UAS11, 06, 8, 0, Tamosaitis, Music Appreciation
+UAS11, 07, 9, 0, Hall, Music Appreciation
+UCS11, 01, 8, 0, Hall, Chamber Choir
+UCS11, 01, 8, 0, Shamazov, Chamber Choir
+UDS11Q2, 01, 2, 0, Winkel, Advanced Wind/Brass Techniques
+UDS11Q2, 01, 2, 0, Wheeler, Advanced Wind/Brass Techniques
+UDS11Q3, 01, 3, 0, Winkel, Symphonic Band
+UDS11Q3, 01, 3, 0, Wheeler, Symphonic Band
+UDS11Q4, 01, 4, 0, Winkel, Intermediate Wind/Brass Techniques
+UDS11Q4, 01, 4, 0, Wheeler, Intermediate Wind/Brass Techniques
+UDS11Q8, 01, 8, 0, Winkel, Beginning Wind/Brass Techniques
+UJS11, 01, 1, 0, Winkel, Jazz Band
+UUS21X, 01, 1, 0, Tamosaitis, AP Music Theory
+UVS11, 01, 5, 0, Hall, Concert Chorus
+UVS11, 01, 5, 0, Shamazov, Concert Chorus
+UYS11, 01, 5, 0, Tamosaitis, Symphony Orchestra
+UZS32, 01, 6, 0, Tamosaitis, Intermediate String Techniques
+UZS33, 01, 7, 0, Tamosaitis, Advanced String Techniques
