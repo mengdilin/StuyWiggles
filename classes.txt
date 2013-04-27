@@ -306,6 +306,39 @@ SCS44XA, 05, 7, 8, Paik, AP Chemistry
 SCS44XB, 02, 2, 3, Paik, AP Chemistry
 SCS44XB, 03, 4, 5, O'Malley, AP Chemistry
 
+TAS22QPA, 01, 2, 0, Winston, Senior Photography
+TAS22QPA, 02, 3, 0, Winston, Senior Photography
+TAS22QPA, 03, 6, 0, Winston, Senior Photography
+TAS22QPA, 04, 9, 0, Winston, Senior Photography
+TDS11QA5, 01, 5, 0, Rothenberg, Junior Introduction to Architecture
+TDS11QA5, 02, 6, 0, Rothenberg, Junior Introduction to Architecture
+TDS11QD5, 01, 3, 0, Sarutto, Junior Introduction to Interior Design
+TDS11QD5, 02, 4, 0, Sarutto, Junior Introduction to Interior Design
+TDS11QD5, 03, 7, 0, Sarutto, Junior Introduction to Interior Design
+TDS11QD5, 04, 9, 0, Sarutto, Junior Introduction to Interior Design
+TDS11QD5, 05, 10, 0, Sarutto, Junior Introduction to Interior Design
+TDS22QAA, 01, 1, 0, Rothenberg, Senior Architecture
+TDS22QAA, 02, 2, 0, Rothenberg, Senior Architecture
+TDS22QAA, 03, 8, 0, Rothenberg, Senior Architecture
+TES22QCA, 01, 2, 0, Colon, Senior Advanced Computer Technology Networking & Internetworking
+TMS11QW5, 01, 1, 0, Rosen, Junior Principles of Technology
+TMS11QW5, 02, 2, 0, Rosen, Junior Principles of Technology
+TMS22QCA, 01, 6, 0, Lonardo, Senior Ceramics
+TMS22QCA, 02, 7, 0, Lonardo, Senior Ceramics
+TMS22QWA, 01, 4, 0, Rosen, Senior Advanced Woodworking
+TMS22QWA, 02, 5, 0, Rosen, Senior Advanced Woodworking
+TMS22QWA, 03, 8, 0, Rosen, Senior Advanced Woodworking
+TMS22QWA, 04, 9, 0, Rosen, Senior Advanced Woodworking
+TQS11QB5, 01, 3, 0, Colon, Junior Robotics
+TQS21QBA, 01, 4, 0, Colon, Senior Robotics Engineering
+TQS11QV5, 01, 2, 0, Gould, Junior Video Production
+TQS11QV5, 02, 4, 0, Gould, Junior Video Production
+TQS11QV5, 03, 9, 0, Gould, Junior Video Production
+TQS22QVA, 01, 3, 0, Gould, Senior Advanced Video Production
+TQS22QVA, 02, 8, 0, Gould, Senior Advanced Video Production
+TYS11QTS, 01, 7, 0, Colon, Junior Computer Technology
+TZS11QG5, 01, 10, 0, Winston, Junior Graphic Arts Communication
+
 UAS11, 01, 1, 0, Shamazov, Music Appreciation
 UAS11, 02, 2, 0, Hall, Music Appreciation
 UAS11, 03, 3, 0, Hall, Music Appreciation
