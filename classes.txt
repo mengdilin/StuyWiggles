@@ -216,6 +216,123 @@ FTS64, 01, 7, 0, Rocchio, Italian 2
 FTS66, 01, 9, 0, Rocchio, Italian 3
 FTS88X, 01, 6, 0, Rocchio, AP Italian Language
 
+HES11, 00, 1, 0, Kennedy, Economics
+HES11, 00, 2, 0, Kennedy, Economics
+HES11, 00, 2, 0, McRoy, Economics
+HES11, 00, 3, 0, Kennedy, Economics
+HES11, 00, 4, 0, Mannino, Economics
+HES11, 00, 5, 0, Mannino, Economics
+HES11, 00, 6, 0, McRoy, Economics
+HES11, 00, 7, 0, Kennedy, Economics
+HES11, 00, 8, 0, Boericke, Economics
+HES11, 00, 8, 0, Greez, Economics
+HES11QWS, 00, 5, 0, Kennedy, Wall Street
+HES11QWS, 00, 6, 0, Kennedy, Wall Street
+HES22X, 00, 1, 0, McRoy, AP Microeconomics
+HES22X, 00, 2, 0, Schweitzer, AP Microeconomics
+HES22X, 00, 5, 0, McRoy, AP Microeconomics
+HES22X, 00, 6, 0, Schweitzer, AP Microeconomics
+HES22X, 00, 7, 0, Schweitzer, AP Microeconomics
+HES22X, 00, 9, 0, McRoy, AP Microeconomics
+HGS42, 00, 1, 0, Mannino, Freshman Global History
+HGS42, 00, 2, 0, Valentin, Freshman Global History
+HGS42, 00, 2, 0, Badgley, Freshman Global History
+HGS42, 00, 2, 0, Waxman, Freshman Global History
+HGS42, 00, 3, 0, Garcia, Freshman Global History
+HGS42, 00, 3, 0, Mannino, Freshman Global History
+HGS42, 00, 3, 0, Waxman, Freshman Global History
+HGS42, 00, 4, 0, Garcia, Freshman Global History
+HGS42, 00, 4, 0, Valentin, Freshman Global History
+HGS42, 00, 5, 0, Garcia, Freshman Global History
+HGS42, 00, 5, 0, Valentin, Freshman Global History
+HGS42, 00, 5, 0, Suri, Freshman Global History
+HGS42, 00, 6, 0, Suri, Freshman Global History
+HGS42, 00, 6, 0, Waxman, Freshman Global History
+HGS42, 00, 7, 0, Tillman, Freshman Global History
+HGS42, 00, 7, 0, Waxman, Freshman Global History
+HGS42, 00, 8, 0, Valentin, Freshman Global History
+HGS42, 00, 8, 0, Waxman, Freshman Global History
+HGS42, 00, 9, 0, Garcia, Freshman Global History
+HGS42, 00, 9, 0, Mannino, Freshman Global History
+HGS42, 00, 9, 0, Valentin, Freshman Global History
+HGS42, 00, 10, 0, Garcia, Freshman Global History
+HGS42QAT, 00, 6, 0, Badgley, Freshman Advanced Topics Global History
+HGS42QAT, 00, 7, 0, Badgley, Freshman Advanced Topics Global History
+HGS42QAT, 00, 9, 0, Badgley, Freshman Advanced Topics Global History
+HGS44, 00, 1, 0, Feldman, Sophomore Global History
+HGS44, 00, 2, 0, Jezer, Sophomore Global History
+HGS44, 00, 3, 0, Olivi, Sophomore Global History
+HGS44, 00, 4, 0, Feldman, Sophomore Global History
+HGS44, 00, 5, 0, Feldman, Sophomore Global History
+HGS44, 00, 6, 0, Jezer, Sophomore Global History
+HGS44, 00, 6, 0, Shuman, Sophomore Global History
+HGS44, 00, 7, 0, Jezer, Sophomore Global History
+HGS44, 00, 7, 0, Shuman, Sophomore Global History
+HGS44, 00, 8, 0, Feldman, Sophomore Global History
+HGS44, 00, 9, 0, Jezer, Sophomore Global History
+HGS44, 00, 9, 0, Shuman, Sophomore Global History
+HGS44, 00, 10, 0, Jezer, Sophomore Global History
+HGS44XE, 00, 2, 0, Hanna, AP European History
+HGS44XE, 00, 3, 0, Hanna, AP European History
+HGS44XW, 00, 2, 0, Trainor, AP World History
+HGS44XW, 00, 3, 0, Trainor, AP World History
+HGS44XW, 00, 4, 0, Trainor, AP World History
+HGS44XW, 00, 5, 0, Olivi, AP World History
+HGS44XW, 00, 6, 0, Olivi, AP World History
+HGS44XW, 00, 9, 0, Olivi, AP World History
+HGS44XW, 00, 10, 0, Olivi, AP World History
+HRS11QCR, 01, 3, 0, Weissman, Criminal Law
+HRS11QCR, 02, 4, 0, Weissman, Criminal Law
+HRS11QGP, 01, 5, 0, Badgley, Geopolitics
+HRS11QMC, 01, 4, 0, Boericke, Modern China
+HRS11QMC, 02, 5, 0, Boericke, Modern China
+HRS11QMC, 03, 8, 0, Boericke, Modern China
+HRS11QNY, 01, 7, 0, Sandler, New York City History
+HRS11QNY, 02, 8, 0, Sandler, New York City History
+HRS22QPT, 01, 3, 0, Polazzo, History of Western Political Theory
+HSS86QJI, 00, 9, 0, Schweitzer, Intel Research Social Science
+HSS86QJI, 00, 10, 0, Schweitzer, Intel Research Social Science
+HTS11X, 00, 4, 0, Polazzo, AP Comparative Government
+HTS11X, 00, 7, 0, Polazzo, AP Comparative Government
+HTS11X, 00, 8, 0, Polazzo, AP Comparative Government
+HTS11X, 00, 10, 0, Polazzo, AP Comparative Government
+HUS22, 00, 1, 0, Wisotsky, US History
+HUS22, 00, 2, 0, Feldman, US History
+HUS22, 00, 2, 0, Shuman, US History
+HUS22, 00, 3, 0, Greenwald, US History
+HUS22, 00, 3, 0, Shuman, US History
+HUS22, 00, 4, 0, Hanna, US History
+HUS22, 00, 4, 0 Wisotsky, US History
+HUS22, 00, 5, 0, Stern, US History
+HUS22, 00, 7, 0, Greenwald, US History
+HUS22, 00, 7, 0, Hanna, US History
+HUS22, 00, 8, 0, Hanna, US History
+HUS22, 00, 8, 0, Wisotsky, US History
+HUS22, 00, 9, 0, Wisotsky, US History
+HUS22, 00, 10, 0, Greenwald, US History
+HUS22X, 00, 1, 0, Greez, AP US History
+HUS22X, 00, 2, 0, Stern, AP US History
+HUS22X, 00, 3, 0, Sandler, AP US History
+HUS22X, 00, 4, 0, Sandler, AP US History
+HUS22X, 00, 6, 0, Stern, AP US History
+HUS22X, 00, 7, 0, Greez, AP US History
+HUS22X, 00, 8, 0, Stern, AP US History
+HUS22X, 00, 9, 0, Stern, AP US History
+HUS22X, 00, 10, 0, Sandler, AP US History
+HUS22XAS, 00, 4, 0, Greez, AP US History: American Studies
+HUS22XAS, 00, 5, 0, Greez, AP US History: American Studies
+HVS11, 00, 1, 0, Tillman, American Government
+HVS11, 00, 1, 0, Weissman, American Government
+HVS11, 00, 2, 0, Tillman, American Government
+HVS11, 00, 3, 0, Wisotsky, American Government
+HVS11, 00, 4, 0, Tillman, American Government
+HVS11, 00, 5, 0, Tillman, American Government
+HVS11, 00, 6, 0, Weissman, American Government
+HVS11, 00, 7, 0, Weissman, American Government
+HVS11, 00, 8, 0, Weissman, American Government
+HVS11, 00, 9, 0, Trainor, American Government
+HVS11, 00, 10, 0, Trainor, American Government
+
 PES86QK, 01, 1, 0, Barth, Grade 11 In-Line Skating
 PES88QD, 01. 1. 0, Choy, Grade 12 Ballroom Dancing
 PES88QD, 02, 2, 0, Choy, Grade 12 Ballroom Dancing
