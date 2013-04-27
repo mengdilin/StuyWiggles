@@ -18,3 +18,27 @@ APS11QWC, 02, 7, 0, Karp, Water Color
 APS22QAP, 01, 1, 0, Cappell, Acrylic Painting
 APS22QAP, 02, 2, 0, Cappell, Acrylic Painting
 AUS11QCG, 01, 4, 0, Cappell, Computer Graphics Design
+UAS11, 00, 2, 0, Hall, Music Appreciation
+UAS11, 00, 3, 0, Hall, Music Appreciation
+UVS11, 00, 5, 0, Hall, Concert Chorus
+UCS11, 00, 8, 0, Hall, Chamber Choir
+UAS11, 00, 9, 0, Hall, Music Appreciation
+UAS11, 00, 1, 0, Shamazov, Music Appreciation
+UAS11, 00, 4, 0, Shamazov, Music Appreciation
+UVS11, 00, 5, 0, Shamazov, Concert Chorus
+UAS11, 00, 7, 0, Shamazov, Music Appreciation
+UCS11, 00, 8, 0, Shamazov, Chamber Choir
+UUS21X, 00, 1, 0, Tamosaitis, AP Music Theory
+UYS11, 00, 5, 0, Tamosaitis, Symphony Orchestra
+UZS32, 00, 6, 0, Tamosaitis, Intermediate String Techniques
+UZS33, 00, 7, 0, Tamosaitis, Advanced String Techniques
+UAS11, 00, 8, 0, Tamosaitis, Music Appreciation
+UJS11, 00, 1, 0, Winkel, Jazz Band
+UDS11Q2, 00, 2, 0, Winkel, Advanced Wind/Brass Techniques
+UDS11Q3, 00, 3, 0, Winkel, Symphonic Band
+UDS11Q4, 00, 4, 0, Winkel, Intermediate Wind/Brass Techniques
+UDS11Q8, 00, 8, 0, Winkel, Beginning Wind/Brass Techniques
+UDS11Q2, 00, 2, 0, Wheeler, Advanced Wind/Brass Techniques
+UDS11Q3, 00, 3, 0, Wheeler, Symphonic Band
+UDS11Q4, 00, 4, 0, Wheeler, Intermediate Wind/Brass Techniques
+
