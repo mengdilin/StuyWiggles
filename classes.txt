@@ -423,6 +423,60 @@ SCS44XA, 05, 7, 8, Paik, AP Chemistry
 SCS44XB, 02, 2, 3, Paik, AP Chemistry
 SCS44XB, 03, 4, 5, O'Malley, AP Chemistry
 
+SBS11QHD, 01, 3, 0, Citron, Human Diseases
+SBS11QHD, 02, 5, 0, Citron, Human Diseases
+SBS11QHD, 03, 8, 0, Citron, Human Diseases
+SBS11QHG, 01, 3, 0, Nedwidek, Medical Human Genetics
+SBS11QHG, 02, 6, 0, Nedwidek, Medical Human Genetics
+SBS11QHI, 01, 10, 0, Citron, Hospital Internship
+SBS11QMD, 01, 4, 0, Citron, Medical Diagnosis
+SBS11QMD, 02, 5, 0, Citron, Medical Diagnosis
+SBS11QME, 01, 5, 0, Bierig, Medical Ethics
+SBS11QME, 02, 7, 0, Bierig, Medical Ethics
+SBS11QME, 03, 8, 0, Bierig, Medical Ethics
+SBS11QMS, 01, 7, 0, Utting, Sophomore Molecular Science
+SBS11QMS, 02, 8, 0, Manwell, Sophomore Molecular Science
+SBS11QNB, 01, 5, 0, Pathak, Topics in Neurobiology
+SBS11QNS, 01, 6, 0, Fundamentals of Nutritional Science
+SBS11QNS, 02, 9, 0, Fundamentals of Nutritional Science
+SBS11QUE, 01, 10, 0, Maggio, Urban Ecology
+SBS22HJ, 01, 1, 2, Quenzer, Freshman Advanced Topics in Biology & Research Techniques
+SBS22HJ, 02, 4, 5, Manwell, Freshman Advanced Topics in Biology & Research Techniques
+SBS44X, 01, 2, 3, Bierig, AP Biology
+SBS44X, 02, 4, 5, Utting, AP Biology
+SBS44X, 03, 9, 10, Utting, AP Biology
+SES11QES, 01, 3, 0, McClellan, Environmental Studies
+SES11QGE, 01, 10, 0, McClellan, Geology
+SFS11QFS, 01, 7, 0, Econome, Forensic Science
+SLS44, 01, 1, 2, Manwell, Freshman Modern Biology
+SLS44, 02, 1, 2, George, Freshman Modern Biology
+SLS44, 03, 1, 2, Horenstein, Freshman Modern Biology
+SLS44, 05, 2, 3, Maggio, Freshman Modern Biology
+SLS44, 06, 2, 3, Reep, Freshman Modern Biology
+SLS44, 07, 3, 4, George, Freshman Modern Biology
+SLS44, 09, 3, 4, Reep, Freshman Modern Biology
+SLS44, 11, 4, 5, Horenstein, Freshman Modern Biology
+SLS44, 12, 6, 7, McClellan, Freshman Modern Biology
+SLS44, 13, 6, 7, George, Freshman Modern Biology
+SLS44, 14, 6, 7, Horenstein, Freshman Modern Biology
+SLS44, 15, 7, 8, Maggio, Freshman Modern Biology
+SLS44, 17, 7, 8, McClellan, Freshman Modern Biology
+SLS44, 18, 9, 10, Horenstein, Freshman Modern Biology
+SLS44, 19, 9, 10, Pathak, Freshman Modern Biology
+SLS44, 20, 9, 10, Econome, Freshman Modern Biology
+SLS44, 21, 4, 5, Quenzer, Freshman Modern Biology
+SLS44QM, 01, 1, 2, Pathak, Junior Molecular Biology
+SLS44QM, 02, 3, 4, Econome, Junior Molecular Biology
+SLS44GM, 04, 6, 7, Pathak, Junior Molecular Biology
+SLS44QM, 05, 8, 9, Nedwidek, Junior Molecular Biology
+SLS44QM, 06, 9, 10, Nedwidek, Junior Molecular Biology
+SQS22X, 01, 8, 0, Reep, AP Psychology
+SQS22X, 02, 9, 0, Reep, AP Psychology
+SQS866QJ5, 01, 9, 10, Gastel, Intel Research Biology/Psychology
+SWS11QLZ, 01, 1, 0, Fong, Vertebrate Zoology
+SWS11QLZ, 02, 2, 0, Fong, Vertebrate Zoology
+SWS22X, 01, 9, 0, Citron, AP Environmental Science
+
 SPS11QAS, 01, 2, 0, Akhmedov, Astronomy
 SPS11QAS, 02, 6, 0, Lam, Astronomy
 SPS11QAS, 03, 7, 0, Lam, Astronomy
