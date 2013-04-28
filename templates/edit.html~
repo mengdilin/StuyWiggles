@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <form action="edit" method="POST" id="editor">
     <head>
       <title>STUY WIGGLES: Edit</title>
-      <link rel="shortcut icon"  href="{{ url_for('static', filename='img/icon.jpg') }}">
+      <link rel="shortcut icon"  href="{{ url_for('static', filename='img/icon.jpg')}}">
       <meta name="viewport" content="width=device-width,initial-scale=1.0"></meta>
       <link href="static/css/bootstrap-responsive.css" rel="stylsheet">
       <link href="static/css/bootstrap.css" rel="stylesheet">
@@ -42,6 +41,7 @@
     </head>
     
     <body>
+      <form action="edit" method="POST" id="editor">
       <!-- <body bgcolor="#212122">-->
       <div class="navbar navbar-fixed-top navbar-inverse">
 	<div class="navbar-inner">

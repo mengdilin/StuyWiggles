@@ -254,6 +254,19 @@ def profile():
                                ,accepted=notif["accepted"]
                                )
 
+@app.route('/grad15',methods=['GET','POST'])
+def grad15():
+    if not session.has_key('user'):
+        return redirect(url_for('about'))
+    if request.method=='GET':
+        return render_template('grad2015.html')
+
+@app.route('/grad07',methods=['GET','POST'])
+def grad07():
+    if not session.has_key('user'):
+        return redirect(url_for('about'))
+    if request.method=='GET':
+        return render_template('grad07.html')
 
 def l_equal(a,b):
     for index in range(len(a)):

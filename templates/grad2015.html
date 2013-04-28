@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+    <title>Stuy Wiggles</title>
+    <link rel="shortcut icon"  href="{{ url_for('static', filename='img/icon.jpg') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <link href="static/css/bootstrap-responsive.css" rel="stylsheet">
+    <link  href="static/css/bootstrap.css" rel="stylesheet">
+      <style>
+	body{padding-top:100px;
+	padding-left:40px;
+	background-image: url("../static/img/background101.jpg");
+	background-repeat: repeat-y;
+	color:black;
+	}
+	tr:hover {
+	color: white;
+	}
+	.requests{padding-top:100px; padding-left:100px;}
+	.back h3 {color:black;}
+	h1,h2,h3,h4,h5,h6,body {
+	font-family:"georgia";
+	color:black;
+	}
+      </style>
+  </head>
+<body>
+  <div class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+
+	<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span> 
+	</button>
+
+	<a class="brand" href="/"><img src="static/img/Wiggles.png" height="20" width="89"></a>
+	<div class="nav-collapse navbar-responsive-collapse in collapse">
+	  <ul class="nav">
+	    {% if loggedout %}
+	    <li> <a href="/about">About</a></li>
+	    <li><a href="/register">Register</a></li>
+	    {% else %}
+	    <li><a href="/profile">Profile</a></li>
+	    <li><a href="/tradingfloor">Trading Floor</a></li>
+	    <li><a href="/classinfo">Class Information</a></li>
+	    <li><a href="/edit">Edit Profile</a></li>
+	    <li><a href="/grad15">Graduation Requirement (2015)</a></li>
+	    <li><a href="/grad07">Graduation Requirement (2007)</a></li>
+	    <a class="navbar-text pull-right" href="/logout" class="navbar-link">Logout</a>
+	    {% endif %}
+	  </ul>
+	</div> <!-- /.nav-collapse --> 
+    </div>
+  </div>
+
+<DIV><h1>Graduation Requirements</h1></DIV>
+<H3>All Stuyvesant High School students beginning with the Class of 2015 must complete a minimum of the following courses between grades 9-12:</H3>
+<TABLE class="table table-condensed table-hover table-striped">
+<THEAD class="dark">
+<TR>
+<TH>Subject Area </TH>
+<TH>Course Requirements </TH>
+<TH>Is passing a NYS Regents Exam Required? </TH>
+<TH>Miscellany </TH></TR></THEAD>
+<TBODY class=light>
+<TR>
+<TD>English </TD>
+<TD>4 years, grades 9-12 </TD>
+<TD>
+<LI>English Regents </LI></TD>
+<TD></TD></TR>
+<TR>
+<TD>Social Studies </TD>
+<TD>4 years, grades 9-12. If a year of history (e.g., Global History I) is completed in 8th Grade, two terms of history courses must be substituted. </TD>
+<TD>
+<LI>Global History Regents<BR>
+<LI>US History Regents<BR></LI></TD>
+<TD></TD></TR>
+<TR>
+<TD>Sciences </TD>
+<TD>
+<LI>Regents Living Environment<BR>
+<LI>Regents Chemistry<BR>
+<LI>Regents Physics<BR>
+<LI>1 year of Science electives (2 years if Living Environment and Regents taken in 8th Grade)<BR></LI></TD>
+<TD>
+<LI>Living Environment Regents<BR>
+<LI>Chemistry Regents<BR>
+<LI>Physics Regents </LI></TD>
+<TD>Science Electives may be any science course except Lab Techniques, Vertebrate Zoology, Intel Research classes, and Psychology courses. AP Psychology will count as a science elective under certain conditions (see Online Course Guide). </TD></TR>
+<TR>
+<TD>Mathematics </TD>
+<TD>4&nbsp;years of Mathematics, grades 9-12 </TD>
+<TD>
+<LI>Integrated Algebra Regents<BR>
+<LI>Geometry Regents<BR>
+<LI>Algebra II and Trigonometry Regents </LI>
+
+</TD>
+<TD>Math Research, Math Team, and Computer Science courses do not fulfill the Math requirement. Completion of Pre-calculus or Advanced Algebra is required. </TD></TR>
+<TR>
+<TD>World Languages </TD>
+<TD>3 years of the same language at Stuyvesant. </TD>
+<TD>Regents Exam after Level 6 </TD>
+<TD>
+<P>A minimum of Language Level 6 must be completed. </P>If students have completed 3 years of language study and passed the Regents in junior high school, they must choose a new language, complete 3 years of study, and pass the Regents in the new language</TD></TR>
+<TR>
+<TD>Health and Physical Education </TD>
+<TD>
+<LI>7 terms of Physical Education 
+<LI>1 term of Health Education </LI></TD>
+<TD>No </TD>
+<TD>Students who fail any Physical Education class must make up the class in Summer School. </TD></TR>
+<TR>
+<TD>Technology Education </TD>
+<TD>
+<LI>1 term of Tech Graphic Communications TD1 
+<LI>2&nbsp;term of Intro to Computer Science, ML1 and ML2
+<LI>2 terms of Applied Science Classes&nbsp;</LI></TD>
+<TD>No </TD>
+<TD>
+<P>Students who successfully complete participation in the Band, Orchestra or Chorus are exempted from Applied Science. </P>
+<P></P>
+<P>Students who complete a 2-pd Intel Research class and submit a paper to Intel are exempted from Applied Science.</P></TD></TR>
+<TR>
+<TD>Music and Fine Arts Education </TD>
+<TD>
+<LI>1 term Art Appreciation 
+<LI>1 term Music Appreciation </LI></TD>
+<TD>No </TD>
+<TD>Students in the Band, Orchestra or Chorus (for at least three terms) are exempted from Music Appreciation. </TD></TR>
+<TR>
+<TD>Miscellaneous </TD>
+<TD>2 terms of Senior Electives (one course taken each term of senior year) </TD>
+<TD>No </TD>
+<TD>This requirement can be fulfilled by taking anyone credit course that is not being taken to fulfill another requirement. Intel Research classes do NOT fulfill this requirement. </TD></TR></TBODY></TABLE>
+
+</body>
+</html>
