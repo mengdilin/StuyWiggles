@@ -238,6 +238,16 @@ def has_lunch(username,period):
     else:
         return False
 
+def get_lunch(username):
+    db=Connection["StuyWiggles"]
+    student=find_student(username)
+    schedule=student["schedule"]
+    l=""
+    for i in schedule:
+        if i[1]=="Cafe":
+            l=i[0]
+    return l
+
 username1="mengdilin"
 password1="abcdefg"
 name1="mengdi lin"
