@@ -385,7 +385,7 @@ req=[' 10',' Music Appreciation',' Bernstein','AHS11',' 13']
 #set_period("test2",10,request)
 #print get_schedule("test2")
 #post_request("test2",req)
-refresh_floor()
+#refresh_floor()
 #print get_floor()
 #set_period("test2",10,req)
 

@@ -58,7 +58,9 @@
   {% else %}
   <div class="span4 alert alert-error">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
-    Invalid Request!
+    <ul>Invalid Request!</ul>
+    <li>You must drop the current class before you can set a new one</li>
+    <li>If you have lunch this period, go to edit profile to change your lunch period</li>
   </div>
   {% endif %}
   {% endif %}
@@ -76,7 +78,7 @@
       <form class="navbar-search pull-left">
 	<input type="text" class="search-query filter" placeholder="search">
 
-	<table class="table table-condensed table-hover">
+	<table class="table table-condensed table-hover table-striped" id="myTable">
 	  <thead>
 	    <tr>
 	      <th>Period</th>
