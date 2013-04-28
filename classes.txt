@@ -356,10 +356,10 @@ MCS44X, 00, 6, 0, Pascu, AP Calculus BC
 MCS44X, 00, 7, 0, Pascu, AP Calculus BC
 MCS66C, 00, 3, 0, Chen, Differential Equations
 MCS66C, 00, 4, 0, Chen, Differential Equations
-MES44, 00, 5, 0, Fenyves, **********
-MES44, 00, 9, 0, Fenyves, **********
-MES44X, 00, 2, 0, Protass, *********
-MES44X, 00, 6, 0, Protass, *********
+MES44, 00, 5, 0, Fenyves, Integrated Algebra
+MES44, 00, 9, 0, Fenyves, Integrated Algebra
+MES44, 00, 2, 0, Protass, Integrated Algebra
+MES44, 00, 6, 0, Protass, Integrated Algebra
 MGS44, 00, 1, 0, Fenyves, Geometry
 MGS44, 00, 2, 0, Fenyves, Geometry
 MGS44, 00, 2, 0, Herrera, Geometry
@@ -448,11 +448,11 @@ MQS11QQS, 00, 2, 0, Feigenbaum, Statistics
 MQS22, 00, 2, 0, Butler, Advanced Algebra 
 MQS22, 00, 3, 0, Butler, Advanced Algebra 
 MQS22, 00, 6, 0, Butler, Advanced Algebra
-MQS42QPS, 00, 1, 0, Goldberg, *********
-MQS42QPS, 00, 1, 0, Jumash, ***********
-MQS42QPS, 00, 1, 0, Stonescu, *********
-MQS44QPS, 00, 1, 0, Chew, *************
-MQS44QPS, 00, 1, 0, Pascu, ************
+MQS42QPS, 00, 1, 0, Goldberg, Freshman Problem Solving
+MQS42QPS, 00, 1, 0, Jumash, Freshman Problem Solving
+MQS42QPS, 00, 1, 0, Stonescu, Freshman Problem Solving
+MQS44QPS, 00, 1, 0, Chew, Sophomore Problem Solving
+MQS44QPS, 00, 1, 0, Pascu, Sophomore Problem Solving
 MQS81QJ, 00, 5, 0, Rubenstein, Math Research
 MQS81QJ, 00, 6, 0, Rubenstein, Math Research
 MQS86QJI, 00, 10, 0, Brooks, Research Intel Talent Search
