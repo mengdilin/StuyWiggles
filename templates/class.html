@@ -58,9 +58,21 @@
   {% else %}
   <div class="span4 alert alert-error">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <ul>Invalid Request!</ul>
-    <li>You must drop the current class before you can set a new one</li>
-    <li>If you have lunch this period, go to edit profile to change your lunch period</li>
+    <ul>Invalid Request!
+    <li>
+      <ul>To set classes
+	<li>You must drop the current class before you can set a new one</li>
+	<li>If you have lunch this period, go to edit profile to change your lunch period</li>
+	</ul>
+    </li>
+      <li>
+      <ul>To request classes
+	<li>If you are requesting a class that coincides with your lunch period, you must change your lunch period first</li>
+	<li>You cannot request a class you already have in the same period </li>
+      </ul>
+      </li>
+    </ul>
+    
   </div>
   {% endif %}
   {% endif %}

@@ -3,7 +3,7 @@
 
   <head>
     <title>Stuy Wiggles</title>
-    <link rel="shortcut icon"  href="{{ url_for('static', filename='img/W.ico') }}">
+    <link rel="shortcut icon"  href="{{ url_for('static', filename='img/icon.jpg') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     <link href="static/css/bootstrap-responsive.css" rel="stylsheet">
     <link  href="static/css/bootstrap.css" rel="stylesheet">
@@ -29,7 +29,7 @@
 	       <span class="icon-bar"></span>
 	       <span class="icon-bar"></span> 
 	    </button>
-	    <a class="brand" href="/"><img src="static/img/Wiggles.png"></a>
+	    <a class="brand" href="/"><img src="static/img/Wiggles.png" height="40" width="177"></a>
 	    <div class="nav-collapse navbar-responsive-collapse in collapse">
 	      <ul class="nav">
 		{% if loggedout %}
