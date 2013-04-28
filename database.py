@@ -17,7 +17,7 @@ def dbupdate(username,user):
 def add_student(username,password):
     db=Connection["StuyWiggles"]
     if (username not in get_usernames()) and validate_password(password):
-        s=["","","","",""]
+        s=["","free","n/a","",""]
         student={"username":str(username),"password":str(password),"schedule":[s,s,s,s,s,s,s,s,s,s], "osis":0,"id":0,"posted request":[],"notification":{"post":[],"accept":{},"accepted":{}},"name":"","email":""}
         students.insert(student)
         return False
@@ -277,6 +277,15 @@ def drop_period(username,period):
     schedule=student["schedule"]
     schedule[int(period)-1]=["","free","n/a","",""]
     students.update({"username":str(username)},student)
+
+def has_lunch(username,period):
+    db=Connection["StuyWiggles"]
+    student=find_student(username)
+    schedule=student["schedule"]
+    if schedule[int(period)-1][1]=="Cafe":
+        return True
+    else:
+        return False
 
 username1="mengdilin"
 password1="abcdefg"

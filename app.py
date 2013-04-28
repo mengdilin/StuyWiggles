@@ -18,14 +18,16 @@ def logout():
 
 @app.route('/about',methods=['GET','POST'])
 def about():
-    if request.method=='GET':
-        return render_template('about.html',loggedout=True)
+    if session.has_key('user'):
+        return redirect(url_for('profile'))
+    elif request.method=="GET":
+        return render_template("about.html",loggedout=True)
     elif request.method=="POST":
         if request.form['button']=='Login':
             username=request.form['username']
             password=request.form['password']
             if username not in database.get_usernames():
-                return render_template("about.html",loggedout=True,registered=False)
+                return render_template("register.html",loggedout=True)
             if database.validate(username,password):
                 session["user"]=username
                 return redirect(url_for("profile"))
@@ -55,7 +57,7 @@ def register():
             database.set_id(username,digit)
             database.set_name(username,name)
             database.set_email(username,email)
-            database.sett_period(username,
+            database.set_period(username,
                                  int(lunch),
                                  [str(lunch),
                                   "Cafe",
@@ -112,11 +114,12 @@ def classinfo():
                                ,email=email
                                ,classes=classes
                                ,schedule=schedule
-                               ,validate=False)
+                               ,get=True)
     if request.method=="POST":
         value=request.form['button']
         value=value.split(" ")
         index=int(value[1])-1
+        validate=True
         if (str(value[0])=="set"):
             period=classes[index][0]
             clas=classes[index]
@@ -124,10 +127,17 @@ def classinfo():
             if l_equal(schedule[int(period)-1],clas):
                 database.drop_period(username,period)
             else:
-                database.set_period(username,period,clas)
+                if schedule[int(period)-1][1]=="free":
+                    database.set_period(username,period,clas)
+                else:
+                    validate=False
         if (str(value[0])=="req"):
             req=classes[index]
-            database.post_request(username,req)
+            period=classes[index][0]
+            if database.has_lunch(username,index) or l_equal(schedule[int(period)-1],req):
+                validate=False
+            else:
+                database.post_request(username,req)
         return render_template("class.html"
                                ,name=name
                                ,osis=osis
@@ -135,7 +145,7 @@ def classinfo():
                                ,email=email
                                ,classes=classes
                                ,schedule=schedule
-                               ,validate=True)
+                               ,validate=validate)
 
 @app.route("/tradingfloor",methods=['GET','POST'])
 def tradingfloor():
@@ -162,18 +172,27 @@ def tradingfloor():
         acceptername=username
         postername=floor[index]['username']
         schedule=database.get_schedule(username)[period]
+        validate=False
+        myself=False
         try:
-            if l_equal(req,schedule):
-                database.accept_request(postername,acceptername,req)
-                return redirect(url_for("tradingfloor"))
+            if not str(postername)==str(username):
+                return postername
+                if l_equal(req,schedule):
+                    database.accept_request(postername,acceptername,req)
+                    return redirect(url_for("tradingfloor"))
+                else:
+                    validate=True
             else:
-                return render_template("trading.html"
-                                       ,name=name
-                                       ,osis=osis
-                                       ,digits=digits
-                                       ,email=email
-                                       ,floor=floor
-                                       ,validate=True)
+                validate=True
+                myself=True
+            return render_template("trading.html"
+                                   ,name=name
+                                   ,osis=osis
+                                   ,digits=digits
+                                   ,email=email
+                                   ,floor=floor
+                                   ,validate=validate
+                                   ,myself=myself)
         except Exception:
             return render_template("trading.html"
                                    ,name=name
