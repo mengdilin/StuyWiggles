@@ -10,7 +10,7 @@
       <style>
 	body{padding-top:100px;
 	padding-left:40px;
-	background-image: url("../static/img/background101.jpg");
+	background-image: url("../static/img/background100.jpg");
 	background-repeat: repeat-y;
 	color:black;
 	}
