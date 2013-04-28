@@ -18,7 +18,7 @@ def add_student(username,password):
     db=Connection["StuyWiggles"]
     if (username not in get_usernames()) and validate_password(password):
         s=["","free","n/a","",""]
-        student={"username":str(username),"password":str(password),"schedule":[s,s,s,s,s,s,s,s,s,s], "osis":0,"id":0,"posted request":[],"notification":{"post":[],"accept":{},"accepted":{}},"name":"","email":"","trade":False}
+        student={"username":str(username),"password":str(password),"schedule":[s,s,s,s,s,s,s,s,s,s], "osis":0,"id":0,"posted request":[],"notification":{"post":[],"accept":{},"accepted":{}},"name":"","email":""}
         students.insert(student)
         return False
     else:
@@ -59,16 +59,10 @@ def get_name(username):
 def post_request(username,request):
     db=Connection["StuyWiggles"]
     student=find_student(username)
-    student["trade"]=True
     current_schedule=get_schedule(username)
     current_schedule=current_schedule[int(request[0])-1]
     row_data={"name":get_name(username),"username":username,"request":request,"current schedule":current_schedule, "period":request[0]}
     floor.insert(row_data)
-    dbupdate(username,student)
-
-
-
-
 
 def get_notification(username):
     db=Connection["StuyWiggles"]
@@ -398,10 +392,15 @@ def classupdate(info):
     db=Connection["StuyWiggles"]
     class_info.update({"name":"name"},info)
 
-def remove_request(username, request):
-    db=Connection["StuyWiggles"]
-    print floor.find_one({"current schedule":{"$all":request}})
 
+def remove_request(username, request):
+    floor.remove({"username":username,"request":request})
+
+def l_equal(a,b):
+    for index in range(len(a)):
+        if (a[index]!=b[index]):
+            return False
+    return True
 
 c={"name":"name","classes":[]}
 
@@ -417,10 +416,7 @@ c={"name":"name","classes":[]}
 #print find_student("mango")
 
 #floor.drop()
-
-
-request=["","free","u/a","",""]
-username='testing1'
-
-remove_request(username,request)
+username='mango'
+request=[' 10',' Art Appreciation',' Bernstein','AHS11',' 13']
+#floor.remove({"username":username,"request":request})
 #print get_floor()
