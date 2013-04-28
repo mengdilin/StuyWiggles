@@ -63,7 +63,7 @@ def post_request(username,request):
     current_schedule=current_schedule[int(request[0])-1]
     row_data={"name":get_name(username),"username":username,"request":request,"current schedule":current_schedule, "period":request[0]}
     floor.insert(row_data)
-
+        
 def get_notification(username):
     db=Connection["StuyWiggles"]
     user=find_student(username)
@@ -74,9 +74,6 @@ def accept_request(postername,acceptername,request):
     db=Connection["StuyWiggles"]
     poster=find_student(postername)
     accepter=find_student(acceptername)
-
-    #cannot update deletion
-    #poster["notification"]["post"]=remove_item(poster["notification"]["post"],request)
 
     if postername not in accepter["notification"]["accept"].keys():
         accepter["notification"]["accept"][postername]=[]
@@ -94,8 +91,7 @@ def accept_request(postername,acceptername,request):
     accepter["schedule"][int(request[0])-1]=post_class
     #print [accepter["schedule"][int(request[0])],post_class]
     poster["schedule"][int(request[0])-1]=accept_class
-    floor.remove({"name":get_name(postername),"request":request})
-
+    floor.remove({"username":postername,"request":request})
     dbupdate(postername,poster)
     dbupdate(acceptername,accepter)
 
@@ -103,51 +99,6 @@ def remove_item(l,x):
     l=[item for item in l if (str(item[0])!=str(x[0]) or str(item[1])!=str(x[1]) or str(item[2])!=str(x[2]))]
     return l
 
-'''
-#sender:a username
-#receiver: a username
-#request:a request message in string
-def request(sendername,receivername,request):
-    db=Connection["StuyWiggles"]
-    sender_user=find_student(sendername)
-    sender=sender_user["request"]["sent"]
-    if receivername not in sender.keys():
-        sender[receivername]=[]
-    sender[receivername].append(request)
-    receiver_user=find_student(receivername)
-    receiver=receiver_user["request"]["received"]
-    if sendername not in receiver.keys():
-        receiver[sendername]=[]
-    receiver[sendername].append(request)
-    dbupdate(sendername,sender_user)
-    dbupdate(receivername,receiver_user)
-
-#approve requests received by username1
-#add request to the approve dict for both users
-#remove request from dict for both users
-def approve(username1,username2,request):
-    db=Connection["StuyWiggles"]
-    user1=find_student(username1)
-    user2=find_student(username2)
-    user1["request"]["approved"].append(request)
-    user2["request"]["approved"].append(request)
-    user1["request"]["received"][username2]=[data for data in user1["request"]["received"][username2] if str(data)!=str(request)]
-    user2["request"]["sent"][username1]=[data for data in user2["request"]["sent"][username1] if str(data)!=str(request)]
-    dbupdate(username1,user1)
-    dbupdate(username2,user2)
-
-#decline requests received by username1
-#add request to the declined dict for both users
-def decline(username1,username2,request):
-    db=Connection["StuyWiggles"]
-    user1=find_student(username1)
-    user2=find_student(username2)
-    user1["request"]["declined"].append(request)
-    user2["request"]["declined"].append(request)
-    dbupdate(username1,user1)
-    dbupdate(username2,user2)
-
-'''
 def get_request(username):
     db=Connection["StuyWiggles"]
     user=find_student(username)
@@ -260,7 +211,6 @@ def get_period(username,period_number):
     return schedule[period_number-1]
     
 #parameter period: an int 
-#parameter clas: ["class","teacher"]
 def set_period(username,period,clas):
     db=Connection["StuyWiggles"]
     student=find_student(username)
@@ -276,7 +226,7 @@ def drop_period(username,period):
     db=Connection["StuyWiggles"]
     student=find_student(username)
     schedule=student["schedule"]
-    schedule[int(period)-1]=["","free","n/a","",""]
+    schedule[int(period)-1]=[str(period),"free","n/a","",""]
     students.update({"username":str(username)},student)
 
 def has_lunch(username,period):
@@ -287,18 +237,6 @@ def has_lunch(username,period):
         return True
     else:
         return False
-
-def get_lunch(username):
-    db=Connection["StuyWiggles"]
-    student=find_student(username)
-    schedule=student["schedule"]
-    l=""
-    for i in schedule:
-        if i[1]=="Cafe":
-            l=i[0]
-    return l
-
-#print get_lunch('testing1')
 
 username1="mengdilin"
 password1="abcdefg"
@@ -357,6 +295,7 @@ set_schedule(username2,class,teacher)
 request=["cocoros","calculus bc","3"]
 #request(username2,username1,request)
 
+students.drop()
 
 
 print find_student(username2)
@@ -414,6 +353,15 @@ def l_equal(a,b):
             return False
     return True
 
+def refresh_floor():
+    for item in floor.find():
+        username=str(item['username'])
+        request=(item["request"])
+        period=int(item["request"][0])
+        schedule=get_schedule(username)[period-1]
+        item["current schedule"]=schedule
+        floor.update({"username":username,"request":request},item)
+
 c={"name":"name","classes":[]}
 
 #class_info.insert(c)
@@ -432,3 +380,12 @@ username='mango'
 request=[' 10',' Art Appreciation',' Bernstein','AHS11',' 13']
 #floor.remove({"username":username,"request":request})
 #print get_floor()
+
+req=[' 10',' Music Appreciation',' Bernstein','AHS11',' 13']
+#set_period("test2",10,request)
+#print get_schedule("test2")
+#post_request("test2",req)
+refresh_floor()
+#print get_floor()
+#set_period("test2",10,req)
+

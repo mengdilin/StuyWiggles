@@ -88,20 +88,6 @@ def edit():
             email=request.form['email']
             digit=request.form['digit']
             osis=request.form['osis']
-            lunch=request.form['lunch']
-            schedule=database.get_schedule(username)
-            current_lunch=database.get_lunch(username)
-            pos=database.get_period(username,int(lunch))[1]
-            if not (pos == 'free' or pos=='Cafe'):
-                return render_template("edit.html"
-                                       ,username=username
-                                       ,email=email
-                                       ,osis=osis
-                                       ,digit=digit
-                                       ,loggedout=False
-                                       ,invalid=True)
-            database.set_period(username,current_lunch,["","free","n/a","",""])
-            database.set_period(username,lunch,[str(lunch),"Cafe","Chi Kun Wang","ZLN5","0"+str(lunch)])
             database.set_password(username,password)
             database.set_email(username,email)
             database.set_id(username,digit)
@@ -170,6 +156,7 @@ def tradingfloor():
     osis=database.get_osis(username)
     digits=database.get_id(username)
     email=database.get_email(username)
+    database.refresh_floor()
     floor=database.get_floor()
     if request.method=='GET':
         return render_template("trading.html"
@@ -216,11 +203,7 @@ def tradingfloor():
                                    ,floor=floor
                                    ,validate=True)
 
-def l_equal(a,b):
-    for index in range(len(a)):
-        if (a[index]!=b[index]):
-            return False
-    return True
+
     
 @app.route('/profile',methods=['GET','POST'])
 def profile():
@@ -245,7 +228,11 @@ def profile():
                                )
 
 
-                                           
+def l_equal(a,b):
+    for index in range(len(a)):
+        if (a[index]!=b[index]):
+            return False
+    return True                                           
                                            
                                            
 if __name__=="__main__":
