@@ -400,7 +400,16 @@ def classupdate(info):
 
 def remove_request(username, request):
     db=Connection["StuyWiggles"]
-    print floor.find_one({"current schedule":{"$all":request}})
+    student=find_student(username)
+    me=[]
+    for i in floor.find({'username':str(username)}):
+        me.append(i)
+    req='nothing'
+    for i in me:
+        if i['request'][0]==' 3':
+            req=i
+    print req
+   # myrequests['request']
 
 
 c={"name":"name","classes":[]}

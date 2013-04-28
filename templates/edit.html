@@ -89,6 +89,17 @@
 	    <input type="text" id="osis" placeholder="9-digit" name="osis" value="{{osis}}"/>
 	  </div>
 	</div>
+	<div class="control-group">
+	  <label class="control-label" for="osis">Change Lunch Period :</label>
+	  <div class="controls">
+	    <label class="radio inline" id="lunch">
+	      {% for number in range(5) %}
+	      <input type="radio" name="lunch" value="{{number+4}}">{{number+4}}</input>
+	      {% endfor %}
+	    </label>
+	  </div>
+	</div>
+	  
 	<button class="btn" type="submit" name="button" value="Edit">Edit</button>
       </div>
       
