@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html>
+  <form action="edit" method="POST" id="editor">
     <head>
-
-      <title>STUY WIGGLES: Register</title>
-      <link rel="shortcut icon"  href="{{ url_for('static', filename='img/icon.jpg') }}">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+      <title>STUY WIGGLES: Edit</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0"></meta>
       <link href="static/css/bootstrap-responsive.css" rel="stylsheet">
       <link href="static/css/bootstrap.css" rel="stylesheet">
       <style>
-	body{
-	padding-top:100px;
-	padding-left:40px;
-	background-image: url("../static/img/background.jpg");
-	color:black;}
-
-
+	body{padding-top:100px;padding-left:40px}
 	h1,h2,h3,h4,h5,h6,body {
 	font-family:"georgia";
 	}
@@ -27,12 +20,12 @@
 	label.error {
 	font-weight: bold;
 	color:red;
-	padding:2px 8px;
+	padding: 2px 8px;
 	margin-top: 2px
 	}
       </style>
     </head>
-    <form action="register" method="POST" id="registration">
+    
     <body>
       <!-- <body bgcolor="#212122">-->
       <div class="navbar navbar-fixed-top navbar-inverse">
@@ -43,17 +36,17 @@
 	       <span class="icon-bar"></span>
 	       <span class="icon-bar"></span> 
 	    </button>
-	    <a class="brand" href="/"><img src="static/img/Wiggles.png" height="40" width="177"></a>
+	    <a class="brand" href="/"><img src="static/img/Wiggles.png"></a>
 	    <div class="nav-collapse navbar-responsive-collapse in collapse">
 	      <ul class="nav">
 		{% if loggedout %}
 		<li> <a href="/about">About</a></li>
-		<li class="active"><a href="/register">Register</a></li>
+		<li><a href="/register">Register</a></li>
 		{% else %}
 		<li><a href="/profile">Profile</a></li>
 		<li><a href="/tradingfloor">Trading Floor</a></li>
 		<li><a href="/classinfo">Class Information</a></li>
-		<li><a href="/edit">Edit Profile</a></li>
+		<li class="active"><a href="/edit">Edit Profile</a></li>
 		<a class="navbar-text pull-right" href="/logout" class="navbar-link">Logout</a>
 		{% endif %}
 	      </ul>
@@ -61,22 +54,16 @@
 	  </div> 
 	</div>
       </div>
-      
 
       <div class="container">
-	<h1>REGISTER</h1>  
-	{% if exists %}
+	{% if invalid %}
 	<div class="alert alert-error">
 	  <button type="button" name="alert" class="close" data-dismiss="alert">&times;</button>
-	  <h3>Invalid username! Please choose another.</h3>
+	  <h3>Invalid lunch request. You have class that period! >:[</h3>
 	</div>
 	{% endif %}
-	<div class="control-group">
-	  <label class="control-label" for="username">Username :</label>
-	  <div class="controls">
-	    <input type="text" id="username" name="username" />
-	  </div>
-	</div>
+	<h1>Edit Profile : {{username}}</h1>
+	
 	<div class="control-group">
 	  <label class="control-label" for="password">Password :</label>
 	  <!-- Use tool for validation -->
@@ -91,75 +78,50 @@
 	  </div>
 	</div>
 	<div class="control-group">
-	  <label class="control-label" for="name">Name :</label>
+	  <label class="control-label" for="email">Change Email :</label>
 	  <div class="controls">
-	    <input type="text" id="name" placeholder="First Last" name="name" />
+	    <input type="text" id="email" name="email" value="{{email}}"/>
 	  </div>
 	</div>
 	<div class="control-group">
-	  <label class="control-label" for="email">Email :</label>
+	  <label class="control-label" for="digit">Change Id : </label>
 	  <div class="controls">
-	    <input type="text" id="email" name="email"/>
+	    <input type="text" id="digit" placeholder="4-digit" name="digit" value="{{digit}}"/>
 	  </div>
 	</div>
 	<div class="control-group">
-	  <label class="control-label" for="digit">Id : </label>
+	  <label class="control-label" for="osis">Change Osis : </label>
 	  <div class="controls">
-	    <input type="text" id="digit" placeholder="4-digit" name="digit" />
+	    <input type="text" id="osis" placeholder="9-digit" name="osis" value="{{osis}}"/>
 	  </div>
 	</div>
 	<div class="control-group">
-	  <label class="control-label" for="osis">Osis : </label>
+	  <label class="control-label" for="osis">Change Lunch Period :</label>
 	  <div class="controls">
-	    <input type="text" id="osis" placeholder="9-digit" name="osis" />
-	  </div>
-	</div>
-	<div class="control-group">
-	  <label class="control-label" for="lunch">Lunch Period :</label>
-	  <div class="controls" >
-	    <label class="radio inline">
+	    <label class="radio inline" id="lunch">
 	      <input type="radio" name="lunch" value="4">4</input>
 	    </label>
-	    <label class="radio inline">
+	    <label class="radio inline" id="lunch">
 	      <input type="radio" name="lunch" value="5">5</input>
 	    </label>
-	    <label class="radio inline">
+	    <label class="radio inline" id="lunch">
 	      <input type="radio" name="lunch" value="6">6</input>
 	    </label>
-	    <label class="radio inline">
+	    <label class="radio inline" id="lunch">
 	      <input type="radio" name="lunch" value="7">7</input>
 	    </label>
-	    <label class="radio inline">
+	    <label class="radio inline" id="lunch">
 	      <input type="radio" name="lunch" value="8">8</input>
 	    </label>
 	  </div>
 	</div>
-<!--
-	<label>Schedule :</label>
-	<table class="table-condensed">
-	  <thead>
-	    <tr>
-	      <th>#</th>
-	      <th>Class Name</th>
-	      <th>Teacher</th>
-	  </thead>
-	  <tbody>
-	    {% for number in range(10) %}
-	    <tr>
-	      <td>{{ loop.index }}</td>
-	      <td><input type="text" name="class" /></td>
-	      <td><input type="text" name="teacher" /></td>
-	    </tr>
-	    {% endfor %}
-	  </tbody>
-	</table>
-	-->
-	<button class="btn" type="submit" name="button" value="Register">Register</button>
+	  
+	<button class="btn" type="submit" name="button" value="Edit">Edit</button>
       </div>
-
-
-</body>
-
+      
+      
+    </body>
+    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="static/js/jquery-1.7.2.min.js"><\/script>')</script>
       
@@ -169,13 +131,9 @@
       
       <script>
 	$(document).ready(function(){
-	$("#registration").validate(
+	$("#editor").validate(
 	{
 	rules: {
-	username: {
-	minlength: 2,
-	required: true
-	},
 	password:{
 	minlength: 6,
 	maxlength: 12,
@@ -183,9 +141,6 @@
 	},
 	verpassword:{
 	equalTo: "#password",
-	required: true
-	},
-	name: {
 	required: true
 	},
 	email: {
@@ -218,29 +173,5 @@
       </script>
       
 	
-      
-
-      <!--
-      Nod Validation runs conflict with Flask
-
-      <script language="javascript" type="text/javascript">
-	var metrics = [
-	["#password","between:6:20","Must be 6-20 characters long please."],
-	["#verpassword","same-as:#password","Your passwords don't match!"],
-	["#digit","exact-length:4","4-digit ID means 4 digits"],
-	["#digit","integer","4-digit ID means 4 digits"],
-	["#osis","integer","Osis is 9 digits!"],
-	["#osis","exact-length:9","Osis is 9 digits!"]
-	];
-	
-	var options = {
-	'groupClass':'warning',
-	'disableSubmitBtn':false,
-	};
-	
-	$("#registration").nod(metrics);
-	
-      </script>
-      -->
-  </form>      
+  </form>
 </html>
