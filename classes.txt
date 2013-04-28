@@ -1,3 +1,4 @@
+
 AHS11, 01, 1, 0, Karp, Art Appreciation
 AHS11, 02, 2, 0, Barrow, Art Appreciation
 AHS11, 03, 3, 0, Barrow, Art Appreciation
@@ -18,27 +19,710 @@ APS11QWC, 02, 7, 0, Karp, Water Color
 APS22QAP, 01, 1, 0, Cappell, Acrylic Painting
 APS22QAP, 02, 2, 0, Cappell, Acrylic Painting
 AUS11QCG, 01, 4, 0, Cappell, Computer Graphics Design
-UAS11, 00, 2, 0, Hall, Music Appreciation
-UAS11, 00, 3, 0, Hall, Music Appreciation
-UVS11, 00, 5, 0, Hall, Concert Chorus
-UCS11, 00, 8, 0, Hall, Chamber Choir
-UAS11, 00, 9, 0, Hall, Music Appreciation
-UAS11, 00, 1, 0, Shamazov, Music Appreciation
-UAS11, 00, 4, 0, Shamazov, Music Appreciation
-UVS11, 00, 5, 0, Shamazov, Concert Chorus
-UAS11, 00, 7, 0, Shamazov, Music Appreciation
-UCS11, 00, 8, 0, Shamazov, Chamber Choir
-UUS21X, 00, 1, 0, Tamosaitis, AP Music Theory
-UYS11, 00, 5, 0, Tamosaitis, Symphony Orchestra
-UZS32, 00, 6, 0, Tamosaitis, Intermediate String Techniques
-UZS33, 00, 7, 0, Tamosaitis, Advanced String Techniques
-UAS11, 00, 8, 0, Tamosaitis, Music Appreciation
-UJS11, 00, 1, 0, Winkel, Jazz Band
-UDS11Q2, 00, 2, 0, Winkel, Advanced Wind/Brass Techniques
-UDS11Q3, 00, 3, 0, Winkel, Symphonic Band
-UDS11Q4, 00, 4, 0, Winkel, Intermediate Wind/Brass Techniques
-UDS11Q8, 00, 8, 0, Winkel, Beginning Wind/Brass Techniques
-UDS11Q2, 00, 2, 0, Wheeler, Advanced Wind/Brass Techniques
-UDS11Q3, 00, 3, 0, Wheeler, Symphonic Band
-UDS11Q4, 00, 4, 0, Wheeler, Intermediate Wind/Brass Techniques
 
+E2FC, 01, 1, 0, Ferencz, Freshman Composition
+E2FC, 02, 1, 0, Henderson, Freshman Composition
+E2FC, 03, 1, 0, Nieves, Freshman Composition
+E2FC, 04, 2, 0, Nieves, Freshman Composition
+E2FC, 05, 2, 0, Schechter, Freshman Composition
+E2FC, 06, 2, 0, Weil, Freshman Composition
+E2FC, 07, 3, 0, La Bonne, Freshman Composition
+E2FC, 08, 3, 0, Moore, Freshman Composition
+E2FC, 09, 3, 0, Weil, Freshman Composition
+E2FC, 10, 4, 0, Bonsignore, Freshman Composition
+E2FC, 11, 4, 0, Ferencz, Freshman Composition
+E2FC, 12, 4, 0, Oberfield, Freshman Composition
+E2FC, 13, 5, 0, Bonsignore, Freshman Composition
+E2FC, 14, 5, 0, La Bonne, Freshman Composition
+E2FC, 15, 5, 0, Oberfield, Freshman Composition
+E2FC, 16, 6, 0, Garfinkel, Freshman Composition
+E2FC, 17, 6, 0, Henderson, Freshman Composition
+E2FC, 18, 6, 0, Manning, Freshman Composition
+E2FC, 19, 7, 0, Fletcher, Freshman Composition
+E2FC, 20, 7, 0, Garfinkel, Freshman Composition
+E2FC, 21, 7, 0, Henderson, Freshman Composition
+E2FC, 22, 8, 0, La Bonne, Freshman Composition
+E2FC, 23, 8, 0, Nieves, Freshman Composition
+E2FC, 24, 8, 0, Schechter, Freshman Composition
+E2FC, 25, 9, 0, Bonsignore, Freshman Composition
+E2FC, 26, 9, 0, Manning, Freshman Composition
+E2FC, 27, 9, 0, Weil, Freshman Composition
+E2FC, 28, 10, 0, Fletcher, Freshman Composition
+E2FC, 29, 10, 0, Moore, Freshman Composition
+E4EL, 01, 1, 0, Schechter, European Literature
+E4EL, 02, 2, 0, Moore, European Literature
+E4EL, 03, 3, 0, Grossman, European Literature
+E4EL, 04, 4, 0, Manning, European Literature
+E4EL, 05, 5, 0, Mazzurco, European Literature
+E4EL, 06, 6, 0, Mazzurco, European Literature
+E4EL, 07, 7, 0, Francis, European Literature
+E4EL, 08, 9, 0, Francis, European Literature
+E4EL, 09, 10, 0, Manning, European Literature
+E4ME, 01, 1, 0, Gerety, Modern European Literature
+E4ME, 02, 2, 0, Gerety, Modern European Literature
+E4ME, 03, 3, 0, Gerety, Modern European Literature
+E4ME, 04, 3, 0, Swartz, Modern European Literature
+E4ME, 05, 4, 0, Swartz, Modern European Literature
+E4ME, 06, 5, 0, Ferencz, Modern European Literature
+E4ME, 07, 5, 0, Mandler, Modern European Literature
+E4ME, 08, 6, 0, Gern, Modern European Literature
+E4ME, 09, 6, 0, Swartz, Modern European Literature
+E4ME, 10, 7, 0, Mandler, Modern European Literature
+E4ME, 11, 7, 0, Sheinman, Modern European Literature
+E4ME, 12, 8, 0, Sheinman, Modern European Literature
+E4ME, 13, 8, 0, Ferencz, Modern European Literature
+E4ME, 14, 9, 0, Ferencz, Modern European Literature
+E4ME, 15, 9, 0, Gern, Modern European Literature
+E4ME, 16, 10, 0, Gern, Modern European Literature
+E61X, 01, 6, 0, Nieves, AP English Language - American Literary History
+E61X, 02, 7, 0, Nieves, AP English Language - American Literary History
+E63X, 01, 2, 0, Garfinkel, AP English Language - Contemporaries and Classics
+E63X, 02, 3, 0, Garfinkel, AP English Language - Contemporaries and Classics
+E6X5, 01, 4, 0, Francis, AP English Language - American Studies
+E6X5, 02, 5, 0, Francis, AP English Language - American Studies
+E6AC, 01, 3, 0, Sheinman, Acting Workshop
+E6AC, 02, 4, 0, Sheinman, Acting Workshop
+E6DF, 01, 2, 0, Halperin, Detective Fiction
+E6DF, 02, 8, 0, Halperin, Detective Fiction
+E6HA, 01, 7, 0, Oberfield, Asian American Literature
+E6LA, 01, 1, 0, La Bonne, Later American Literature
+E6LA, 02, 2, 0, Brown, Later American Literature
+E6LA, 03, 2, 0, Mott, Later American Literature
+E6LA, 04, 3, 0, Oberfield, Later American Literature
+E6LA, 05, 4, 0, Grossman, Later American Literature
+E6LA, 06, 5, 0, Gerety, Later American Literature
+E6LA, 07, 6, 0, La Bonne, Later American Literature
+E6LA, 08, 7, 0, Gerety, Later American Literature
+E6LA, 09, 8, 0, Mott, Later American Literature
+E6LA, 10, 9, 0, Brown, Later American Literature
+E6LA, 11, 9, 0, Mott, Later American Literature
+E6LA, 12, 10, 0, Oberfield, Later American Literature
+E6CN, 01, 7, 0, Weil, Creative Nonfiction Workshop
+E6CN, 02, 8, 0, Weil, Creative Nonfiction Worskshop
+E8CN, 01, 7, 0, Weil, Creative Nonfiction Workshop
+E8CN, 02, 8, 0, Weil, Creative Nonfiction Workshop
+E6PW, 01, 6, 0, Moore, Poetry Workshop
+E6PW, 02, 7, 0, Moore, Poetry Workshop
+E8PW, 01, 6, 0, Moore, Poetry Workshop
+E8PW, 02, 7, 0, Moore, Poetry Workshop
+E6SW, 01, 2, 0, Fletcher, Science Writing
+E8SW, 01, 2, 0, Fletcher, Science Writing
+E6WW, 01, 3, 0, Fletcher, Writers Workshop
+E6WW, 02, 4, 0, Fletcher, Writers Workshop
+E8WW, 01, 3, 0, Fletcher, Writers Workshop
+E8WW, 02, 4, 0, Fletcher, Writers Workshop
+E81X, 01, 4, 0, Gern, AP English Literature - Ancients & Moderns
+E81X, 02, 5, 0, Gern, AP English Literature - Ancients & Moderns
+E83X, 01, 5, 0, Schechter, AP English Literature - Great Books
+E83X, 02, 6, 0, Schechter, AP English Literature - Great Books
+E85X, 01, 5, 0, Henderson, AP English Literature - Society & Self
+E85X, 02, 9, 0, Henderson, AP English Literature - Society & Self
+E8EE, 01, 9, 0, Mazzurco, Existentialism
+E8LB, 01, 1, 0, Halperin, Later British and World Literatute
+E8LB, 02, 2, 0, Mandler, Later British and World Literatute
+E8LB, 03, 3, 0, Mandler, Later British and World Literatute
+E8LB, 04, 3, 0, Brown, Later British and World Literatute
+E8LB, 05, 4, 0, Brown, Later British and World Literatute
+E8LB, 06, 6, 0, Brown, Later British and World Literatute
+E8LB, 07, 7, 0, Halperin, Later British and World Literatute
+E8LB, 08, 8, 0, Manning, Later British and World Literatute
+E8LB, 09, 9, 0, Mandler, Later British and World Literatute
+E8LB, 10, 9, 0, Swartz, Later British and World Literatute
+E8LB, 11, 10, 0, Swartz, Later British and World Literatute
+E8SF, 01, 1, 0, Bonsignore, Science Fiction & Fantasy
+E8SF, 02, 8, 0, Bonsignore, Science Fiction & Fantasy
+E8SL, 01, 3, 0, Mott, Shakespearean Literature
+E8SL, 02, 7, 0, Mott, Shakespearean Literature
+ECDT, 01, 10, 0, Scheinman, Debate Team
+EJMS, 01, 10, 0, Garfinkel, Spectator
+
+FFS64, 01, 3, 0, Augustave, French 2
+FFS66, 01, 2, 0, Augustave, French 3
+FFS66, 02, 8, 0, Augustave, French 3
+FFS66, 03, 9, 0, Augustave, French 3
+FFS88X, 01, 6, 0, Augustave, AP French Language
+FGS64, 01, 2, 0, Dehn-Knight, German 2
+FGS64, 02, 4, 0, Dehn-Knight, German 2
+FJS62, 01, 4, 0, Helinski, Japanese 1
+FJS64, 01, 2, 0, Helinski, Japanese 2
+FJS64, 02, 3, 0, Helinski, Japanese 2
+FJS66, 01, 9, 0, Helinski, Japanese 3
+FJS88X, 01, 8, 0, Helinski, AP Japanese Language
+FLS62, 01, 2, 0, Brockman, Latin 1
+FLS62, 02, 6, 0, Brockman, Latin 1
+FLS64, 01, 9, 0, Brockman, Latin 2
+FLS66, 01, 3, 0, Brockman, Latin 3
+FLS88X, 01, 7, 0, Brockman, AP Latin Literature
+FMS62, 01, 2, 0, Pan, Mandarin 1
+FMS62, 02, 4, 0, Pan, Mandarin 1
+FMS62, 03, 6, 0, Pan, Mandarin 1
+FMS62, 04, 7, 0, Pan, Mandarin 1
+FMS64, 01, 1, 0, Pan, Mandarin 2
+FMS64, 02, 2, 0, Yang, Mandarin 2
+FMS64, 03, 5, 0, Guan, Mandarin 2
+FMS64, 04, 7, 0, Guan, Mandarin 2
+FMS66, 01, 3, 0, Guan, Mandarin 3
+FMS66, 02, 4, 0, Guan, Mandarin 3
+FMS66, 03, 9, 0, Yang, Mandarin 3
+FMS66, 04, 10, 0, Yang, Mandarin 3
+FMS88, 01, 5, 0, Yang, Mandarin Chinese Conversation and Composition
+FMS88, 02, 6, 0, Yang, Mandarin Chinese Conversation and Composition
+FMS88X, 01, 8, 0, Guan, AP Mandarin Chinese Language
+FSS62, 01, 1, 0, Carpenter, Spanish 1
+FSS62, 02, 2, 0, Bravo, Spanish 1
+FSS62, 03, 3, 0, Bravo, Spanish 1
+FSS62, 04, 8, 0, Carpenter, Spanish 1
+FSS64, 01, 1, 0, Bravo, Spanish 2
+FSS64, 02, 2, 0, Diaz, Spanish 2
+FSS64, 03, 2, 0, Silverio, Spanish 2
+FSS64, 04, 3, 0, Diaz, Spanish 2
+FSS64, 05, 3, 0, Silverio, Spanish 2
+FSS64, 06, 4, 0, Ambia, Spanish 2
+FSS64, 07, 5, 0, Carpenter, Spanish 2
+FSS64, 08, 5, 0, Weldon, Spanish 2
+FSS64, 09, 6, 0, Bravo, Spanish 2
+FSS64, 10, 7, 0, Weldon, Spanish 2
+FSS64, 11, 8, 0, Ambia, Spanish 2
+FSS64, 12, 8, 0, Dehn-Knight, Spanish 2
+FSS64, 13, 9, 0, Dehn-Knight, Spanish 2
+FSS64, 14, 9, 0, Monserrat, Spanish 2
+FSS64, 15, 10, Dehn-Knight, Spanish 2
+FSS66, 01, 1, 0, Ambia, Spanish 3
+FSS66, 02, 1, 0, Monserrat, Spanish 3
+FSS66, 03, 2, 0, Ambia, Spanish 3
+FSS66, 04, 3, 0, Simon, Spanish 3
+FSS66, 05, 4, 0, Diaz, Spanish 3
+FSS66, 06, 4, 0, Simon, Spanish 3
+FSS66, 07, 5, 0, Monserrat, Spanish 3
+FSS66, 08, 6, 0, Carpenter, Spanish 3
+FSS66, 09, 6, 0, Monserrat, Spanish 3
+FSS66, 10, 7, 0, Diaz, Spanish 3
+FSS66, 11, 7, 0, Silverio, Spanish 3
+FSS66, 12, 8, 0, Silverio, Spanish 3
+FSS66, 13, 8, 0, Weldon, Spanish 3
+FSS66, 14, 9, 0, Bravo, Spanish 3
+FSS66, 15, 9, 0, Carpenter, Spanish 3
+FSS66, 16, 9, 0, Weldon, Spanish 3
+FSS66, 17, 10, 0, Silverio, Spanish 3
+FSS66, 18, 10, 0, Simon, Spanish 3
+FSS88, 01, 7, 0, Ambia, Spanish Conversation and Composition
+FSS88, 02, 8, 0, Diaz, Spanish Conversation and Composition
+FSS88X, 01, 1, 0, Weldon, AP Spanish Language
+FSS88X, 02, 3, 0, Ubieta, AP Spanish Language
+FSS88X, 03, 4, 0, Ubieta, AP Spanish Language
+FSSAAX, 01, 7, 0, Monserrat, AP Spanish Literature
+FTS62, 01, 1, 0, Rocchio, Italian 1
+FTS62, 02, 2, 0, Rocchio, Italian 1
+FTS64, 01, 7, 0, Rocchio, Italian 2
+FTS66, 01, 9, 0, Rocchio, Italian 3
+FTS88X, 01, 6, 0, Rocchio, AP Italian Language
+
+HES11, 01, 1, 0, Kennedy, Economics
+HES11, 02, 2, 0, Kennedy, Economics
+HES11, 03, 2, 0, McRoy, Economics
+HES11, 04, 3, 0, Kennedy, Economics
+HES11, 05, 4, 0, Mannino, Economics
+HES11, 06, 5, 0, Mannino, Economics
+HES11, 07, 6, 0, McRoy, Economics
+HES11, 08, 7, 0, Kennedy, Economics
+HES11, 09, 8, 0, Boericke, Economics
+HES11, 10, 8, 0, Greez, Economics
+HES11QWS, 01, 5, 0, Kennedy, Wall Street
+HES11QWS, 02, 6, 0, Kennedy, Wall Street
+HES22X, 01, 1, 0, McRoy, AP Microeconomics
+HES22X, 02, 2, 0, Schweitzer, AP Microeconomics
+HES22X, 03, 5, 0, McRoy, AP Microeconomics
+HES22X, 04, 6, 0, Schweitzer, AP Microeconomics
+HES22X, 05, 7, 0, Schweitzer, AP Microeconomics
+HES22X, 06, 9, 0, McRoy, AP Microeconomics
+HGS42, 01, 1, 0, Mannino, Freshman Global History
+HGS42, 02, 2, 0, Valentin, Freshman Global History
+HGS42, 03, 2, 0, Badgley, Freshman Global History
+HGS42, 04, 2, 0, Waxman, Freshman Global History
+HGS42, 05, 3, 0, Garcia, Freshman Global History
+HGS42, 06, 3, 0, Mannino, Freshman Global History
+HGS42, 07, 3, 0, Waxman, Freshman Global History
+HGS42, 08, 4, 0, Garcia, Freshman Global History
+HGS42, 09, 4, 0, Valentin, Freshman Global History
+HGS42, 10, 5, 0, Garcia, Freshman Global History
+HGS42, 11, 5, 0, Valentin, Freshman Global History
+HGS42, 12, 5, 0, Suri, Freshman Global History
+HGS42, 13, 6, 0, Suri, Freshman Global History
+HGS42, 14, 6, 0, Waxman, Freshman Global History
+HGS42, 15, 7, 0, Tillman, Freshman Global History
+HGS42, 16, 7, 0, Waxman, Freshman Global History
+HGS42, 17, 8, 0, Valentin, Freshman Global History
+HGS42, 18, 8, 0, Waxman, Freshman Global History
+HGS42, 19, 9, 0, Garcia, Freshman Global History
+HGS42, 20, 9, 0, Mannino, Freshman Global History
+HGS42, 21, 9, 0, Valentin, Freshman Global History
+HGS42, 22, 10, 0, Garcia, Freshman Global History
+HGS42QAT, 01, 6, 0, Badgley, Freshman Advanced Topics Global History
+HGS42QAT, 02, 7, 0, Badgley, Freshman Advanced Topics Global History
+HGS42QAT, 03, 9, 0, Badgley, Freshman Advanced Topics Global History
+HGS44, 01, 1, 0, Feldman, Sophomore Global History
+HGS44, 02, 2, 0, Jezer, Sophomore Global History
+HGS44, 03, 3, 0, Olivi, Sophomore Global History
+HGS44, 04, 4, 0, Feldman, Sophomore Global History
+HGS44, 05, 5, 0, Feldman, Sophomore Global History
+HGS44, 06, 6, 0, Jezer, Sophomore Global History
+HGS44, 07, 6, 0, Shuman, Sophomore Global History
+HGS44, 08, 7, 0, Jezer, Sophomore Global History
+HGS44, 09, 7, 0, Shuman, Sophomore Global History
+HGS44, 10, 8, 0, Feldman, Sophomore Global History
+HGS44, 11, 9, 0, Jezer, Sophomore Global History
+HGS44, 12, 9, 0, Shuman, Sophomore Global History
+HGS44, 13, 10, 0, Jezer, Sophomore Global History
+HGS44XE, 01, 2, 0, Hanna, AP European History
+HGS44XE, 02, 3, 0, Hanna, AP European History
+HGS44XW, 01, 2, 0, Trainor, AP World History
+HGS44XW, 02, 3, 0, Trainor, AP World History
+HGS44XW, 03, 4, 0, Trainor, AP World History
+HGS44XW, 04, 5, 0, Olivi, AP World History
+HGS44XW, 05, 6, 0, Olivi, AP World History
+HGS44XW, 06, 9, 0, Olivi, AP World History
+HGS44XW, 07, 10, 0, Olivi, AP World History
+HRS11QCR, 01, 3, 0, Weissman, Criminal Law
+HRS11QCR, 02, 4, 0, Weissman, Criminal Law
+HRS11QGP, 01, 5, 0, Badgley, Geopolitics
+HRS11QMC, 01, 4, 0, Boericke, Modern China
+HRS11QMC, 02, 5, 0, Boericke, Modern China
+HRS11QMC, 03, 8, 0, Boericke, Modern China
+HRS11QNY, 01, 7, 0, Sandler, New York City History
+HRS11QNY, 02, 8, 0, Sandler, New York City History
+HRS22QPT, 01, 3, 0, Polazzo, History of Western Political Theory
+HSS86QJI, 01, 9, 0, Schweitzer, Intel Research Social Science
+HSS86QJI, 02, 10, 0, Schweitzer, Intel Research Social Science
+HTS11X, 01, 4, 0, Polazzo, AP Comparative Government
+HTS11X, 02, 7, 0, Polazzo, AP Comparative Government
+HTS11X, 03, 8, 0, Polazzo, AP Comparative Government
+HTS11X, 04, 10, 0, Polazzo, AP Comparative Government
+HUS22, 01, 1, 0, Wisotsky, US History
+HUS22, 02, 2, 0, Feldman, US History
+HUS22, 03, 2, 0, Shuman, US History
+HUS22, 04, 3, 0, Greenwald, US History
+HUS22, 05, 3, 0, Shuman, US History
+HUS22, 06, 4, 0, Hanna, US History
+HUS22, 07, 4, 0 Wisotsky, US History
+HUS22, 08, 5, 0, Stern, US History
+HUS22, 09, 7, 0, Greenwald, US History
+HUS22, 10, 7, 0, Hanna, US History
+HUS22, 11, 8, 0, Hanna, US History
+HUS22, 12, 8, 0, Wisotsky, US History
+HUS22, 13, 9, 0, Wisotsky, US History
+HUS22, 14, 10, 0, Greenwald, US History
+HUS22X, 01, 1, 0, Greez, AP US History
+HUS22X, 02, 2, 0, Stern, AP US History
+HUS22X, 03, 3, 0, Sandler, AP US History
+HUS22X, 04, 4, 0, Sandler, AP US History
+HUS22X, 05, 6, 0, Stern, AP US History
+HUS22X, 06, 7, 0, Greez, AP US History
+HUS22X, 07, 8, 0, Stern, AP US History
+HUS22X, 08, 9, 0, Stern, AP US History
+HUS22X, 09, 10, 0, Sandler, AP US History
+HUS22XAS, 01, 4, 0, Greez, AP US History: American Studies
+HUS22XAS, 02, 5, 0, Greez, AP US History: American Studies
+HVS11, 01, 1, 0, Tillman, American Government
+HVS11, 02, 1, 0, Weissman, American Government
+HVS11, 03, 2, 0, Tillman, American Government
+HVS11, 04, 3, 0, Wisotsky, American Government
+HVS11, 05, 4, 0, Tillman, American Government
+HVS11, 06, 5, 0, Tillman, American Government
+HVS11, 07, 6, 0, Weissman, American Government
+HVS11, 08, 7, 0, Weissman, American Government
+HVS11, 09, 8, 0, Weissman, American Government
+HVS11, 10, 9, 0, Trainor, American Government
+HVS11, 11, 10, 0, Trainor, American Government
+
+MCS22, 00, 4, 0, Goldberg, Calculus
+MCS22, 00, 5, 0, Goldberg, Calculus
+MCS22, 00, 6, 0, Goldberg, Calculus
+MCS22, 00, 8, 0, Maksudian, Calculus
+MCS22, 00, 9, 0, Maksudian, Calculus
+MCS22, 00, 10, 0, Maksudian, Calculus
+MCS22X, 00, 2, 0, Ferrara, AP Calculus AB
+MCS22X, 00, 3, 0, Jaye, AP Calculus AB
+MCS22X, 00, 4, 0, Jaye, AP Calculus AB
+MCS22X, 00, 5, 0, Usoroh, AP Calculus AB
+MCS22X, 00, 6, 0, Usoroh, AP Calculus AB
+MCS22X, 00, 7, 0, Usoroh, AP Calculus AB
+MCS22X, 00, 8, 0, Stonescu, AP Calculus AB
+MCS22X, 00, 9, 0, Stonescu, AP Calculus AB
+MCS44X, 00, 1, 0, Avigdor, AP Calculus BC
+MCS44X, 00, 2, 0, Avigdor, AP Calculus BC
+MCS44X, 00, 3, 0, Cocoros, AP Calculus BC
+MCS44X, 00, 4, 0, Cocoros, AP Calculus BC
+MCS44X, 00, 5, 0, Cocoros, AP Calculus BC
+MCS44X, 00, 6, 0, Pascu, AP Calculus BC
+MCS44X, 00, 7, 0, Pascu, AP Calculus BC
+MCS66C, 00, 3, 0, Chen, Differential Equations
+MCS66C, 00, 4, 0, Chen, Differential Equations
+MES44, 00, 5, 0, Fenyves, Integrated Algebra
+MES44, 00, 9, 0, Fenyves, Integrated Algebra
+MES44, 00, 2, 0, Protass, Integrated Algebra
+MES44, 00, 6, 0, Protass, Integrated Algebra
+MGS44, 00, 1, 0, Fenyves, Geometry
+MGS44, 00, 2, 0, Fenyves, Geometry
+MGS44, 00, 2, 0, Herrera, Geometry
+MGS44, 00, 3, 0, Fenyves, Geometry
+MGS44, 00, 3, 0, Herrera, Geometry
+MGS44, 00, 3, 0, Protass, Geometry
+MGS44, 00, 4, 0, Chew, Geometry
+MGS44, 00, 4, 0, Levy, Geometry
+MGS44, 00, 5, 0, Chew, Geometry
+MGS44, 00, 5, 0, Levy, Geometry
+MGS44, 00, 5, 0, Sterr, Geometry
+MGS44, 00, 6, 0, Ku, Geometry
+MGS44, 00, 6, 0, Levy, Geometry
+MGS44, 00, 6, 0, Sterr, Geometry
+MGS44, 00, 7, 0, Ku, Geometry
+MGS44, 00, 7, 0, Protass, Geometry
+MGS44, 00, 7, 0, Sterr, Geometry
+MGS44, 00, 8, 0, Butler, Geometry
+MGS44, 00, 8, 0, Protass, Geometry
+MGS44, 00, 9, 0, Butler, Geometry
+MGS44, 00, 9, 0, Kavanagh, Geometry
+MGS44, 00, 10, 0, Kavanagh, Geometry
+MGS44H, 00, 4, 0, Avigdor, Honors Geometry
+MGS44H, 00, 7, 0, Avigdor, Honors Geometry
+MGS44H, 00, 8, 0, Avigdor, Honors Geometry
+MKS22, 00, 1, 0, Brooks, Introduction to Computer Science
+MKS22, 00, 1, 0, Brown Mykolyk, Introduction to Computer Science
+MKS22, 00, 1, 0, Griffith, Introduction to Computer Science
+MKS22, 00, 1, 0, Zamansky, Introduction to Computer Science
+MKS22, 00, 2, 0, Zamansky, Introduction to Computer Science
+MKS22, 00, 3, 0, Griffith, Introduction to Computer Science
+MKS22, 00, 3, 0, Konstantonivich, Introduction to Computer Science
+MKS22, 00, 3, 0, Zamansky, Introduction to Computer Science
+MKS22, 00, 4, 0, Griffith, Introduction to Computer Science
+MKS22, 00, 4, 0, Konstantonivich, Introduction to Computer Science
+MKS22, 00, 4, 0, Pascu, Introduction to Computer Science
+MKS22, 00, 5, 0, Brooks, Introduction to Computer Science
+MKS22, 00, 5, 0, Brown Mykolyk, Introduction to Computer Science
+MKS22, 00, 5, 0, Platek, Introduction to Computer Science
+MKS22, 00, 6, 0, Brooks, Introduction to Computer Science
+MKS22, 00, 6, 0, Brown Mykolyk, Introduction to Computer Science
+MKS22, 00, 6, 0, Konstantonivich, Introduction to Computer Science
+MKS22, 00, 7, 0, Brooks, Introduction to Computer Science
+MKS22, 00, 7, 0, Griffith, Introduction to Computer Science
+MKS22, 00, 7, 0, Konstantonivich, Introduction to Computer Science
+MKS22, 00, 8, 0, Dyrland-Weaver, Introduction to Computer Science
+MKS22, 00, 8, 0, Jaishankar, Introduction to Computer Science
+MKS22, 00, 8, 0, Platek, Introduction to Computer Science
+MKS22, 00, 9, 0, Dyrland-Weaver, Introduction to Computer Science
+MKS22, 00, 9, 0, Griffith, Introduction to Computer Science
+MKS22, 00, 9, 0, Jaishankar, Introduction to Computer Science
+MKS22, 00, 10, 0, Dyrland-Weaver, Introduction to Computer Science
+MKS22, 00, 10, 0, Konstantonivich, Introduction to Computer Science
+MKS22QJI, 00, 6, 0, Zamansky, Software Development
+MKS22QJI, 00, 7, 0, Zamansky, Software Development
+MKS22X, 00, 1, 0, Platek, AP Computer Science
+MKS22X, 00, 2, 0, Platek, AP Computer Science
+MKS22X, 00, 3, 0, Platek, AP Computer Science
+MKS22X, 00, 8, 0, Brown Mykolyk, AP Computer Science
+MKS22X, 00, 9, 0, Brown Mykolyk, AP Computer Science
+MKS66C, 00, 4, 0, Dyrland-Weaver, Computer Graphics
+MKS66C, 00, 5, 0, Dyralnd-Weaver, Computer Graphics
+MPS22, 00, 1, 0, Ku, Pre-calculus
+MPS22, 00, 1, 0, Usoroh, Pre-calculus
+MPS22, 00, 2, 0, Ku, Pre-calculus
+MPS22, 00, 2, 0, Usoroh, Pre-calculus
+MPS22, 00, 3, 0, Maksudian, Pre-calculus
+MPS22, 00, 3, 0, Maksudian, Pre-calculus
+MPS22, 00, 3, 0, Rubenstein, Pre-calculus
+MPS22, 00, 5, 0, Herrera, Pre-calculus
+MPS22, 00, 5, 0, Ku, Pre-calculus
+MPS22, 00, 6, 0, Herrera, Pre-calculus
+MPS22, 00, 7, 0, Chew, Pre-calculus
+MPS22, 00, 8, 0, Chew, Pre-calculus
+MPS22, 00, 8, 0, Park, Pre-calculus
+MPS22, 00, 9, 0, Chen, Pre-calculus
+MPS22, 00, 9, 0, Park, Pre-calculus
+MPS22, 00, 10, 0, Chen, Pre-calculus
+MPS22, 00, 10, 0, Herrera, Pre-calculus
+MPS22H, 00, 4, 0, Jaishankar, Honors Pre-calculus
+MPS22H, 00, 5, 0, Jaishankar, Honors Pre-calculus
+MPS22H, 00, 8, 0, Cocoros, Honors Pre-calculus
+MPS22H, 00, 9, 0, Cocoros, Honors Pre-calculus
+MQS11QAL, 00, 7, 0, Chen, Linear Algebra
+MQS11QQS, 00, 2, 0, Feigenbaum, Statistics
+MQS22, 00, 2, 0, Butler, Advanced Algebra 
+MQS22, 00, 3, 0, Butler, Advanced Algebra 
+MQS22, 00, 6, 0, Butler, Advanced Algebra
+MQS42QPS, 00, 1, 0, Goldberg, Freshman Problem Solving
+MQS42QPS, 00, 1, 0, Jumash, Freshman Problem Solving
+MQS42QPS, 00, 1, 0, Stonescu, Freshman Problem Solving
+MQS44QPS, 00, 1, 0, Chew, Sophomore Problem Solving
+MQS44QPS, 00, 1, 0, Pascu, Sophomore Problem Solving
+MQS81QJ, 00, 5, 0, Rubenstein, Math Research
+MQS81QJ, 00, 6, 0, Rubenstein, Math Research
+MQS86QJI, 00, 10, 0, Brooks, Research Intel Talent Search
+MRS22, 00, 1, 0, Jaye, Algebra 2 & Trigonometry
+MRS22, 00, 1, 0, Levy, Algebra 2 & Trigonometry
+MRS22, 00, 2, 0, Kavanagh, Algebra 2 & Trigonometry
+MRS22, 00, 2, 0, Park, Algebra 2 & Trigonometry
+MRS22, 00, 2, 0, Sterr, Algebra 2 & Trigonometry
+MRS22, 00, 3, 0, Jumash, Algebra 2 & Trigonometry
+MRS22, 00, 3, 0, Lostal, Algebra 2 & Trigonometry
+MRS22, 00, 3, 0, Sterr, Algebra 2 & Trigonometry
+MRS22, 00, 4, 0, Jumash, Algebra 2 & Trigonometry
+MRS22, 00, 4, 0, Kavanagh, Algebra 2 & Trigonometry
+MRS22, 00, 4, 0, Lostal, Algebra 2 & Trigonometry
+MRS22, 00, 5, 0, Kavanagh, Algebra 2 & Trigonometry
+MRS22, 00, 5, 0, Park, Algebra 2 & Trigonometry
+MRS22, 00, 6, 0, Jumash, Algebra 2 & Trigonometry
+MRS22, 00, 6, 0, Park, Algebra 2 & Trigonometry
+MRS22, 00, 7, 0, Jumash, Algebra 2 & Trigonometry
+MRS22, 00, 7, 0, Liang, Algebra 2 & Trigonomtetry
+MRS22, 00, 8, 0, Goldberg, Algebra 2 & Trigonometry
+MRS22, 00, 8, 0, Jaye, Algebra 2 & Trigonometry
+MRS22, 00, 9, 0, Jaye, Algebra 2 & Trigonometry
+MRS22, 00, 9, 0, Levy, Algebra 2 & Trigonometry
+MRS22, 00, 9, 0, Lostal, Algebra 2 & Trigonometry
+MRS22, 00, 10, 0, Lostal, Algebra 2 & Trigonometry
+MRS22H, 00, 2, 0, Stonescu, Honors Algebra 2 & Trigonometry
+MRS22H, 00, 3, 0, Stonescu, Honors Algebra 2 & Trigonometry
+MRS22H, 00, 9, 0, Pascu, Honors Algebra 2 & Trigonometry
+MSS22X, 00, 4, 0, Feigenbaum, AP Statistics
+MSS22X, 00, 5, 0, Feigenbaum, AP Statistics
+MSS22X, 00, 8, 0, Feigenbaum, AP Statistics
+MSS22X, 00, 9, 0, Feigenbaum, AP Statistics
+ZMTEAM, 01, 1, 0, Jaishankar, Math Team
+
+PES86QK, 01, 1, 0, Barth, Grade 11 In-Line Skating
+PES88QD, 01. 1. 0, Choy, Grade 12 Ballroom Dancing
+PES88QD, 02, 2, 0, Choy, Grade 12 Ballroom Dancing
+PES88QD, 03, 5, 0, Choy, Grade 12 Ballroom Dancing
+PES88QK, 01, 3, 0, Barth, Grade 12 In-Line Skating
+PFS86QA, 01, 6, 0, Rosenthal, Grade 11 Step Aerobics
+PFS86QP, 01, 4, 0, Bologna, Grade 11 Polar Bear
+PFS86QW, 01, 9, 0, Miller, Grade 11 Weight Training and Physical Fitness
+PFS88QA, 01, 8, 0, Choubaralian, Grade 12 Stuy Box Aerobics
+PFS88QP, 01, 3, Luczak, Grade 12 Polar Bear
+PFS88QW, 01, 2, 0, Barbin, Grade 12 Weight Training and Physical Fitness
+PHS11, 01, 1, 0, Garber, Health Education
+PHS11, 02, 2, 0, Fang, Health Education
+PHS11, 03, 2, 0, Garber, Health Education
+PHS11, 04, 3, 0, Fang, Health Education
+PHS11, 05, 4, 0, Garber, Health Education
+PHS11, 06, 5, 0, Garber, Health Education
+PHS11, 07, 6, 0, Fang, Health Education
+PHS11, 08, 6, 0, Weinwurm, Health Education
+PHS11, 09, 7, 0, Weinwurm, Health Education
+PHS11, 10, 8, 0, Weinwurm, Health Education
+PHS11, 11, 9, 0, Fang, Health Education
+PHS11, 12, 9, 0, Garber, Health Education
+PHS11, 13, 10, 0, Fang, Health Education
+PPS82Q, 01, 1, 0, Markova, Grade 9 Physical Education
+PPS82Q, 02, 1, Rosenthal, Grade 9 Physical Education
+PPS82Q, 03, 3, 0, Bologna, Grade 9 Physical Education
+PPS82Q, 04, 3, 0, Choubaralian, Grade 9 Physical Education
+PPS82Q, 05, 3, 0, Rosenthal, Grade 9 Physical Education
+PPS82Q, 06, 4, 0, Luczak, Grade 9 Physical Education
+PPS82Q, 07, 4, 0, Markova, Grade 9 Physical Education
+PPS82Q, 08, 7, 0, Bologna, Grade 9 Physical Education
+PPS82Q, 09, 7, 0, Luczak, Grade 9 Physical Education
+PPS82Q, 10, 7, 0, Markova, Grade 9 Physical Education
+PPS82Q, 11, 10, 0, Choubaralian, Grade 9 Physical Education
+PPS82Q, 12, 10, 0, Luczak, Grade 9 Physical Education
+PPS84Q, 01, 2, 0, Markova, Grade 10 Physical Education
+PPS84Q, 02, 2, 0, Fisher, Grade 10 Physical Education
+PPS84Q, 03, 2, 0, Choubaralian, Grade 10 Physical Education
+PPS84Q, 04, 5, 0, Fisher, Grade 10 Physical Education
+PPS84Q, 05, 5, 0, Barbin, Grade 10 Physical Education
+PPS84Q, 06, 5, 0, Rosenthal, Grade 10 Physical Education
+PPS84Q, 07, 8, 0, Fisher, Grade 10 Physical Education
+PPS84Q, 08, 8, 0, Barbin, Grade 10 Physical Education
+PPS84Q, 09, 8, 0, Markova, Grade 10 Physical Education
+PPS84Q, 10, 10, 0, Barbin, Grade 10 Physical Education
+PPS86Q, 01, 1, 0, Bologna, Grade 11 Physical Education
+PPS86Q, 02, 4, 0, Barbin, Grade 11 Physical Education
+PPS86Q, 03, 6, 0, Luczak, Grade 11 Physical Education
+PPS86Q, 04. 6, 0, Chobaralian, Grade 11 Physical Education
+PPS86Q, 06, 9, 0, Rosenthal, Grade 11 Physical Education
+PPS86QB, 05, 9, 0, Fisher, Grade 11 Basketball
+PPS88Q, 01, 6, 0, Miller, Grade 12 Physical Education
+PPS88Q, 02, 7, 0, Miller, Grade 12 Physical Education
+PPS88Q, 03, 9, 0, Bologna, Grade 12 Physical Eductaion
+PTS86QV, 01, 4, 0, Fisher, Grade 11 Volleyball
+
+SCS22A, 01, 1, 2, Orlando, Chemistry
+SCS22A, 04, 2, 3, Pluchino, Chemistry
+SCS22A, 05, 2, 3, Kivi, Chemistry
+SCS22A, 07, 4, 5, Arora, Chemistry
+SCS22A, 08, 4, 5, Dibbs, Chemistry
+SCS22A, 11, 5, 6, Pluchino, Chemistry
+SCS22A, 12, 5, 6, Orlando, Chemistry
+SCS22A, 14, 7, 8, Li, Chemistry
+SCS22A, 15, 7, 8, Kivi, Chemistry
+SCS22A, 18, 8, 9, Dibbs, Chemistry
+SCS22A, 21, 9, 10, Arora, Chemistry
+SCS22B, 02, 1, 2, Dibbs, Chemistry
+SCS22B, 03, 1, 2, Pluchino, Chemistry
+SCS22B, 06, 2, 3, Li, Chemistry
+SCS22B, 09, 4, 5, Orlando, Chemistry
+SCS22B, 10, 4, 5, Kivi, Chemistry
+SCS22B, 13, 5, 6, Arora, Chemistry
+SCS22B, 16, 7, 8, Dibbs, Chemistry
+SCS22B, 17, 7, 8, Daves, Chemistry
+SCS22B, 19, 8, 9, Li, Chemistry
+SCS22B, 20, 8, 9, Orlando, Chemistry
+SCS22B, 22, 9, 10, Kivi, Chemistry
+SCS22HJA, 01, 1, 2, Li, Research Chemistry
+SCS22HJA, 03, 8, 9, Daves, Research Chemistry
+SCS22HJB, 02, 1, 2, Daves, Research Chemistry
+SCS22QGC, 01, 2, 0, O'Malley, Organic Chemistry
+SCS22QGC, 02, 8, 0, O'Malley, Organic Chemistry
+SCS44XA, 01, 1, 2, Paik, AP Chemistry
+SCS44XA, 04, 5, 6, O'Malley, AP Chemistry
+SCS44XA, 05, 7, 8, Paik, AP Chemistry
+SCS44XB, 02, 2, 3, Paik, AP Chemistry
+SCS44XB, 03, 4, 5, O'Malley, AP Chemistry
+
+SBS11QHD, 01, 3, 0, Citron, Human Diseases
+SBS11QHD, 02, 5, 0, Citron, Human Diseases
+SBS11QHD, 03, 8, 0, Citron, Human Diseases
+SBS11QHG, 01, 3, 0, Nedwidek, Medical Human Genetics
+SBS11QHG, 02, 6, 0, Nedwidek, Medical Human Genetics
+SBS11QHI, 01, 10, 0, Citron, Hospital Internship
+SBS11QMD, 01, 4, 0, Citron, Medical Diagnosis
+SBS11QMD, 02, 5, 0, Citron, Medical Diagnosis
+SBS11QME, 01, 5, 0, Bierig, Medical Ethics
+SBS11QME, 02, 7, 0, Bierig, Medical Ethics
+SBS11QME, 03, 8, 0, Bierig, Medical Ethics
+SBS11QMS, 01, 7, 0, Utting, Sophomore Molecular Science
+SBS11QMS, 02, 8, 0, Manwell, Sophomore Molecular Science
+SBS11QNB, 01, 5, 0, Pathak, Topics in Neurobiology
+SBS11QNS, 01, 6, 0, Fundamentals of Nutritional Science
+SBS11QNS, 02, 9, 0, Fundamentals of Nutritional Science
+SBS11QUE, 01, 10, 0, Maggio, Urban Ecology
+SBS22HJ, 01, 1, 2, Quenzer, Freshman Advanced Topics in Biology & Research Techniques
+SBS22HJ, 02, 4, 5, Manwell, Freshman Advanced Topics in Biology & Research Techniques
+SBS44X, 01, 2, 3, Bierig, AP Biology
+SBS44X, 02, 4, 5, Utting, AP Biology
+SBS44X, 03, 9, 10, Utting, AP Biology
+SES11QES, 01, 3, 0, McClellan, Environmental Studies
+SES11QGE, 01, 10, 0, McClellan, Geology
+SFS11QFS, 01, 7, 0, Econome, Forensic Science
+SLS44, 01, 1, 2, Manwell, Freshman Modern Biology
+SLS44, 02, 1, 2, George, Freshman Modern Biology
+SLS44, 03, 1, 2, Horenstein, Freshman Modern Biology
+SLS44, 05, 2, 3, Maggio, Freshman Modern Biology
+SLS44, 06, 2, 3, Reep, Freshman Modern Biology
+SLS44, 07, 3, 4, George, Freshman Modern Biology
+SLS44, 09, 3, 4, Reep, Freshman Modern Biology
+SLS44, 11, 4, 5, Horenstein, Freshman Modern Biology
+SLS44, 12, 6, 7, McClellan, Freshman Modern Biology
+SLS44, 13, 6, 7, George, Freshman Modern Biology
+SLS44, 14, 6, 7, Horenstein, Freshman Modern Biology
+SLS44, 15, 7, 8, Maggio, Freshman Modern Biology
+SLS44, 17, 7, 8, McClellan, Freshman Modern Biology
+SLS44, 18, 9, 10, Horenstein, Freshman Modern Biology
+SLS44, 19, 9, 10, Pathak, Freshman Modern Biology
+SLS44, 20, 9, 10, Econome, Freshman Modern Biology
+SLS44, 21, 4, 5, Quenzer, Freshman Modern Biology
+SLS44QM, 01, 1, 2, Pathak, Junior Molecular Biology
+SLS44QM, 02, 3, 4, Econome, Junior Molecular Biology
+SLS44GM, 04, 6, 7, Pathak, Junior Molecular Biology
+SLS44QM, 05, 8, 9, Nedwidek, Junior Molecular Biology
+SLS44QM, 06, 9, 10, Nedwidek, Junior Molecular Biology
+SQS22X, 01, 8, 0, Reep, AP Psychology
+SQS22X, 02, 9, 0, Reep, AP Psychology
+SQS866QJ5, 01, 9, 10, Gastel, Intel Research Biology/Psychology
+SWS11QLZ, 01, 1, 0, Fong, Vertebrate Zoology
+SWS11QLZ, 02, 2, 0, Fong, Vertebrate Zoology
+SWS22X, 01, 9, 0, Citron, AP Environmental Science
+
+SPS11QAS, 01, 2, 0, Akhmedov, Astronomy
+SPS11QAS, 02, 6, 0, Lam, Astronomy
+SPS11QAS, 03, 7, 0, Lam, Astronomy
+SPS22QMP, 01, 9, 0, Ali, Modern Physics and Nanotechnology
+SPS22QMP, 02, 9, 0, Esper, Modern Physics and Nanotechnology
+SPS22A, 03, 3, 4, Strasser, Junior Physics
+SPS22A, 04, 3, 4, Avallone, Junior Physics
+SPS22A, 06, 5, 6, Wang, Junior Physics
+SPS22A, 08, 5, 6, Majewski, Junior Physics
+SPS22A, 09, 6, 7, Ali, Junior Physics
+SPS22A, 10, 8, 9, Strasser, Junior Physics
+SPS22A, 15, 9, 10, Wang, Junior Physics
+SPS22A, 16, 9, 10, Lam, Junior Physics
+SPS22B, 01, 1, 2, Ali, Junior Physics
+SPS22B, 02, 1, 2, Wang, Junior Physics
+SPS22B, 05, 3, 4, Lam, Junior Physics
+SPS22B, 07, 4, 5, Avallone, Junior Physics
+SPS22B, 11, 6, 7, Strasser, Junior Physics
+SPS22B, 12, 5, 6, Ali, Junior Physics
+SPS22B, 13, 8, 9, Wang, Junior Physics
+SPS22B, 14, 8, 9, Majewski, Junior Physics
+SPS22FA, 17, 1, 2, Majewski, Freshman Physics
+SPS22FA, 19, 3, 4, Akhmedov, Freshman Physics
+SPS22FA, 21, 9, 10, Akhmedov, Freshman Physics
+SPS22FB, 18, 1, 2, Thomas, Freshman Physics
+SPS22FB, 20, 7, 8, Akhmedov, Freshman Physics
+SPS22HJA, 01, 3, 4, Gorla, Research Physics
+SPS22HJB, 02, 4, 5, Gorla, Research Physics
+SPS22HJB, 03, 9, 10, Gorla, Research Physics
+SPS22X, 01, 1, 0, Strasser, AP Physics Level B
+SPS22X, 02, 2, 0, Strasser, AP Physics Level B
+SPS22X, 03, 9, 0, Avallone, AP Physics Level B
+SPS22X, 04, 10, 0, Avallone, AP Physics Level B
+SPS44X, 01, 3, 4, Esper, AP Physics Level C
+SPS44X, 02, 7, 8, Esper, AP Physics Level C
+SQS86QJ5, 01, 7, 0, Gorla, Intel Research Physics
+
+TAS22QPA, 01, 2, 0, Winston, Senior Photography
+TAS22QPA, 02, 3, 0, Winston, Senior Photography
+TAS22QPA, 03, 6, 0, Winston, Senior Photography
+TAS22QPA, 04, 9, 0, Winston, Senior Photography
+TDS11QA5, 01, 5, 0, Rothenberg, Junior Introduction to Architecture
+TDS11QA5, 02, 6, 0, Rothenberg, Junior Introduction to Architecture
+TDS11QD5, 01, 3, 0, Sarutto, Junior Introduction to Interior Design
+TDS11QD5, 02, 4, 0, Sarutto, Junior Introduction to Interior Design
+TDS11QD5, 03, 7, 0, Sarutto, Junior Introduction to Interior Design
+TDS11QD5, 04, 9, 0, Sarutto, Junior Introduction to Interior Design
+TDS11QD5, 05, 10, 0, Sarutto, Junior Introduction to Interior Design
+TDS22QAA, 01, 1, 0, Rothenberg, Senior Architecture
+TDS22QAA, 02, 2, 0, Rothenberg, Senior Architecture
+TDS22QAA, 03, 8, 0, Rothenberg, Senior Architecture
+TES22QCA, 01, 2, 0, Colon, Senior Advanced Computer Technology Networking & Internetworking
+TMS11QW5, 01, 1, 0, Rosen, Junior Principles of Technology
+TMS11QW5, 02, 2, 0, Rosen, Junior Principles of Technology
+TMS22QCA, 01, 6, 0, Lonardo, Senior Ceramics
+TMS22QCA, 02, 7, 0, Lonardo, Senior Ceramics
+TMS22QWA, 01, 4, 0, Rosen, Senior Advanced Woodworking
+TMS22QWA, 02, 5, 0, Rosen, Senior Advanced Woodworking
+TMS22QWA, 03, 8, 0, Rosen, Senior Advanced Woodworking
+TMS22QWA, 04, 9, 0, Rosen, Senior Advanced Woodworking
+TQS11QB5, 01, 3, 0, Colon, Junior Robotics
+TQS21QBA, 01, 4, 0, Colon, Senior Robotics Engineering
+TQS11QV5, 01, 2, 0, Gould, Junior Video Production
+TQS11QV5, 02, 4, 0, Gould, Junior Video Production
+TQS11QV5, 03, 9, 0, Gould, Junior Video Production
+TQS22QVA, 01, 3, 0, Gould, Senior Advanced Video Production
+TQS22QVA, 02, 8, 0, Gould, Senior Advanced Video Production
+TYS11QTS, 01, 7, 0, Colon, Junior Computer Technology
+TZS11QG5, 01, 10, 0, Winston, Junior Graphic Arts Communication
+
+UAS11, 01, 1, 0, Shamazov, Music Appreciation
+UAS11, 02, 2, 0, Hall, Music Appreciation
+UAS11, 03, 3, 0, Hall, Music Appreciation
+UAS11, 04, 4, 0, Shamazov, Music Appreciation
+UAS11, 05, 7, 0, Shamazov, Music Appreciation
+UAS11, 06, 8, 0, Tamosaitis, Music Appreciation
+UAS11, 07, 9, 0, Hall, Music Appreciation
+UCS11, 01, 8, 0, Hall, Chamber Choir
+UCS11, 01, 8, 0, Shamazov, Chamber Choir
+UDS11Q2, 01, 2, 0, Winkel, Advanced Wind/Brass Techniques
+UDS11Q2, 01, 2, 0, Wheeler, Advanced Wind/Brass Techniques
+UDS11Q3, 01, 3, 0, Winkel, Symphonic Band
+UDS11Q3, 01, 3, 0, Wheeler, Symphonic Band
+UDS11Q4, 01, 4, 0, Winkel, Intermediate Wind/Brass Techniques
+UDS11Q4, 01, 4, 0, Wheeler, Intermediate Wind/Brass Techniques
+UDS11Q8, 01, 8, 0, Winkel, Beginning Wind/Brass Techniques
+UJS11, 01, 1, 0, Winkel, Jazz Band
+UUS21X, 01, 1, 0, Tamosaitis, AP Music Theory
+UVS11, 01, 5, 0, Hall, Concert Chorus
+UVS11, 01, 5, 0, Shamazov, Concert Chorus
+UYS11, 01, 5, 0, Tamosaitis, Symphony Orchestra
+UZS32, 01, 6, 0, Tamosaitis, Intermediate String Techniques
+UZS33, 01, 7, 0, Tamosaitis, Advanced String Techniques
