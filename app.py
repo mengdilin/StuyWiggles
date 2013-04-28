@@ -167,7 +167,9 @@ def tradingfloor():
                                ,email=email
                                ,validate=False)
     if request.method=='POST':
-        index=int(request.form['button'])-1
+        value=request.form["button"]
+        value=value.split(" ")
+        index=int(value[1])-1
         req=floor[index]["request"]
         period=int(req[0])-1
         acceptername=username
@@ -175,17 +177,27 @@ def tradingfloor():
         schedule=database.get_schedule(username)[period]
         validate=False
         myself=False
+        illegaldel=False
         try:
             if not str(postername)==str(username):
-                return postername
-                if l_equal(req,schedule):
-                    database.accept_request(postername,acceptername,req)
-                    return redirect(url_for("tradingfloor"))
-                else:
+                if value[0]=="accept":
+                    if l_equal(req,schedule):
+                        database.accept_request(postername,acceptername,req)
+                        return redirect(url_for("tradingfloor"))
+                    else:
+                        validate=True
+                elif value[0]=="delete":
                     validate=True
+                    myself=False
+                    illegaldel=True
             else:
-                validate=True
-                myself=True
+                if value[0]=="accept":
+                    validate=True
+                    myself=True
+                else:
+                    database.remove_request(username,req)
+                    database.refresh_floor()
+                    floor=database.get_floor()
             return render_template("trading.html"
                                    ,name=name
                                    ,osis=osis
@@ -193,7 +205,8 @@ def tradingfloor():
                                    ,email=email
                                    ,floor=floor
                                    ,validate=validate
-                                   ,myself=myself)
+                                   ,myself=myself
+                                   ,illegaldel=illegaldel)
         except Exception:
             return render_template("trading.html"
                                    ,name=name
