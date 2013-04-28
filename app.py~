@@ -134,7 +134,7 @@ def classinfo():
         if (str(value[0])=="req"):
             req=classes[index]
             period=classes[index][0]
-            if database.has_lunch(username,period) or l_equal(schedule[int(period)-1],req):
+            if database.has_lunch(username,index) or l_equal(schedule[int(period)-1],req):
                 validate=False
             else:
                 database.post_request(username,req)
