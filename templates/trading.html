@@ -8,11 +8,22 @@
     <link href="static/css/bootstrap-responsive.css" rel="stylsheet">
     <link  href="static/css/bootstrap.css" rel="stylesheet">
     <style>
-      body{padding-top:100px;padding-left:40px}
+      body{padding-top:300px;
+      padding-left:40px;
+      background-image: url("../static/img/background3.jpg");
+      background-repeat:repeat-y;
+      color:black;
+      }
+      tr:hover {
+      color: white;
+      }
+
       .requests{padding-top:100px; padding-left:100px;}
       h1,h2,h3,h4,h5,h6,body {
       font-family:"georgia";
       }
+
+
     </style>
   </head>
   
@@ -63,12 +74,6 @@
       <div class="container-fluid">
 	<div class="row-fluid">
 	  <div class="span12">
-	    <div class="span4">
-	      <h3>Name: {{name}}</h3>
-	      <h3>Osis: {{osis}}</h3>
-	      <h3>Id: {{digits}}</h3>
-	      <h3>Email: {{email}}</h3>
-	    </div>
 	    <div class="span10">
 	      <form class="navbar-search pull-left">
 		<input type="text" class="search-query filter" placeholder="search">

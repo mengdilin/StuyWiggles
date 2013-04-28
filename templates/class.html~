@@ -8,8 +8,16 @@
     <link href="static/css/bootstrap-responsive.css" rel="stylsheet">
     <link  href="static/css/bootstrap.css" rel="stylesheet">
       <style>
-	body{padding-top:100px;padding-left:40px}
+	body{padding-top:300px;
+	padding-left:40px;
+	background-image: url("../static/img/background2.jpg");
+	color:black;
+	}
+	tr:hover {
+	color: white;
+	}
 	.requests{padding-top:100px; padding-left:100px;}
+	.back h3 {color:black;}
 	h1,h2,h3,h4,h5,h6,body {
 	font-family:"georgia";
 	}
@@ -58,16 +66,28 @@
   {% else %}
   <div class="span4 alert alert-error">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <ul>Invalid Request!</ul>
-    <li>You must drop the current class before you can set a new one</li>
-    <li>If you have lunch this period, go to edit profile to change your lunch period</li>
+    <ul>Invalid Request!
+    <li>
+      <ul>To set classes
+	<li>You must drop the current class before you can set a new one</li>
+	<li>If you have lunch this period, go to edit profile to change your lunch period</li>
+	</ul>
+    </li>
+      <li>
+      <ul>To request classes
+	<li>If you are requesting a class that coincides with your lunch period, you must change your lunch period first</li>
+	<li>You cannot request a class you already have in the same period </li>
+      </ul>
+      </li>
+    </ul>
+    
   </div>
   {% endif %}
   {% endif %}
 
 <div class="row-fluid">
   <div class="span12">
-    <div class="span4">
+    <div class="span4 back">
     <h3>Name: {{name}}</h3>
     <h3>Osis: {{osis}}</h3>
     <h3>Id: {{digits}}</h3>

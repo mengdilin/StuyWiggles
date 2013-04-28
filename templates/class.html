@@ -8,8 +8,17 @@
     <link href="static/css/bootstrap-responsive.css" rel="stylsheet">
     <link  href="static/css/bootstrap.css" rel="stylesheet">
       <style>
-	body{padding-top:100px;padding-left:40px}
+	body{padding-top:100px;
+	padding-left:40px;
+	background-image: url("../static/img/background10.jpg");
+	background-repeat: repeat-y;
+	color:black;
+	}
+	tr:hover {
+	color: white;
+	}
 	.requests{padding-top:100px; padding-left:100px;}
+	.back h3 {color:black;}
 	h1,h2,h3,h4,h5,h6,body {
 	font-family:"georgia";
 	}
@@ -79,7 +88,7 @@
 
 <div class="row-fluid">
   <div class="span12">
-    <div class="span4">
+    <div class="span4 back">
     <h3>Name: {{name}}</h3>
     <h3>Osis: {{osis}}</h3>
     <h3>Id: {{digits}}</h3>
