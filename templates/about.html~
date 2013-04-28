@@ -31,7 +31,7 @@
 	       <span class="icon-bar"></span>
 	       <span class="icon-bar"></span> 
 	    </button>
-	    <a class="brand" href="/"><img src="static/img/Wiggles.png" height="20" width="89"></a>
+	    <a class="brand" href="/"><img src="static/img/Wiggles.png" height="40" width="177"></a>
 	    <div class="nav-collapse navbar-responsive-collapse in collapse">
 	      <ul class="nav">
 		{% if loggedout %}
@@ -62,7 +62,7 @@
 	    <button class="btn" type="submit" name="button" value="Register">Register</button>
 	    
 	  </div>
-	  <div class="span8 offset1">
+	  <div class="span8 offset2">
 	    <h1>Welcome to Stuy Wiggles!</h1>
 	    <h4>Constructed by Georgiana Yang, Mengdi Lin, and Victoria Stempel</h4>
 	    <br></br>
@@ -71,8 +71,7 @@
 	    <p>
 	    <h4>Instructions:</h4>
 	    <ol>
-	      <li>Head to 'Class Information' to create your current schedule. 
-		<small>Don't worry if you made a mistake! Just click 'drop'.</small></li>
+	      <li>Head to 'Class Information' to create your current schedule. <small>Don't worry if you made a mistake! Just click 'drop'.</small></li>
 	      <li>For classes that you want, but can't have, click 'Request'</li>
 	      <li>Then, head over to 'Trading Floors' to see what classes are ready for trading!</li>
 	      <li>Disqus is ready for you to discuss away. <small>*Note: We do <b>NOT</b> condone bribery.</small></li>
@@ -80,8 +79,7 @@
 	      <li>Now your Stuy life will be perfect!</li>
 	    </ol>
 	    <ul>
-	      <li>Remember to checkout 'Graduation Requirements' to make</li>
-	      sure you graduate with the perfect schedule!</li>
+	      <li>Remember to checkout 'Graduation Requirements' to make sure you graduate with the perfect schedule!</li>
 	      <li>It's on you to make sure your schedule works out!</li>
 	    </ul>
 	    <p>
