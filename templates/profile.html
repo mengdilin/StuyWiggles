@@ -30,33 +30,35 @@
 
   <body>
     <!-- <body bgcolor="#212122">-->
-
   <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
-      <div class="container">
+
 	<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 	  <span class="icon-bar"></span>
 	  <span class="icon-bar"></span>
 	  <span class="icon-bar"></span> 
 	</button>
-	<a class="brand" href="/profile"><img src="static/img/Wiggles.png" height="40" width="177"></a>
-	<div class="nav-collapse collapse">
+
+	<a class="brand" href="/"><img src="static/img/Wiggles.png" height="20" width="89"></a>
+	<div class="nav-collapse navbar-responsive-collapse in collapse">
 	  <ul class="nav">
 	    {% if loggedout %}
-	    <li><a href="/about">About</a></li>
+	    <li> <a href="/about">About</a></li>
 	    <li><a href="/register">Register</a></li>
 	    {% else %}
-	    <li class="active"><a href="/profile">Profile</a></li>
+	    <li><a href="/profile">Profile</a></li>
 	    <li><a href="/tradingfloor">Trading Floor</a></li>
 	    <li><a href="/classinfo">Class Information</a></li>
 	    <li><a href="/edit">Edit Profile</a></li>
+	    <li><a href="/grad15">Graduation Requirement (2015)</a></li>
+	    <li><a href="/grad07">Graduation Requirement (2007)</a></li>
 	    <a class="navbar-text pull-right" href="/logout" class="navbar-link">Logout</a>
 	    {% endif %}
 	  </ul>
 	</div> <!-- /.nav-collapse --> 
-      </div> 
     </div>
   </div>
+
 
 <div class="container-fluid">
 <form action="profile" method="POST" class="form-inline">
