@@ -1,3 +1,4 @@
+
 AHS11, 01, 1, 0, Karp, Art Appreciation
 AHS11, 02, 2, 0, Barrow, Art Appreciation
 AHS11, 03, 3, 0, Barrow, Art Appreciation
@@ -18,6 +19,7 @@ APS11QWC, 02, 7, 0, Karp, Water Color
 APS22QAP, 01, 1, 0, Cappell, Acrylic Painting
 APS22QAP, 02, 2, 0, Cappell, Acrylic Painting
 AUS11QCG, 01, 4, 0, Cappell, Computer Graphics Design
+
 E2FC, 01, 1, 0, Ferencz, Freshman Composition
 E2FC, 02, 1, 0, Henderson, Freshman Composition
 E2FC, 03, 1, 0, Nieves, Freshman Composition
@@ -133,6 +135,7 @@ E8SL, 01, 3, 0, Mott, Shakespearean Literature
 E8SL, 02, 7, 0, Mott, Shakespearean Literature
 ECDT, 01, 10, 0, Scheinman, Debate Team
 EJMS, 01, 10, 0, Garfinkel, Spectator
+
 FFS64, 01, 3, 0, Augustave, French 2
 FFS66, 01, 2, 0, Augustave, French 3
 FFS66, 02, 8, 0, Augustave, French 3
@@ -183,7 +186,7 @@ FSS64, 11, 8, 0, Ambia, Spanish 2
 FSS64, 12, 8, 0, Dehn-Knight, Spanish 2
 FSS64, 13, 9, 0, Dehn-Knight, Spanish 2
 FSS64, 14, 9, 0, Monserrat, Spanish 2
-FSS64, 15, 10, 0, Dehn-Knight, Spanish 2
+FSS64, 15, 10, Dehn-Knight, Spanish 2
 FSS66, 01, 1, 0, Ambia, Spanish 3
 FSS66, 02, 1, 0, Monserrat, Spanish 3
 FSS66, 03, 2, 0, Ambia, Spanish 3
@@ -213,6 +216,7 @@ FTS62, 02, 2, 0, Rocchio, Italian 1
 FTS64, 01, 7, 0, Rocchio, Italian 2
 FTS66, 01, 9, 0, Rocchio, Italian 3
 FTS88X, 01, 6, 0, Rocchio, AP Italian Language
+
 HES11, 01, 1, 0, Kennedy, Economics
 HES11, 02, 2, 0, Kennedy, Economics
 HES11, 03, 2, 0, McRoy, Economics
@@ -299,7 +303,7 @@ HUS22, 03, 2, 0, Shuman, US History
 HUS22, 04, 3, 0, Greenwald, US History
 HUS22, 05, 3, 0, Shuman, US History
 HUS22, 06, 4, 0, Hanna, US History
-HUS22, 07, 4, 0, Wisotsky, US History
+HUS22, 07, 4, 0 Wisotsky, US History
 HUS22, 08, 5, 0, Stern, US History
 HUS22, 09, 7, 0, Greenwald, US History
 HUS22, 10, 7, 0, Hanna, US History
@@ -329,6 +333,7 @@ HVS11, 08, 7, 0, Weissman, American Government
 HVS11, 09, 8, 0, Weissman, American Government
 HVS11, 10, 9, 0, Trainor, American Government
 HVS11, 11, 10, 0, Trainor, American Government
+
 MCS22, 00, 4, 0, Goldberg, Calculus
 MCS22, 00, 5, 0, Goldberg, Calculus
 MCS22, 00, 6, 0, Goldberg, Calculus
@@ -483,8 +488,9 @@ MSS22X, 00, 5, 0, Feigenbaum, AP Statistics
 MSS22X, 00, 8, 0, Feigenbaum, AP Statistics
 MSS22X, 00, 9, 0, Feigenbaum, AP Statistics
 ZMTEAM, 01, 1, 0, Jaishankar, Math Team
+
 PES86QK, 01, 1, 0, Barth, Grade 11 In-Line Skating
-PES88QD, 01, 1, 0, Choy, Grade 12 Ballroom Dancing
+PES88QD, 01. 1. 0, Choy, Grade 12 Ballroom Dancing
 PES88QD, 02, 2, 0, Choy, Grade 12 Ballroom Dancing
 PES88QD, 03, 5, 0, Choy, Grade 12 Ballroom Dancing
 PES88QK, 01, 3, 0, Barth, Grade 12 In-Line Skating
@@ -492,7 +498,7 @@ PFS86QA, 01, 6, 0, Rosenthal, Grade 11 Step Aerobics
 PFS86QP, 01, 4, 0, Bologna, Grade 11 Polar Bear
 PFS86QW, 01, 9, 0, Miller, Grade 11 Weight Training and Physical Fitness
 PFS88QA, 01, 8, 0, Choubaralian, Grade 12 Stuy Box Aerobics
-PFS88QP, 01, 3, 0, Luczak, Grade 12 Polar Bear
+PFS88QP, 01, 3, Luczak, Grade 12 Polar Bear
 PFS88QW, 01, 2, 0, Barbin, Grade 12 Weight Training and Physical Fitness
 PHS11, 01, 1, 0, Garber, Health Education
 PHS11, 02, 2, 0, Fang, Health Education
@@ -508,7 +514,7 @@ PHS11, 11, 9, 0, Fang, Health Education
 PHS11, 12, 9, 0, Garber, Health Education
 PHS11, 13, 10, 0, Fang, Health Education
 PPS82Q, 01, 1, 0, Markova, Grade 9 Physical Education
-PPS82Q, 02, 1, 0, Rosenthal, Grade 9 Physical Education
+PPS82Q, 02, 1, Rosenthal, Grade 9 Physical Education
 PPS82Q, 03, 3, 0, Bologna, Grade 9 Physical Education
 PPS82Q, 04, 3, 0, Choubaralian, Grade 9 Physical Education
 PPS82Q, 05, 3, 0, Rosenthal, Grade 9 Physical Education
@@ -532,13 +538,14 @@ PPS84Q, 10, 10, 0, Barbin, Grade 10 Physical Education
 PPS86Q, 01, 1, 0, Bologna, Grade 11 Physical Education
 PPS86Q, 02, 4, 0, Barbin, Grade 11 Physical Education
 PPS86Q, 03, 6, 0, Luczak, Grade 11 Physical Education
-PPS86Q, 04, 6, 0, Chobaralian, Grade 11 Physical Education
+PPS86Q, 04. 6, 0, Chobaralian, Grade 11 Physical Education
 PPS86Q, 06, 9, 0, Rosenthal, Grade 11 Physical Education
 PPS86QB, 05, 9, 0, Fisher, Grade 11 Basketball
 PPS88Q, 01, 6, 0, Miller, Grade 12 Physical Education
 PPS88Q, 02, 7, 0, Miller, Grade 12 Physical Education
 PPS88Q, 03, 9, 0, Bologna, Grade 12 Physical Eductaion
 PTS86QV, 01, 4, 0, Fisher, Grade 11 Volleyball
+
 SCS22A, 01, 1, 2, Orlando, Chemistry
 SCS22A, 04, 2, 3, Pluchino, Chemistry
 SCS22A, 05, 2, 3, Kivi, Chemistry
@@ -576,6 +583,7 @@ SCS44XB, 02, 2, 3, Paik, AP Chemistry
 SCS44XB, 02, 3, 3, Paik, AP Chemistry
 SCS44XB, 03, 4, 5, O'Malley, AP Chemistry
 SCS44XB, 03, 5, 5, O'Malley, AP Chemistry
+
 SBS11QHD, 01, 3, 0, Citron, Human Diseases
 SBS11QHD, 02, 5, 0, Citron, Human Diseases
 SBS11QHD, 03, 8, 0, Citron, Human Diseases
@@ -590,8 +598,8 @@ SBS11QME, 03, 8, 0, Bierig, Medical Ethics
 SBS11QMS, 01, 7, 0, Utting, Sophomore Molecular Science
 SBS11QMS, 02, 8, 0, Manwell, Sophomore Molecular Science
 SBS11QNB, 01, 5, 0, Pathak, Topics in Neurobiology
-SBS11QNS, 01, 6, 0, Quenzer, Fundamentals of Nutritional Science
-SBS11QNS, 02, 9, 0, Quenzer, Fundamentals of Nutritional Science
+SBS11QNS, 01, 6, 0, Fundamentals of Nutritional Science
+SBS11QNS, 02, 9, 0, Fundamentals of Nutritional Science
 SBS11QUE, 01, 10, 0, Maggio, Urban Ecology
 SBS22HJ, 01, 1, 2, Quenzer, Freshman Advanced Topics in Biology & Research Techniques
 SBS22HJ, 02, 4, 5, Manwell, Freshman Advanced Topics in Biology & Research Techniques
@@ -632,6 +640,7 @@ SQS866QJ5, 01, 9, 10, Gastel, Intel Research Biology/Psychology
 SWS11QLZ, 01, 1, 0, Fong, Vertebrate Zoology
 SWS11QLZ, 02, 2, 0, Fong, Vertebrate Zoology
 SWS22X, 01, 9, 0, Citron, AP Environmental Science
+
 SPS11QAS, 01, 2, 0, Akhmedov, Astronomy
 SPS11QAS, 02, 6, 0, Lam, Astronomy
 SPS11QAS, 03, 7, 0, Lam, Astronomy
@@ -670,6 +679,7 @@ SPS44X, 01, 4, 4, Esper, AP Physics Level C
 SPS44X, 02, 7, 8, Esper, AP Physics Level C
 SPS44X, 02, 8, 8, Esper, AP Physics Level C
 SQS86QJ5, 01, 7, 0, Gorla, Intel Research Physics
+
 TAS22QPA, 01, 2, 0, Winston, Senior Photography
 TAS22QPA, 02, 3, 0, Winston, Senior Photography
 TAS22QPA, 03, 6, 0, Winston, Senior Photography
@@ -702,6 +712,7 @@ TQS22QVA, 01, 3, 0, Gould, Senior Advanced Video Production
 TQS22QVA, 02, 8, 0, Gould, Senior Advanced Video Production
 TYS11QTS, 01, 7, 0, Colon, Junior Computer Technology
 TZS11QG5, 01, 10, 0, Winston, Junior Graphic Arts Communication
+
 UAS11, 01, 1, 0, Shamazov, Music Appreciation
 UAS11, 02, 2, 0, Hall, Music Appreciation
 UAS11, 03, 3, 0, Hall, Music Appreciation

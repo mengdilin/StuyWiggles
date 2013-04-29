@@ -345,6 +345,7 @@ def save_classes():
     clas=prep_class_file()
     info=class_info.find_one()
     for item in clas:
+        #print item
         info["classes"].append(item)
     classupdate(info)
 
@@ -397,6 +398,4 @@ req=[' 10',' Music Appreciation',' Bernstein','AHS11',' 13']
 #refresh_floor()
 #print get_floor()
 #set_period("test2",10,req)
-#class_info.drop()
-#class_info.insert({"name":"name","classes":[]})
-#save_classes()
+
