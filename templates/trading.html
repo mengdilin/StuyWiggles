@@ -18,7 +18,7 @@
       color: white;
       }
 
-      a:link{color:#15317E;}
+      a:link{color:#0404B4;}
       a:visited {color:#7d6115;}
       .requests{padding-top:100px; padding-left:100px;}
       h2,h3,h4,h5,h6,body {
@@ -108,8 +108,8 @@
 		    {% for item in floor %}
 		    <tr>
 		      <td>{{item.name}}</td>
-		      <td>{{item["current schedule"][1]}} with {{item["current schedule"][2]}} period {{item["current schedule"][0]}}</td>
-		      <td>{{item.request[1]}} with {{item.request[2]}} period {{item.request[0]}}</td>
+		      <td><a href="{{item['current schedule'][5]}}">{{item["current schedule"][1]}}</a> with {{item["current schedule"][2]}} period {{item["current schedule"][0]}}</td>
+		      <td><a href="{{item.request[5]}}">{{item.request[1]}}</a> with {{item.request[2]}} period {{item.request[0]}}</td>
 		      <td> <button class="btn btn-success btn-small" type="submit" name="button" value="accept {{loop.index}}"><i class="icon-ok icon-white"></i>accept</button></td>
 		      <td> <button class="btn btn-danger btn-small" type="submit" name="button" value="delete {{loop.index}}"><i class="icon-remove icon-white"></i>delete</button></td>
 		    </tr>
