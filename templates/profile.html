@@ -80,7 +80,7 @@
 	  <th>Period</th>
 	  <th>Class</th>
 	  <th>Teacher</th>
-
+	  <th>Drop</th>
 	</tr>
       </thead>
       <tbody>
@@ -90,8 +90,11 @@
 	  <td>{{loop.index}}</td>
 	  <td>{{data[1]}}</td>
 	  <td>{{data[2]}}</td>
-
-
+	  <td>
+	  {% if not (data[1]=="free" or data[1]=="Cafe") %}
+	  <button class="btn btn-danger btn-small" type="submit" name="button"  value="drop {{loop.index}}"><i class="icon-remove icon-white"></i>Drop</button></td>
+	  {% endif %}
+	  </td>
 	</tr>
 	{% endfor %}
       </tbody>

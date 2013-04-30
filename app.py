@@ -253,6 +253,25 @@ def profile():
                                ,accept=notif["accept"]
                                ,accepted=notif["accepted"]
                                )
+    elif request.method=="POST":
+        value=request.form["button"]
+        value=value.split(" ")
+        index=int(value[1])-1
+        if str(value[0])=="drop":
+            schedule=database.get_schedule(username)
+            clas=schedule[index]
+            if not (clas[1]=="free" or clas[1]=="Cafe"):
+                database.drop_period(username,clas[0])
+                schedule=database.get_schedule(username)
+        return render_template("profile.html"
+                               ,name=name
+                               ,osis=osis
+                               ,digits=digits
+                               ,schedule=schedule
+                               ,email=email
+                               ,accept=notif["accept"]
+                               ,accepted=notif["accepted"]
+                               )
 
 @app.route('/grad15',methods=['GET','POST'])
 def grad15():
