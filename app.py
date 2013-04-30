@@ -138,13 +138,10 @@ def classinfo():
             period=classes[index][0]
             clas=classes[index]
             schedule=database.get_schedule(username)
-            if l_equal(schedule[int(period)-1],clas):
-                database.drop_period(username,period)
+            if schedule[int(period)-1][1]=="free":
+                database.set_period(username,period,clas)
             else:
-                if schedule[int(period)-1][1]=="free":
-                    database.set_period(username,period,clas)
-                else:
-                    validate=False
+                validate=False
         if (str(value[0])=="req"):
             req=classes[index]
             period=classes[index][0]
