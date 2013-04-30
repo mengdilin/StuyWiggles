@@ -17,7 +17,7 @@ def dbupdate(username,user):
 def add_student(username,password):
     db=Connection["StuyWiggles"]
     if (username not in get_usernames()) and validate_password(password):
-        s=["","free","n/a","",""]
+        s=["","free","n/a","","",""]
         student={"username":str(username),"password":str(password),"schedule":[s,s,s,s,s,s,s,s,s,s], "osis":0,"id":0,"posted request":[],"notification":{"post":[],"accept":{},"accepted":{}},"name":"","email":""}
         students.insert(student)
         return False
@@ -226,7 +226,7 @@ def drop_period(username,period):
     db=Connection["StuyWiggles"]
     student=find_student(username)
     schedule=student["schedule"]
-    schedule[int(period)-1]=[str(period),"free","n/a","",""]
+    schedule[int(period)-1]=[str(period),"free","n/a","","",""]
     students.update({"username":str(username)},student)
 
 def has_lunch(username,period):
@@ -335,12 +335,13 @@ def prep_class_file():
     classes=f.readlines()
     classes=[x.strip() for x in classes]
     classes=[x.split(",") for x in classes]
-    classes=[[x[2],x[5],x[4],x[0],x[1]] for x in classes]
+    classes=[[x[2],x[5],x[4],x[0],x[1],x[6]] for x in classes]
     return classes
 
 def get_class_info():
     l=class_info.find_one()["classes"]
     return l
+
 def save_classes():
     clas=prep_class_file()
     info=class_info.find_one()
@@ -400,3 +401,8 @@ req=[' 10',' Music Appreciation',' Bernstein','AHS11',' 13']
 #class_info.drop()
 #class_info.insert({"name":"name","classes":[]})
 #save_classes()
+
+#floor.drop()
+#students.drop()
+
+#print get_schedule("mengdilin")
