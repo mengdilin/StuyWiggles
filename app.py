@@ -63,7 +63,9 @@ def register():
                                   "Cafe",
                                   "Chi Kun Wang",
                                   "ZLN5",
-                                  "0"+str(lunch)])
+                                  "0"+str(lunch),
+                                  ""])
+                                  
             return redirect(url_for("profile"))
     return redirect(url_for("register"))
 
@@ -100,8 +102,8 @@ def edit():
                                        ,digit=digit
                                        ,loggedout=False
                                        ,invalid=True)
-            database.set_period(username,current_lunch,["","free","n/a","",""])
-            database.set_period(username,lunch,[str(lunch),"Cafe","Chi Kun Wang","ZLN5","0"+str(lunch)])
+            database.set_period(username,current_lunch,["","free","n/a","","",""])
+            database.set_period(username,lunch,[str(lunch),"Cafe","Chi Kun Wang","ZLN5","0"+str(lunch),""])
             database.set_password(username,password)
             database.set_email(username,email)
             database.set_id(username,digit)
