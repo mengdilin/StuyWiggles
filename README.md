@@ -13,5 +13,5 @@ Webpages: Victoria
 
 Check out at <a href="http://ml7.stuycs.org:7007">http://ml7.stuycs.org:7007</a>
 
-To deploy the project locally, clone the project and run app.py.
+To run the project locally, clone the project and run app.py.
 
