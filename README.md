@@ -13,4 +13,5 @@ Webpages: Victoria
 
 Check out at <a href="http://ml7.stuycs.org:7007">http://ml7.stuycs.org:7007</a>
 
-By April 5th, our group plans on setting up the database and creating basic templates for every page needed. By April 12th, we will have finished all of the methods needed for registration and interaction between server and database. By April 18, we will finish login, register (Georgiana), and profile.html and notification system for database (mengdi); logo design, stalking department to get class codes and teachers (victoria)
+To deploy the project locally, clone the project and run app.py.
+
