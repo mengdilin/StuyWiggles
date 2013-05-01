@@ -109,8 +109,8 @@ E6WW, 01, 3, 0, Fletcher, Writers Workshop, http://stuy.enschool.org/apps/pages/
 E6WW, 02, 4, 0, Fletcher, Writers Workshop, http://stuy.enschool.org/apps/pages/index.jsp?uREC_ID=128041&type=d&pREC_ID=253669
 E8WW, 01, 3, 0, Fletcher, Writers Workshop, http://stuy.enschool.org/apps/pages/index.jsp?uREC_ID=128041&type=d&pREC_ID=253669
 E8WW, 02, 4, 0, Fletcher, Writers Workshop, http://stuy.enschool.org/apps/pages/index.jsp?uREC_ID=128041&type=d&pREC_ID=253669
-E81X, 01, 4, 0, Gern, AP English Literature - Ancients & Moderns, http://stuy.enschool.org/apps/pages/index.jsp?uREC_ID=128041&type=d&pREC_ID=253679
-E81X, 02, 5, 0, Gern, AP English Literature - Ancients & Moderns, http://stuy.enschool.org/apps/pages/index.jsp?uREC_ID=128041&type=d&pREC_ID=253679
+E81X, 01, 3, 0, Gern, AP English Literature - Ancients & Moderns, http://stuy.enschool.org/apps/pages/index.jsp?uREC_ID=128041&type=d&pREC_ID=253679
+E81X, 02, 4, 0, Gern, AP English Literature - Ancients & Moderns, http://stuy.enschool.org/apps/pages/index.jsp?uREC_ID=128041&type=d&pREC_ID=253679
 E83X, 01, 5, 0, Schechter, AP English Literature - Great Books, http://stuy.enschool.org/apps/pages/index.jsp?uREC_ID=128041&type=d&pREC_ID=253688
 E83X, 02, 6, 0, Schechter, AP English Literature - Great Books, http://stuy.enschool.org/apps/pages/index.jsp?uREC_ID=128041&type=d&pREC_ID=253688
 E85X, 01, 5, 0, Henderson, AP English Literature - Society & Self, http://stuy.enschool.org/apps/pages/index.jsp?uREC_ID=128041&type=d&pREC_ID=253694
