@@ -232,6 +232,9 @@ def tradingfloor():
 def visit(username=""):
     if not session.has_key('user'):
         return redirect(url_for('about'))
+    me=session['user']
+    if str(username)==str(me):
+        return redirect(url_for('profile'))
     name=database.get_name(username)
     osis=database.get_osis(username)
     digits=database.get_id(username)
