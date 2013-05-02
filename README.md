@@ -31,10 +31,11 @@ Remember to checkout 'Graduation Requirements' to make sure you graduate with th
 It's on you to make sure your schedule works out!
 
 Resources:
+<ul>
 <li>MongoDB</li>
 <li>Twitter Bootstrap</li>
 <li>Disqus</li>
 <li>JQuery</li>
-
+</ul>
 
 
