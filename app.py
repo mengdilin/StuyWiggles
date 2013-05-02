@@ -228,7 +228,29 @@ def tradingfloor():
                                    ,floor=floor
                                    ,validate=True)
 
-
+@app.route('/<username>',methods=['GET','POST'])
+def visit(username=""):
+    if not session.has_key('user'):
+        return redirect(url_for('about'))
+    me=session['user']
+    if str(username)==str(me):
+        return redirect(url_for('profile'))
+    name=database.get_name(username)
+    osis=database.get_osis(username)
+    digits=database.get_id(username)
+    email=database.get_email(username)
+    schedule=database.get_schedule(username)
+    notif=database.get_notification(username)
+    if request.method=='GET':        
+        return render_template("visit.html"
+                               ,name=name
+                               ,osis=osis
+                               ,digits=digits
+                               ,schedule=schedule
+                               ,email=email
+                               ,accept=notif["accept"]
+                               ,accepted=notif["accepted"]
+                               )
     
 @app.route('/profile',methods=['GET','POST'])
 def profile():

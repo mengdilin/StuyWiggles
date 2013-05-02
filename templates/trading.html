@@ -107,7 +107,7 @@
 		  <tbody class="searchable">
 		    {% for item in floor %}
 		    <tr>
-		      <td>{{item.name}}</td>
+		      <td><a href="/{{item.username}}"</a>{{item.name}}</td>
 		      <td><a href="{{item['current schedule'][5]}}">{{item["current schedule"][1]}}</a> with {{item["current schedule"][2]}} period {{item["current schedule"][0]}}</td>
 		      <td><a href="{{item.request[5]}}">{{item.request[1]}}</a> with {{item.request[2]}} period {{item.request[0]}}</td>
 		      <td> <button class="btn btn-success btn-small" type="submit" name="button" value="accept {{loop.index}}"><i class="icon-ok icon-white"></i>accept</button></td>
