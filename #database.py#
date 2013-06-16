@@ -98,8 +98,6 @@ def accept_request(postername,acceptername,request):
     db=Connection["StuyWiggles"]
     poster=find_student(postername)
     accepter=find_student(acceptername)
-    prequest=request.append(poster["name"])
-    arequest=request.append(accepter["name"])
     if postername not in accepter["notification"]["accept"].keys():
         accepter["notification"]["accept"][postername]=[]
     if acceptername not in poster["notification"]["accepted"].keys():

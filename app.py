@@ -263,6 +263,12 @@ def profile():
     email=database.get_email(username)
     schedule=database.get_schedule(username)
     notif=database.get_notification(username)
+    names=notif["accept"].keys()
+    newnames=[]
+    for item in names:
+        name=database.find_student(item)
+        name=name["name"]
+        newnames.append(name)
     if request.method=='GET':        
         return render_template("profile.html"
                                ,name=name
@@ -270,8 +276,7 @@ def profile():
                                ,digits=digits
                                ,schedule=schedule
                                ,email=email
-                               ,accept=notif["accept"]
-                               ,accepted=notif["accepted"]
+                               ,accept=newnames
                                )
     elif request.method=="POST":
         value=request.form["button"]
