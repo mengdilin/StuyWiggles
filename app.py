@@ -294,8 +294,7 @@ def profile():
                                ,digits=digits
                                ,schedule=schedule
                                ,email=email
-                               ,accept=notif["accept"]
-                               ,accepted=notif["accepted"]
+                               ,accept=newnames
                                )
 
 @app.route('/grad15',methods=['GET','POST'])
