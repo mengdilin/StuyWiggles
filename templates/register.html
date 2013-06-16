@@ -71,6 +71,12 @@
 	  <h3>Invalid username! Please choose another.</h3>
 	</div>
 	{% endif %}
+	{% if redirected %}
+	<div class="alert alert-error">
+	  <button type="button" name="alert" class="close" data-dismiss="alert">&times;</button>
+	  <h3>Username doesn't exist. You may register with that username.</h3>
+	</div>
+	{% endif %}
 	<div class="control-group">
 	  <label class="control-label" for="username">Username :</label>
 	  <div class="controls">

@@ -27,7 +27,9 @@ def about():
             username=request.form['username']
             password=request.form['password']
             if username not in database.get_usernames():
-                return render_template("register.html",loggedout=True)
+                return render_template("register.html",
+                                       loggedout=True, 
+                                       redirected=True)
             if database.validate(username,password):
                 session["user"]=username
                 return redirect(url_for("profile"))
