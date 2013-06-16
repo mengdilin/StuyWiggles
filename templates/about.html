@@ -54,6 +54,9 @@
 	<div class="row-fluid">
 	  <div class="span2">
 	    <h1>Login</h1>
+	    {% if invalidp %}
+	    <p class="alert alert-error">Invalid password.</p>
+	    {% endif %}
 	    <label class="control-label" for="lusername">Username</label>
 	    <input type="text" name="username" placeholder="Username"></input>
 	    <label class="control-label" for="lpassword">Password</label>

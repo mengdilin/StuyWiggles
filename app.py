@@ -31,6 +31,8 @@ def about():
             if database.validate(username,password):
                 session["user"]=username
                 return redirect(url_for("profile"))
+            else:
+                return render_template("about.html",invalidp=True)
         if request.form['button']=='Register':
             return redirect(url_for("register"))
         return redirect(url_for("about"))
