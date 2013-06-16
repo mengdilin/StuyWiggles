@@ -41,7 +41,7 @@ def dbupdate(username,user):
 def add_student(username,password):
     db=Connection["StuyWiggles"]
     if (username not in get_usernames()) and validate_password(password):
-        s=["","free","n/a","","",""]
+        s=[""," free"," n/a","","",""]
         student={"username":str(username),"password":str(password),"schedule":[s,s,s,s,s,s,s,s,s,s], "osis":0,"id":0,"posted request":[],"notification":{"post":[],"accept":{},"accepted":{}},"name":"","email":""}
         students.insert(student)
         return False
@@ -118,10 +118,10 @@ def accept_request(postername,acceptername,request):
     floor.remove({"username":postername,"request":request})
     dbupdate(postername,poster)
     dbupdate(acceptername,accepter)
-    abody="Dear "+str(accepter["name"])+"\n"+"You have successfully traded with "+str(poster["name"])+". You have changed your class"+str(accept_class[1])+" with Teacher"+str(accept_class[2])+" period"+str(accept_class[0])+" to"+str(post_class[1])+" with Teacher"+str(post_class[2])+" period"+str(post_class[0])+".\nSincerely, \nStuyWiggles"
+    abody="Dear "+str(accepter["name"])+"\n"+"You have successfully traded with "+str(poster["name"])+". You have changed your class"+str(accept_class[1])+" with Teacher"+str(accept_class[2])+" period"+str(accept_class[0])+" to"+str(post_class[1])+" with Teacher"+str(post_class[2])+" period"+str(accept_class[0])+".\nSincerely, \nStuyWiggles"
     subject="Transaction successful!"
 
-    pbody="Dear "+str(poster["name"])+"\n"+"\tYou have successfully traded with "+str(accepter["name"])+". You have changed your class"+str(post_class[1])+" with Teacher"+str(post_class[2])+" period"+str(post_class[0])+" to"+str(accept_class[1])+" with Teacher"+str(accept_class[2])+" period"+str(accept_class[0])+".\nSincerely, StuyWiggles"
+    pbody="Dear "+str(poster["name"])+"\n"+"\tYou have successfully traded with "+str(accepter["name"])+". You have changed your class"+str(post_class[1])+" with Teacher"+str(post_class[2])+" period"+str(accept_class[0])+" to"+str(accept_class[1])+" with Teacher"+str(accept_class[2])+" period"+str(accept_class[0])+".\nSincerely, StuyWiggles"
     amail=str(accepter["email"])
     pmail=str(poster["email"])
     msg(abody,subject,amail)
@@ -259,7 +259,7 @@ def drop_period(username,period):
     db=Connection["StuyWiggles"]
     student=find_student(username)
     schedule=student["schedule"]
-    schedule[int(period)-1]=[str(period),"free","n/a","","",""]
+    schedule[int(period)-1]=[str(period)," free"," n/a","","",""]
     students.update({"username":str(username)},student)
 
 def has_lunch(username,period):
