@@ -1,4 +1,10 @@
 from pymongo import Connection
+from email.header    import Header
+from email.mime.text import MIMEText
+from getpass         import getpass
+from smtplib         import SMTP_SSL
+
+
 
 Connection=Connection('mongo2.stuycs.org')
 db=Connection.admin
@@ -7,6 +13,24 @@ db=Connection["StuyWiggles"]
 students=db.students
 floor=db.floor
 class_info=db.classinfo
+
+def msg(body,subject,mail):
+    login, password = 'stuywiggles@gmail.com', "stuyvesant"
+# create message
+    msg = MIMEText(body, _charset='utf-8')
+    msg['Subject'] = Header(subject, 'utf-8')
+    msg['From'] = login
+    msg['To'] = mail
+# send it via gmail
+    s = SMTP_SSL('smtp.gmail.com', 465, timeout=10)
+    s.set_debuglevel(0)
+    try:
+        s.login(login, password)
+        s.sendmail(msg['From'], msg['To'], msg.as_string())
+    except Exception:
+        return False
+    finally:
+        s.quit()
 
 def dbupdate(username,user):
     db=Connection["StuyWiggles"]
@@ -82,10 +106,10 @@ def accept_request(postername,acceptername,request):
     if len(accepter["notification"]["accept"][postername])>=7:
         accepter["notification"]["accept"][postername].pop(0)
     accepter["notification"]["accept"][postername].append(request)
-    
     if len(poster["notification"]["accepted"][acceptername])>=7:
         poster["notification"]["accepted"][acceptername].pop(0)
     poster["notification"]["accepted"][acceptername].append(request)
+
     accept_class=accepter["schedule"][int(request[0])-1]
     post_class=poster["schedule"][int(request[0])-1]
     accepter["schedule"][int(request[0])-1]=post_class
@@ -94,6 +118,15 @@ def accept_request(postername,acceptername,request):
     floor.remove({"username":postername,"request":request})
     dbupdate(postername,poster)
     dbupdate(acceptername,accepter)
+    abody="Dear "+str(accepter["name"])+"\n"+"\tYou have successfully traded with "+str(poster["name"])+". You have changed your class"+str(accept_class[1])+" with Teacher"+str(accept_class[2])+" period"+str(accept_class[0])+" to"+str(post_class[1])+" with Teacher"+str(post_class[2])+" period"+str(post_class[0])+".\nSincerely, StuyWiggles"
+    subject="Transaction successful!"
+
+    pbody="Dear "+str(poster["name"])+"\n"+"\tYou have successfully traded with "+str(accepter["name"])+". You have changed your class"+str(post_class[1])+" with Teacher"+str(post_class[2])+" period"+str(post_class[0])+" to"+str(accept_class[1])+" with Teacher"+str(accept_class[2])+" period"+str(accept_class[0])+".\nSincerely, StuyWiggles"
+    amail=str(accepter["email"])
+    pmail=str(poster["email"])
+    msg(abody,subject,amail)
+    msg(pbody,subject,pmail)
+
 
 def remove_item(l,x):
     l=[item for item in l if (str(item[0])!=str(x[0]) or str(item[1])!=str(x[1]) or str(item[2])!=str(x[2]))]
