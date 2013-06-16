@@ -118,10 +118,10 @@ def accept_request(postername,acceptername,request):
     floor.remove({"username":postername,"request":request})
     dbupdate(postername,poster)
     dbupdate(acceptername,accepter)
-    abody="Dear "+str(accepter["name"])+",\n"+"You have successfully traded with "+str(poster["name"])+". You have changed your class"+str(accept_class[1])+" with Teacher"+str(accept_class[2])+" period"+str(accept_class[0])+" to"+str(post_class[1])+" with Teacher"+str(post_class[2])+" period"+str(post_class[0])+".\nSincerely, \nStuyWiggles"
+    abody="Dear "+str(accepter["name"])+",\n"+"You have successfully traded with "+str(poster["name"])+". You have changed your class"+str(accept_class[1])+" with Teacher"+str(accept_class[2])+" period"+str(accept_class[0])+" to"+str(post_class[1])+" with Teacher"+str(post_class[2])+" period"+str(accept_class[0])+".\nSincerely, \nStuyWiggles"
     subject="Transaction successful!"
 
-    pbody="Dear "+str(poster["name"])+",\n"+"You have successfully traded with "+str(accepter["name"])+". You have changed your class"+str(post_class[1])+" with Teacher"+str(post_class[2])+" period"+str(post_class[0])+" to"+str(accept_class[1])+" with Teacher"+str(accept_class[2])+" period"+str(accept_class[0])+".\nSincerely, \nStuyWiggles"
+    pbody="Dear "+str(poster["name"])+",\n"+"You have successfully traded with "+str(accepter["name"])+". You have changed your class"+str(post_class[1])+" with Teacher"+str(post_class[2])+" period"+str(accept_class[0])+" to"+str(accept_class[1])+" with Teacher"+str(accept_class[2])+" period"+str(accept_class[0])+".\nSincerely, \nStuyWiggles"
     amail=str(accepter["email"])
     pmail=str(poster["email"])
     msg(abody,subject,amail)
