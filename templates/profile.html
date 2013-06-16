@@ -119,7 +119,7 @@
 
       <h3>My Requests:</h3>
       {% for item in accepted %}  
-      <ul><h4>{{item}} accepted your request:</h4></ul>
+      <ul><h4>{{item}} accepted your request</h4></ul>
       <div class="requests">
       {% for data in accepted[item] %}
       <li><h5>{{data[1]}} with teacher {{data[2]}} and period {{data[0]}}</h5></li>
@@ -129,7 +129,7 @@
  
       <h3>Other's Requests:</h3>
       {% for item in accept %}  
-      <ul><h4>You have accepted {{item}}'s request:</h4></ul>
+      <ul><h4>You have accepted {{item}}'s request</h4></ul>
       <div class="requests">
       {% for data in accept[item] %}
       <li><h5>{{data[1]}} with teacher {{data[2]}} and period {{data[0]}}</h5></li>
