@@ -98,7 +98,8 @@ def edit():
             pos=database.get_period(username,int(lunch))[1]
             if database.validate(username,password):
                 s=request.form['npassword']
-                if not s=="":
+                ddd=request.form["vernpassword"]
+                if not s=="" and (str(s)==str(ddd)):
                     password=str(request.form['npassword'])
                 #return password
             else:
@@ -292,8 +293,6 @@ def profile():
         aaa=database.find_student(item)
         aaa=aaa["name"]
         newernames.append(aaa)
-
-    print newnames,newernames
 
     if request.method=='GET':        
         return render_template("profile.html"

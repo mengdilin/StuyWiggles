@@ -107,6 +107,18 @@
 	    <input type="password" id="npassword" name="npassword" />
 	  </div>
 	</div>
+
+
+	<!--Mengdi's change-->
+	<div class="control-group">
+	  <label class="control-label" for="vernpassword">Verify New Password (Optional): </label>
+	  <div class="controls">
+	    <input type="password" id="vernpassword" name="vernpassword" />
+	  </div>
+	</div>
+	<!--Mengdi's change ends-->
+
+
 	<div class="control-group">
 	  <label class="control-label" for="email">Change Email :</label>
 	  <div class="controls">
@@ -172,6 +184,10 @@
 	npassword:{
 	minlength: 6,
 	maxlength: 12,
+	required: false
+	},
+	vernpassword:{
+	equalTo: "#npassword",
 	required: false
 	},
 	email: {
