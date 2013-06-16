@@ -266,9 +266,9 @@ def profile():
     names=notif["accept"].keys()
     newnames=[]
     for item in names:
-        name=database.find_student(item)
-        name=name["name"]
-        newnames.append(name)
+        stuff=database.find_student(item)
+        stuff=stuff["name"]
+        newnames.append(stuff)
     if request.method=='GET':        
         return render_template("profile.html"
                                ,name=name
