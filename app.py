@@ -268,11 +268,20 @@ def profile():
     schedule=database.get_schedule(username)
     notif=database.get_notification(username)
     names=notif["accept"].keys()
+    acceptednames=notif["accepted"].keys()
     newnames=[]
     for item in names:
         stuff=database.find_student(item)
         stuff=stuff["name"]
         newnames.append(stuff)
+    newernames=[]
+    for item in acceptednames:
+        aaa=database.find_student(item)
+        aaa=aaa["name"]
+        newernames.append(aaa)
+
+    print newnames,newernames
+
     if request.method=='GET':        
         return render_template("profile.html"
                                ,name=name
@@ -280,7 +289,10 @@ def profile():
                                ,digits=digits
                                ,schedule=schedule
                                ,email=email
-                               ,accept=newnames
+                               ,accept=notif['accept']
+                               ,newernames=newernames
+                               ,accepted=notif['accepted']
+                               ,newnames=newnames
                                )
     elif request.method=="POST":
         value=request.form["button"]
@@ -298,7 +310,10 @@ def profile():
                                ,digits=digits
                                ,schedule=schedule
                                ,email=email
-                               ,accept=newnames
+                               ,accept=notif['accept']
+                               ,newnames=newnames
+                               ,accepted=notif['accepted']
+                               ,newernames=newernames
                                )
 
 @app.route('/grad15',methods=['GET','POST'])
