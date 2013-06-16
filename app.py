@@ -34,7 +34,7 @@ def about():
                 session["user"]=username
                 return redirect(url_for("profile"))
             else:
-                return render_template("about.html",invalidp=True)
+                return render_template("about.html",loggedout=True,invalidp=True)
         if request.form['button']=='Register':
             return redirect(url_for("register"))
         return redirect(url_for("about"))
@@ -97,6 +97,19 @@ def edit():
             schedule=database.get_schedule(username)
             current_lunch=database.get_lunch(username)
             pos=database.get_period(username,int(lunch))[1]
+            if database.validate(username,password):
+                s=request.form['npassword']
+                if not s=="":
+                    password=str(request.form['npassword'])
+                #return password
+            else:
+                return render_template("edit.html"
+                                       ,username=username
+                                       ,email=email
+                                       ,osis=osis
+                                       ,digit=digit
+                                       ,loggedout=False
+                                       ,invalidp=True)
             if not (pos == ' free' or pos=='Cafe'):
                 return render_template("edit.html"
                                        ,username=username
@@ -107,7 +120,7 @@ def edit():
                                        ,invalid=True)
             database.set_period(username,current_lunch,[""," free","n/a","",""])
             database.set_period(username,lunch,[str(lunch),"Cafe","Chi Kun Wang","ZLN5","0"+str(lunch)])
-            database.set_password(username,password)
+            database.set_password(username,str(password))
             database.set_email(username,email)
             database.set_id(username,digit)
             database.set_osis(username,osis)
