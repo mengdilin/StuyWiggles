@@ -93,7 +93,7 @@ def edit():
             schedule=database.get_schedule(username)
             current_lunch=database.get_lunch(username)
             pos=database.get_period(username,int(lunch))[1]
-            if not (pos == 'free' or pos=='Cafe'):
+            if not (pos == ' free' or pos=='Cafe'):
                 return render_template("edit.html"
                                        ,username=username
                                        ,email=email
@@ -101,7 +101,7 @@ def edit():
                                        ,digit=digit
                                        ,loggedout=False
                                        ,invalid=True)
-            database.set_period(username,current_lunch,["","free","n/a","",""])
+            database.set_period(username,current_lunch,[""," free","n/a","",""])
             database.set_period(username,lunch,[str(lunch),"Cafe","Chi Kun Wang","ZLN5","0"+str(lunch)])
             database.set_password(username,password)
             database.set_email(username,email)
