@@ -139,7 +139,7 @@ def classinfo():
             period=classes[index][0]
             clas=classes[index]
             schedule=database.get_schedule(username)
-            if schedule[int(period)-1][1]=="free":
+            if schedule[int(period)-1][1]==" free":
                 database.set_period(username,period,clas)
             else:
                 validate=False
@@ -280,7 +280,7 @@ def profile():
         if str(value[0])=="drop":
             schedule=database.get_schedule(username)
             clas=schedule[index]
-            if not (clas[1]=="free" or clas[1]=="Cafe"):
+            if not (clas[1]==" free" or clas[1]=="Cafe"):
                 database.drop_period(username,clas[0])
                 schedule=database.get_schedule(username)
         return render_template("profile.html"

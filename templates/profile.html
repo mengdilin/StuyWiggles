@@ -92,7 +92,7 @@
 	  <td><a href="{{data[5]}}">{{data[1]}}</a></td>
 	  <td>{{data[2]}}</td>
 	  <td>
-	  {% if not (data[1]=="free" or data[1]=="Cafe") %}
+	  {% if not (data[1]==" free" or data[1]=="Cafe") %}
 	  <button class="btn btn-danger btn-small" type="submit" name="button"  value="drop {{loop.index}}"><i class="icon-remove icon-white"></i>Drop</button></td>
 	  {% endif %}
 	  </td>
