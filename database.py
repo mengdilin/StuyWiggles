@@ -259,7 +259,7 @@ def drop_period(username,period):
     db=Connection["StuyWiggles"]
     student=find_student(username)
     schedule=student["schedule"]
-    schedule[int(period)-1]=[str(period),"free","n/a","","",""]
+    schedule[int(period)-1]=[str(period)," free"," n/a","","",""]
     students.update({"username":str(username)},student)
 
 def has_lunch(username,period):
