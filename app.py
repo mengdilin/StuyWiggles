@@ -71,7 +71,6 @@ def register():
                                   
             return redirect(url_for("profile"))
     return redirect(url_for("register"))
-
 @app.route("/edit",methods=['GET','POST'])
 def edit():
     if not session.has_key('user'):
@@ -126,6 +125,7 @@ def edit():
             database.set_osis(username,osis)
             return redirect(url_for('profile'))
         return redirect(url_for('edit'))
+
 
 @app.route("/classinfo",methods=['GET','POST'])
 def classinfo():
