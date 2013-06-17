@@ -440,5 +440,3 @@ req=[' 10',' Music Appreciation',' Bernstein','AHS11',' 13']
 
 #print get_schedule("mengdilin")
 
-print find_student("georgi2")
-set_password("georgi2","123123")
