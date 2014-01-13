@@ -53,9 +53,6 @@ def get_name(username):
     name=user["name"]
     return name
 
-#Incomeplete!!
-#request needs to add to trading floor collection
-#request: [period, class, teacher]
 def post_request(username,request):
     db=Connection["StuyWiggles"]
     student=find_student(username)
@@ -164,19 +161,6 @@ def get_floor():
     l=[item for item in floor.find()]
     return l
 
-
-
-'''
-#format for parameter schedule:
-#A list length of 10 which contains 10 lists: [list 1, list 2, list 3, ..., list 10]
-#for each list within the big list: ["class","teacher"]
-def set_schedule(username,schedule):
-    db=Connection["StuyWiggles"]
-    student=find_student(username)
-    student["schedule"]=schedule
-    students.update({"username":str(username)},student)
-'''
-
 def get_schedule(username):
     db=Connection["StuyWiggles"]
     student=find_student(username)
@@ -248,83 +232,6 @@ def get_lunch(username):
             l=i[0]
     return l
 
-username1="mengdilin"
-password1="abcdefg"
-name1="mengdi lin"
-digits1="8744"
-osis1="211451265"
-teacher=["a","b","c","d","e","f","g","h","i","j"]
-clas=["0","1","2","3","4","5","6","7","8","9"]
-schedule1=[["a","a1"]
-          ,["b","b2"]
-          ,["c","c3"]
-          ,["d","d4"]
-          ,["e","e5"]
-          ,["f","f6"]
-          ,["g","g7"]
-          ,["h","h8"]
-          ,["i","i9"]
-          ,["j","j10"]]
-
-username2="georgiii"
-password2="abcdefg"
-name2="georgi yang"
-
-digits2="1111"
-osis2="111111111"
-schedule2=[["A","a1"]
-          ,["B","b2"]
-          ,["C","c3"]
-          ,["D","d4"]
-          ,["E","e5"]
-          ,["F","f6"]
-          ,["G","g7"]
-          ,["H","h8"]
-          ,["I","i9"]
-          ,["J","j10"]]
-'''
-students.drop()
-
-add_student(username1,password1)
-set_name(username1,name1)
-
-
-set_id(username1,digits1)
-set_osis(username1,osis1)
-set_schedule(username1,clas,teacher)
-
-
-add_student(username2,password2)
-set_name(username2,name2)
-
-
-set_id(username2,digits2)
-set_osis(username2,osis2)
-set_schedule(username2,class,teacher)
-
-request=["cocoros","calculus bc","3"]
-#request(username2,username1,request)
-
-students.drop()
-
-
-print find_student(username2)
-
-
-
-print find_student(username2)
-
-'''
-
-request=["3","calculus bc","cocoros"]
-#accept_request(username1,username2,request)
-#post_request(username1,request)
-#print find_student(username1)
-#print find_student(username2)
-#accept_request("mengdilin","georgiii",["7","Calculus","C"])
-#print get_floor()
-
-
 '''
 =================================================================
 Methods for the class info page database
@@ -372,37 +279,3 @@ def refresh_floor():
         item["current schedule"]=schedule
         floor.update({"username":username,"request":request},item)
 
-c={"name":"name","classes":[]}
-
-#class_info.insert(c)
-#save_classes()
-#class_info.drop()
-#print prep_class_file()
-
-#print get_class_info()
-#floor.drop()
-#students.drop()
-
-#print find_student("mango")
-
-#floor.drop()
-username='mango'
-request=[' 10',' Art Appreciation',' Bernstein','AHS11',' 13']
-#floor.remove({"username":username,"request":request})
-#print get_floor()
-
-req=[' 10',' Music Appreciation',' Bernstein','AHS11',' 13']
-#set_period("test2",10,request)
-#print get_schedule("test2")
-#post_request("test2",req)
-#refresh_floor()
-#print get_floor()
-#set_period("test2",10,req)
-#class_info.drop()
-#class_info.insert({"name":"name","classes":[]})
-#save_classes()
-
-#floor.drop()
-#students.drop()
-
-#print get_schedule("mengdilin")
