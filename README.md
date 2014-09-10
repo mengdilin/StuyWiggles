@@ -1,18 +1,6 @@
 Wiggles
 ===========
 
-Georgiana Yang, Mengdi Lin, Victoria Stempel
-
-Group Leader: Victoria
-
-Database: Mengdi
-
-Server: Georgiana
-
-Webpages: Victoria
-
-To run the project locally, clone the project and run app.py.
-
 Purpose:
 To serve as a trading floor between students at Stuyvesant High School!
 
